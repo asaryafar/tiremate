@@ -1,0 +1,202 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmItem_Quick_Add" targetNamespace="http://www.tempuri.org/DSFrmItem_Quick_Add.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmItem_Quick_Add.xsd" xmlns="http://www.tempuri.org/DSFrmItem_Quick_Add.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmItem_Quick_Add" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="inv_item_quick_refrence">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_quick_refrence" type="xs:string" />
+              <xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_price_code">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="price_code" type="xs:string" />
+              <xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+              <xs:element name="price1_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price1_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price1_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price1_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price1_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price1_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="price2_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price2_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price2_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price2_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price2_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price2_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="price3_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price3_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price3_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price3_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price3_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price3_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="price4_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price4_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price4_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price4_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price4_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price4_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="price5_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price5_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price5_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price5_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price5_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price5_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="price6_c_l_a_p" type="xs:string" minOccurs="0" />
+              <xs:element name="price6_operator" type="xs:string" minOccurs="0" />
+              <xs:element name="price6_d_persent" type="xs:string" minOccurs="0" />
+              <xs:element name="price6_amount" type="xs:float" minOccurs="0" />
+              <xs:element name="price6_odd_price" type="xs:float" minOccurs="0" />
+              <xs:element name="price6_price_level" type="xs:string" minOccurs="0" />
+              <xs:element name="special_notice" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tire_size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_table_public" type="xs:string" />
+              <xs:element name="desc_table" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_vendor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_vendor" type="xs:string" />
+              <xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="address" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_city" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_state" type="xs:string" minOccurs="0" />
+              <xs:element name="zipcode" type="xs:string" minOccurs="0" />
+              <xs:element name="phone_main" type="xs:string" minOccurs="0" />
+              <xs:element name="phone_cell" type="xs:string" minOccurs="0" />
+              <xs:element name="phone_work" type="xs:string" minOccurs="0" />
+              <xs:element name="phone_ext1" type="xs:string" minOccurs="0" />
+              <xs:element name="phone_ext2" type="xs:string" minOccurs="0" />
+              <xs:element name="email" type="xs:string" minOccurs="0" />
+              <xs:element name="www" type="xs:string" minOccurs="0" />
+              <xs:element name="federal_tax_id" type="xs:string" minOccurs="0" />
+              <xs:element name="social_security_no" type="xs:string" minOccurs="0" />
+              <xs:element name="ap_terms" type="xs:string" minOccurs="0" />
+              <xs:element name="vendor_type" type="xs:string" minOccurs="0" />
+              <xs:element name="class_vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="buyer_id" type="xs:string" minOccurs="0" />
+              <xs:element name="vendor_since" type="xs:string" minOccurs="0" />
+              <xs:element name="f_1099" type="xs:boolean" minOccurs="0" />
+              <xs:element name="on_hold" type="xs:boolean" minOccurs="0" />
+              <xs:element name="inactive" type="xs:boolean" minOccurs="0" />
+              <xs:element name="notes" type="xs:string" minOccurs="0" />
+              <xs:element name="credit_limited" type="xs:float" minOccurs="0" />
+              <xs:element name="remit_to_company" type="xs:string" minOccurs="0" />
+              <xs:element name="remit_to_address" type="xs:string" minOccurs="0" />
+              <xs:element name="remit_to_city" type="xs:string" minOccurs="0" />
+              <xs:element name="remit_to_state" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SideWall">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_table_public" type="xs:string" />
+              <xs:element name="desc_table" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LoadRange">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_table_public" type="xs:string" />
+              <xs:element name="desc_table" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_type_item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_item_type" type="xs:string" />
+              <xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item_no" type="xs:string" />
+              <xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+              <xs:element name="desc_item" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_quick_refrence" type="xs:string" minOccurs="0" />
+              <xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="line" type="xs:string" minOccurs="0" />
+              <xs:element name="note" type="xs:string" minOccurs="0" />
+              <xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="upc" type="xs:string" minOccurs="0" />
+              <xs:element name="special_notice" type="xs:string" minOccurs="0" />
+              <xs:element name="wheel_size" type="xs:string" minOccurs="0" />
+              <xs:element name="tire_size" type="xs:string" minOccurs="0" />
+              <xs:element name="service_description" type="xs:string" minOccurs="0" />
+              <xs:element name="sidwall" type="xs:string" minOccurs="0" />
+              <xs:element name="load_range" type="xs:string" minOccurs="0" />
+              <xs:element name="cost" type="xs:float" minOccurs="0" />
+              <xs:element name="fet" type="xs:float" minOccurs="0" />
+              <xs:element name="price_code" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_line">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_brand" type="xs:string" />
+              <xs:element name="style" type="xs:string" />
+              <xs:element name="line" type="xs:string" />
+              <xs:element name="features" type="xs:string" minOccurs="0" />
+              <xs:element name="benefits" type="xs:string" minOccurs="0" />
+              <xs:element name="treadwear" type="xs:string" minOccurs="0" />
+              <xs:element name="traction" type="xs:string" minOccurs="0" />
+              <xs:element name="temperature" type="xs:string" minOccurs="0" />
+              <xs:element name="limit_warranty" type="xs:string" minOccurs="0" />
+              <xs:element name="construction" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="image_remark" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="tread_life" type="xs:string" minOccurs="0" />
+              <xs:element name="wet_traction" type="xs:string" minOccurs="0" />
+              <xs:element name="quiet_ride" type="xs:string" minOccurs="0" />
+              <xs:element name="handling" type="xs:string" minOccurs="0" />
+              <xs:element name="winter_traction" type="xs:string" minOccurs="0" />
+              <xs:element name="nud_traction" type="xs:string" minOccurs="0" />
+              <xs:element name="overall_score" type="xs:string" minOccurs="0" />
+              <xs:element name="dry_traction" type="xs:string" minOccurs="0" />
+              <xs:element name="ride_comfort" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_item_quick_refrence" />
+      <xs:field xpath="mstns:cod_quick_refrence" />
+    </xs:unique>
+    <xs:unique name="inv_price_code_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_price_code" />
+      <xs:field xpath="mstns:price_code" />
+    </xs:unique>
+    <xs:unique name="inv_vendor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_vendor" />
+      <xs:field xpath="mstns:cod_vendor" />
+    </xs:unique>
+    <xs:unique name="inv_tab_type_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_type_item" />
+      <xs:field xpath="mstns:cod_item_type" />
+    </xs:unique>
+    <xs:unique name="inv_tab_line_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_line" />
+      <xs:field xpath="mstns:line" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmBankAccount" targetNamespace="http://www.tempuri.org/DSFrmBankAccount.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmBankAccount.xsd" xmlns="http://www.tempuri.org/DSFrmBankAccount.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmBankAccount" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="bas_Account_Type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_account_type" type="xs:string" />
+              <xs:element name="desc_account_type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GL_account" type="xs:string" />
+              <xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+              <xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_banks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="name_bank" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_Account_Type" />
+      <xs:field xpath="mstns:cod_account_type" />
+    </xs:unique>
+    <xs:unique name="GL_account_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account" />
+      <xs:field xpath="mstns:GL_account" />
+    </xs:unique>
+    <xs:unique name="bas_banks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_banks" />
+      <xs:field xpath="mstns:id_bank" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

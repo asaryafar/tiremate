@@ -1,0 +1,557 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{EDC4328A-076D-4408-954F-6BA47EE9B7D7}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "ReportBank"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "ReportBank"
+                StartupObject = "ReportBank.(None)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "CommonClass"
+                    Project = "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "CalendarCombo"
+                    Project = "{30965394-1B22-4CAB-9EA2-51BB89A3C927}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Microsoft.VisualBasic"
+                    AssemblyName = "Microsoft.VisualBasic"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\Microsoft.VisualBasic.dll"
+                />
+                <Reference
+                    Name = "Janus.Windows.UI.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.UI.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "Janus.Windows.CalendarCombo.v2"
+                    AssemblyName = "Janus.Windows.CalendarCombo.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.CalendarCombo.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.GridEX.v2"
+                    AssemblyName = "Janus.Windows.GridEX.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.GridEX.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CrystalDecisions.CrystalReports.Engine"
+                    AssemblyName = "CrystalDecisions.CrystalReports.Engine"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.CrystalReports.Engine.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Windows.Forms"
+                    AssemblyName = "CrystalDecisions.Windows.Forms"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Shared"
+                    AssemblyName = "CrystalDecisions.Shared"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Shared.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.ReportSource"
+                    AssemblyName = "CrystalDecisions.ReportSource"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.ReportSource.dll"
+                />
+                <Reference
+                    Name = "emailandwebaddress"
+                    AssemblyName = "EmailAndWebAddress"
+                    HintPath = "..\emailandwebaddress\obj\debug\emailandwebaddress.dll"
+                />
+                <Reference
+                    Name = "CalcUtils"
+                    Project = "{CA30DA09-E6A1-437D-B371-8EB0E3B801B0}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcAccount"
+                    Project = "{E87488B1-7E89-464C-9A86-94BD4A600497}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DSFrmKindTextReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmKindTextReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmKindTextReport.vb"
+                    DependentUpon = "DSFrmKindTextReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmPrint.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmPrint.vb"
+                />
+                <File
+                    RelPath = "DSFrmPrint.vb"
+                    DependentUpon = "DSFrmPrint.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmPrint.xsx"
+                    DependentUpon = "DSFrmPrint.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmPrintJournal.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmPrintJournal.vb"
+                />
+                <File
+                    RelPath = "DSFrmPrintJournal.vb"
+                    DependentUpon = "DSFrmPrintJournal.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmPrintJournal.xsx"
+                    DependentUpon = "DSFrmPrintJournal.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmReminder.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmReminder.vb"
+                />
+                <File
+                    RelPath = "DSFrmReminder.vb"
+                    DependentUpon = "DSFrmReminder.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmReminder.xsx"
+                    DependentUpon = "DSFrmReminder.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmRepBank.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmRepBank.vb"
+                />
+                <File
+                    RelPath = "DSFrmRepBank.vb"
+                    DependentUpon = "DSFrmRepBank.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmRepBank.xsx"
+                    DependentUpon = "DSFrmRepBank.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmRepJournal.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmRepJournal.vb"
+                />
+                <File
+                    RelPath = "DSFrmRepJournal.vb"
+                    DependentUpon = "DSFrmRepJournal.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmRepJournal.xsx"
+                    DependentUpon = "DSFrmRepJournal.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmThankCard.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmThankCard.vb"
+                />
+                <File
+                    RelPath = "DSFrmThankCard.vb"
+                    DependentUpon = "DSFrmThankCard.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmThankCard.xsx"
+                    DependentUpon = "DSFrmThankCard.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "FrmInactiveCus.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInactiveCus.resx"
+                    DependentUpon = "FrmInactiveCus.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmInspectCard.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInspectCard.resx"
+                    DependentUpon = "FrmInspectCard.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmKindTextReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmKindTextReport.resx"
+                    DependentUpon = "FrmKindTextReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmPrint.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmPrint.resx"
+                    DependentUpon = "FrmPrint.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmPrintJournal.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmPrintJournal.resx"
+                    DependentUpon = "FrmPrintJournal.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmReminder.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmReminder.resx"
+                    DependentUpon = "FrmReminder.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmRepBank.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmRepBank.resx"
+                    DependentUpon = "FrmRepBank.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmRepJournal.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmRepJournal.resx"
+                    DependentUpon = "FrmRepJournal.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSelect.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSelect.resx"
+                    DependentUpon = "FrmSelect.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSelectJournal.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSelectJournal.resx"
+                    DependentUpon = "FrmSelectJournal.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmThankCard.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmThankCard.resx"
+                    DependentUpon = "FrmThankCard.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RepAdjustment.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepAdjustment.vb"
+                />
+                <File
+                    RelPath = "RepAdjustment.vb"
+                    DependentUpon = "RepAdjustment.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepATMDetail.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepATMDetail.vb"
+                />
+                <File
+                    RelPath = "RepATMDetail.vb"
+                    DependentUpon = "RepATMDetail.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepCheckByAcountDetail.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepCheckByAcountDetail.vb"
+                />
+                <File
+                    RelPath = "RepCheckByAcountDetail.vb"
+                    DependentUpon = "RepCheckByAcountDetail.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepCheckDetail.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepCheckDetail.vb"
+                />
+                <File
+                    RelPath = "RepCheckDetail.vb"
+                    DependentUpon = "RepCheckDetail.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepDepositDetail.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepDepositDetail.vb"
+                />
+                <File
+                    RelPath = "RepDepositDetail.vb"
+                    DependentUpon = "RepDepositDetail.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepReminder.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepReminder.vb"
+                />
+                <File
+                    RelPath = "RepReminder.vb"
+                    DependentUpon = "RepReminder.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepSummery.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepSummery.vb"
+                />
+                <File
+                    RelPath = "RepSummery.vb"
+                    DependentUpon = "RepSummery.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepTransferDetail.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepTransferDetail.vb"
+                />
+                <File
+                    RelPath = "RepTransferDetail.vb"
+                    DependentUpon = "RepTransferDetail.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RptDynamicRep.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RptDynamicRep.vb"
+                />
+                <File
+                    RelPath = "RptDynamicRep.vb"
+                    DependentUpon = "RptDynamicRep.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+            </Include>
+        </Files>
+        <StartupServices>
+            <Service ID = "{CF845C55-C321-4742-B673-E6212D061ED9}" />
+        </StartupServices>
+    </VisualBasic>
+</VisualStudioProject>
+

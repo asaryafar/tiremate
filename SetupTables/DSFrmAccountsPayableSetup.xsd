@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmAccountsPayableSetup" targetNamespace="http://www.tempuri.org/DSFrmAccountsPayableSetup.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmAccountsPayableSetup.xsd" xmlns="http://www.tempuri.org/DSFrmAccountsPayableSetup.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmAccountsPayableSetup" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GL_account">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account3">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_TAB_AR_TERM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AR_terms" type="xs:string" />
+							<xs:element name="KIND_AR" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_NET_DUE_IN" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ST_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_NET_DUE_BEFORE" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_IF_ISSUED_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DD_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_NO_OF_PAYMENT" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_BEFORE_DAY" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="GL_account_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_account" />
+			<xs:field xpath="mstns:GL_account" />
+		</xs:unique>
+		<xs:unique name="GL_TAB_AR_TERM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_TAB_AR_TERM" />
+			<xs:field xpath="mstns:AR_terms" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmSearchInterStoreSales" targetNamespace="http://www.tempuri.org/DSFrmSearchInterStoreSales.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmSearchInterStoreSales.xsd" xmlns="http://www.tempuri.org/DSFrmSearchInterStoreSales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmSearchInterStoreSales" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="inv_salse_transfer_head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_sales_transfer" type="xs:string" />
+              <xs:element name="type_sales_transfer" type="xs:string" />
+              <xs:element name="by_action" type="xs:string" minOccurs="0" />
+              <xs:element name="authoriz_action" type="xs:string" minOccurs="0" />
+              <xs:element name="store_from" type="xs:string" minOccurs="0" />
+              <xs:element name="store_to" type="xs:string" minOccurs="0" />
+              <xs:element name="date_action" type="xs:string" minOccurs="0" />
+              <xs:element name="note" type="xs:string" minOccurs="0" />
+              <xs:element name="comment" type="xs:string" minOccurs="0" />
+              <xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+              <xs:element name="excost" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

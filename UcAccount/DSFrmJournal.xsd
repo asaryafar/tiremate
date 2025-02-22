@@ -1,0 +1,100 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmJournal" targetNamespace="http://www.tempuri.org/DSFrmJournal.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmJournal.xsd"
+	xmlns="http://www.tempuri.org/DSFrmJournal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmJournal" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GL_journal_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_journal" type="xs:int" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_reference" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_amount_debit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GL_journal_amount_credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_journal_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_journal" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="GL_journal_date" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_reference" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_type_code" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_picture" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_ready_description">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_ready_desc" type="xs:int" />
+							<xs:element name="GL_ready_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_type_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_type_journal">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_journal_type_code" type="xs:string" />
+							<xs:element name="GL_journal_type_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_ready_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GeneralJournal">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_journal" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="GL_journal_date" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_reference" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_type_code" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_amount_debit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GL_journal_amount_credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="SumBed" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="SumBes" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TarazKol">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="desc_GL_account" type="xs:string" />
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="ManA_Bed" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ManA_Bes" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Jari_bed" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Jari_Bes" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Jam_Bed" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Jam_Bes" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Man_Bed" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Man_Bes" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_journal_head" />
+			<xs:field xpath="mstns:id_GL_journal" />
+		</xs:unique>
+		<xs:unique name="GL_ready_description_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_ready_description" />
+			<xs:field xpath="mstns:id_GL_ready_desc" />
+		</xs:unique>
+		<xs:unique name="DSFrmJournalKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:TarazKol" />
+			<xs:field xpath="mstns:GL_account" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

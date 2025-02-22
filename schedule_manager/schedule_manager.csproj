@@ -1,0 +1,345 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "schedule_manager"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = ""
+                RootNamespace = "schedule_manager"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "false"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "janus.windows.schedule.v2"
+                    AssemblyName = "Janus.Windows.Schedule.v2"
+                    HintPath = "c:\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.schedule.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "janus.windows.calendarcombo.v2"
+                    AssemblyName = "Janus.Windows.CalendarCombo.v2"
+                    HintPath = "..\..\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.calendarcombo.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "janus.windows.ui.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "..\..\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.ui.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CommonClass"
+                    Project = "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Appoint.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Appoint.resx"
+                    DependentUpon = "Appoint.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CalendarOptions.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CalendarOptions.resx"
+                    DependentUpon = "CalendarOptions.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ComboItem.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataSet1.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DataSet1.cs"
+                />
+                <File
+                    RelPath = "DataSet1.cs"
+                    DependentUpon = "DataSet1.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DataSet2.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DataSet2.cs"
+                />
+                <File
+                    RelPath = "DataSet2.cs"
+                    DependentUpon = "DataSet2.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DateNavigator.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DateNavigator.resx"
+                    DependentUpon = "DateNavigator.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "e_Dataset.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "e_Dataset.cs"
+                />
+                <File
+                    RelPath = "e_Dataset.cs"
+                    DependentUpon = "e_Dataset.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "e_s_DataSet.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "e_s_DataSet.cs"
+                />
+                <File
+                    RelPath = "e_s_DataSet.cs"
+                    DependentUpon = "e_s_DataSet.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "e_s_DataSet.xsx"
+                    DependentUpon = "e_s_DataSet.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "MyDS.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RecurrenceForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RecurrenceForm.resx"
+                    DependentUpon = "RecurrenceForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RecurrenceOptionDialog.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "RecurrenceOptionDialog.resx"
+                    DependentUpon = "RecurrenceOptionDialog.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ReminderForm.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ReminderForm.resx"
+                    DependentUpon = "ReminderForm.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "S_DataSet.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "S_DataSet.cs"
+                />
+                <File
+                    RelPath = "S_DataSet.cs"
+                    DependentUpon = "S_DataSet.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "S_DataSet.xsx"
+                    DependentUpon = "S_DataSet.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "s_DataSet2.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "s_DataSet2.cs"
+                />
+                <File
+                    RelPath = "s_DataSet2.cs"
+                    DependentUpon = "s_DataSet2.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "s_DataSet2.xsx"
+                    DependentUpon = "s_DataSet2.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "schedule.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "schedule.resx"
+                    DependentUpon = "schedule.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "user_dataset.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "user_dataset.cs"
+                />
+                <File
+                    RelPath = "user_dataset.cs"
+                    DependentUpon = "user_dataset.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "user_dataset.xsx"
+                    DependentUpon = "user_dataset.xsd"
+                    BuildAction = "None"
+                />
+            </Include>
+        </Files>
+    </CSHARP>
+</VisualStudioProject>
+

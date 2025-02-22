@@ -1,0 +1,414 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{9736AEA8-D16C-426B-9990-ACABBF0B68AE}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "UCMenu"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "UCMenu"
+                StartupObject = "UCMenu.(None)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "Janus.Windows.ButtonBar.v2"
+                    AssemblyName = "Janus.Windows.ButtonBar.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ButtonBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.CalendarCombo.v2"
+                    AssemblyName = "Janus.Windows.CalendarCombo.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.CalendarCombo.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.ExplorerBar.v2"
+                    AssemblyName = "Janus.Windows.ExplorerBar.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ExplorerBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.GridEX.v2"
+                    AssemblyName = "Janus.Windows.GridEX.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.GridEX.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Schedule.v2"
+                    AssemblyName = "Janus.Windows.Schedule.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Schedule.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.TimeLine.v2"
+                    AssemblyName = "Janus.Windows.TimeLine.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.TimeLine.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.UI.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.UI.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CommonClass"
+                    Project = "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UserAccess"
+                    Project = "{EF64C447-0FC1-4BA7-83F0-B556C15DBCBF}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCInv_Package"
+                    Project = "{3625A8B5-95E1-4986-8526-8345BAE4BC7C}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCVehicle"
+                    Project = "{A517E50B-F0BE-4481-B15F-F5F3A6218D11}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCPhone"
+                    Project = "{BA1BA9D4-B039-4B92-8EE2-70E057921B0C}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCVendor"
+                    Project = "{2C87BA05-66B0-4D2A-A649-0AC21D2536CD}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCLabor_Service"
+                    Project = "{5D56B1AF-4698-4037-A631-6C52D922AD99}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCEmployee"
+                    Project = "{AF4E5BE8-4F4C-42B4-8AFB-EEDC5CF8FD88}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCInv_Item"
+                    Project = "{459CB30E-C24C-439E-A67A-8A830F7676CB}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCCustomer"
+                    Project = "{526EB5B9-D149-4DF8-879D-754EE3B61D6D}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcReceiveReturnProduct"
+                    Project = "{A07501F0-F7E2-43D8-BAAC-1AF1BEABDEDF}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "SetupTables"
+                    Project = "{9A2C5F46-683C-4C69-9FCD-D83585D26DA3}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcPurchaseOrder"
+                    Project = "{D69BE3D6-35CA-4DC4-8160-1A181B917470}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "FormGenerator"
+                    Project = "{A96A53FB-3EFC-4CF8-9CCA-483DFF1DBBBA}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Calendar"
+                    Project = "{D4DE1986-9699-47ED-A434-1A716A985243}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCBankAccount"
+                    Project = "{005553F0-2E1E-4AFB-AFDA-8EFB9A4F7982}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcAccount"
+                    Project = "{E87488B1-7E89-464C-9A86-94BD4A600497}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCPayroll"
+                    Project = "{E4A76624-8A1A-4E2E-8D5E-A9A7D9E2EF5F}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCTimeSheet"
+                    Project = "{21AEE989-941D-469A-B360-E0D069C21B13}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCAccountAdjustment"
+                    Project = "{81856BB2-5C3E-4BC9-8054-C995EA1EA738}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Report"
+                    Project = "{3E2A0801-B6AD-476D-9AD7-52BA9696D06E}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcInterStoreSale"
+                    Project = "{FBDE6CC5-650C-4DC8-A87A-97FFBABE09F7}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "WorkOrderUtility"
+                    Project = "{CB7066F0-7BE1-457B-B6F7-FF22998F9E50}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "ServiceCenterScreen"
+                    Project = "{90CE2E44-3F5D-4C2D-BA98-C7D5979113E2}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Convert"
+                    Project = "{6AE3F03C-454D-438D-9774-B8C93730981B}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "ReportCustomer"
+                    Project = "{955A8989-D12D-4BD8-B6AC-947A42FE1FB7}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "GraphicalReports"
+                    Project = "{BECC2373-D27A-490A-8310-D76F6F872500}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "ReportBank"
+                    Project = "{EDC4328A-076D-4408-954F-6BA47EE9B7D7}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmBaseMenu.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmBaseMenu.resx"
+                    DependentUpon = "FrmBaseMenu.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu1.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu1.resx"
+                    DependentUpon = "Frmmenu1.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu10.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu10.resx"
+                    DependentUpon = "Frmmenu10.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu2.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu2.resx"
+                    DependentUpon = "Frmmenu2.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu3.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu3.resx"
+                    DependentUpon = "Frmmenu3.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu4.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu4.resx"
+                    DependentUpon = "Frmmenu4.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu5.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu5.resx"
+                    DependentUpon = "Frmmenu5.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu6.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu6.resx"
+                    DependentUpon = "Frmmenu6.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu7.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu7.resx"
+                    DependentUpon = "Frmmenu7.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu8.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu8.resx"
+                    DependentUpon = "Frmmenu8.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Frmmenu9.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Frmmenu9.resx"
+                    DependentUpon = "Frmmenu9.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSplash.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSplash.resx"
+                    DependentUpon = "FrmSplash.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

@@ -1,0 +1,178 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrint" targetNamespace="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmPrint.xsd"
+	xmlns="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrint" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_item1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="size" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="location" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ProductPriceList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="size" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" msprop:nullValue="_empty" />
+							<xs:element name="service_description" type="xs:string" minOccurs="0" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_code" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_price1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount_price2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount_price3" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount_price4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount_price5" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="amount_price6" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="size" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="line" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="one" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="two" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="three" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="four" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="five" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="RepNo" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="flagitem" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagline" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagbrand" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagstyle" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InventoryCountSheet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="Bin" type="xs:string" minOccurs="0" />
+							<xs:element name="Lcount" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="QOH" type="xs:float" minOccurs="0" />
+							<xs:element name="QCounted" type="xs:float" minOccurs="0" />
+							<xs:element name="Remarks" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="line" type="xs:string" msprop:nullValue="_empty" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_value">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="size" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="line" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="one" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="two" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="three" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="four" type="xs:decimal" minOccurs="0" nillable="true" />
+							<xs:element name="five" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="RepNo" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="flagitem" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagline" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagbrand" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagstyle" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SlowMoving">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="size" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="line" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="one" type="xs:int" minOccurs="0" nillable="true" />
+							<xs:element name="two" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="three" type="xs:int" minOccurs="0" nillable="true" />
+							<xs:element name="four" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="five" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="RepNo" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="flagitem" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagline" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagbrand" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagstyle" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="IVRSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Fet" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CostFet" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InventoryStatusReport">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="size" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="line" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="one" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="two" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="three" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="four" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="five" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="RepNo" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="style" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="flagitem" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagline" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagbrand" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagstyle" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

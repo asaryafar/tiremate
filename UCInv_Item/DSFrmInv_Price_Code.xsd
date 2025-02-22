@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmInv_Price_Code" targetNamespace="http://www.tempuri.org/DSFrmInv_Price_Code.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmInv_Price_Code.xsd" xmlns="http://www.tempuri.org/DSFrmInv_Price_Code.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmInv_Price_Code" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_price_code1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="price_code" type="xs:string" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_price_code2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="price_code" type="xs:string" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_price_code">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="price_code" type="xs:string" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_price_code1" />
+			<xs:field xpath="mstns:price_code" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

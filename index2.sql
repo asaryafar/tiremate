@@ -1,0 +1,1 @@
+CREATE  INDEX [IX_service_center_head] ON [dbo].[service_center_head]([type_of_form]) ON [PRIMARY]

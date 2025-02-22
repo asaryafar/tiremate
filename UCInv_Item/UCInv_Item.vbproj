@@ -1,0 +1,870 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{459CB30E-C24C-439E-A67A-8A830F7676CB}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "UCInv_Item"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "UCInv_Item"
+                StartupObject = "UCInv_Item.(None)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CommonClass"
+                    Project = "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "janus.windows.ui.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "c:\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.ui.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "UcUserOperation"
+                    Project = "{24266D1A-E7CB-42A8-86E8-2413D676355E}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "janus.windows.gridex.v2"
+                    AssemblyName = "Janus.Windows.GridEX.v2"
+                    HintPath = "c:\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.gridex.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "janus.windows.calendarcombo.v2"
+                    AssemblyName = "Janus.Windows.CalendarCombo.v2"
+                    HintPath = "c:\program files\janus systems\controls for microsoft .net\windows forms controls v2\bin\janus.windows.calendarcombo.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CalcUtils"
+                    Project = "{CA30DA09-E6A1-437D-B371-8EB0E3B801B0}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Microsoft.VisualBasic"
+                    AssemblyName = "Microsoft.VisualBasic"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\Microsoft.VisualBasic.dll"
+                />
+                <Reference
+                    Name = "UCPicture"
+                    Project = "{0811A202-97B6-4E88-8C11-675D7E19B2A4}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCVendor"
+                    Project = "{2C87BA05-66B0-4D2A-A649-0AC21D2536CD}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "Janus.Windows.ButtonBar.v2"
+                    AssemblyName = "Janus.Windows.ButtonBar.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ButtonBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.ExplorerBar.v2"
+                    AssemblyName = "Janus.Windows.ExplorerBar.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ExplorerBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Schedule.v2"
+                    AssemblyName = "Janus.Windows.Schedule.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Schedule.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.TimeLine.v2"
+                    AssemblyName = "Janus.Windows.TimeLine.v2"
+                    HintPath = "C:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.TimeLine.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "UCVehicle"
+                    Project = "{A517E50B-F0BE-4481-B15F-F5F3A6218D11}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCPhone"
+                    Project = "{BA1BA9D4-B039-4B92-8EE2-70E057921B0C}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCZipCode"
+                    Project = "{040B8511-95EF-497C-BF0E-2EE24FA22E2A}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "EmailAndWebAddress"
+                    Project = "{4BDA9AB3-B41B-4DE9-8501-3628063943AE}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCLabor_Service"
+                    Project = "{5D56B1AF-4698-4037-A631-6C52D922AD99}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "CalendarCombo"
+                    Project = "{30965394-1B22-4CAB-9EA2-51BB89A3C927}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "WorkOrderUtility"
+                    Project = "{CB7066F0-7BE1-457B-B6F7-FF22998F9E50}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcPublicTable"
+                    Project = "{AFE4F29E-A13C-4C04-9F28-618C4B54A332}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcQuickReference"
+                    Project = "{5A090C59-5D0A-4091-BF8A-700EC3E12181}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCCommentButton"
+                    Project = "{9D6B1ADA-2DAC-4A73-84E8-DE06F19A9AA9}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCCustomer"
+                    Project = "{526EB5B9-D149-4DF8-879D-754EE3B61D6D}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCEmployee"
+                    Project = "{AF4E5BE8-4F4C-42B4-8AFB-EEDC5CF8FD88}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Shared"
+                    AssemblyName = "CrystalDecisions.Shared"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Shared.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.ReportSource"
+                    AssemblyName = "CrystalDecisions.ReportSource"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.ReportSource.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.CrystalReports.Engine"
+                    AssemblyName = "CrystalDecisions.CrystalReports.Engine"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.CrystalReports.Engine.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Windows.Forms"
+                    AssemblyName = "CrystalDecisions.Windows.Forms"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Windows.Forms.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsInv_line.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ClsItem_no.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DSFrmChargeGroupCostItem.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmChargeGroupCostItem1.vb"
+                />
+                <File
+                    RelPath = "DSFrmChargeGroupCostItem.xsx"
+                    DependentUpon = "DSFrmChargeGroupCostItem.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmChargeGroupCostItem1.vb"
+                    DependentUpon = "DSFrmChargeGroupCostItem.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmFindSize.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmFindSize.vb"
+                />
+                <File
+                    RelPath = "DSFrmFindSize.vb"
+                    DependentUpon = "DSFrmFindSize.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmFindSize.xsx"
+                    DependentUpon = "DSFrmFindSize.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmInv_line.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmInv_line.vb"
+                />
+                <File
+                    RelPath = "DSFrmInv_line.vb"
+                    DependentUpon = "DSFrmInv_line.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmInv_line.xsx"
+                    DependentUpon = "DSFrmInv_line.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmInv_Price_Code.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmInv_Price_Code.vb"
+                />
+                <File
+                    RelPath = "DSFrmInv_Price_Code.vb"
+                    DependentUpon = "DSFrmInv_Price_Code.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmInv_Price_Code.xsx"
+                    DependentUpon = "DSFrmInv_Price_Code.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmInventoryAdjustment.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmInventoryAdjustment.vb"
+                />
+                <File
+                    RelPath = "DSFrmInventoryAdjustment.vb"
+                    DependentUpon = "DSFrmInventoryAdjustment.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmInventoryAdjustment.xsx"
+                    DependentUpon = "DSFrmInventoryAdjustment.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmItem_Quick_Add.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmItem_Quick_Add.vb"
+                />
+                <File
+                    RelPath = "DSFrmItem_Quick_Add.vb"
+                    DependentUpon = "DSFrmItem_Quick_Add.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmItem_Quick_Add.xsx"
+                    DependentUpon = "DSFrmItem_Quick_Add.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmItemHistory.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmItemHistory.vb"
+                />
+                <File
+                    RelPath = "DSFrmItemHistory.vb"
+                    DependentUpon = "DSFrmItemHistory.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmItemHistory.xsx"
+                    DependentUpon = "DSFrmItemHistory.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmItemVendors.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmItemVendors.vb"
+                />
+                <File
+                    RelPath = "DSFrmItemVendors.vb"
+                    DependentUpon = "DSFrmItemVendors.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmRepItem.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmRepItem.vb"
+                />
+                <File
+                    RelPath = "DSFrmRepItem.vb"
+                    DependentUpon = "DSFrmRepItem.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmRepItem.xsx"
+                    DependentUpon = "DSFrmRepItem.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmSearchInvAdjustment.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmSearchInvAdjustment.vb"
+                />
+                <File
+                    RelPath = "DSFrmSearchInvAdjustment.vb"
+                    DependentUpon = "DSFrmSearchInvAdjustment.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmSearchInvAdjustment.xsx"
+                    DependentUpon = "DSFrmSearchInvAdjustment.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmSearchSize.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmSearchSize.vb"
+                />
+                <File
+                    RelPath = "DSFrmSearchSize.vb"
+                    DependentUpon = "DSFrmSearchSize.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSInv_Item.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSInv_Item.vb"
+                />
+                <File
+                    RelPath = "DSInv_Item.vb"
+                    DependentUpon = "DSInv_Item.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSInv_Item.xsx"
+                    DependentUpon = "DSInv_Item.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSInv_tab_line.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSInv_tab_line.vb"
+                />
+                <File
+                    RelPath = "DSInv_tab_line.vb"
+                    DependentUpon = "DSInv_tab_line.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSInv_tab_line.xsx"
+                    DependentUpon = "DSInv_tab_line.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSInvItemProduct.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSInvItemProduct.vb"
+                />
+                <File
+                    RelPath = "DSInvItemProduct.vb"
+                    DependentUpon = "DSInvItemProduct.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSInvItemProduct.xsx"
+                    DependentUpon = "DSInvItemProduct.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSPicture.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSPicture.vb"
+                />
+                <File
+                    RelPath = "DSPicture.vb"
+                    DependentUpon = "DSPicture.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSPicture.xsx"
+                    DependentUpon = "DSPicture.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "FrmCalculateItemPrice.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmCalculateItemPrice.resx"
+                    DependentUpon = "FrmCalculateItemPrice.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmChangeGroupCostItem.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmChangeGroupCostItem.resx"
+                    DependentUpon = "FrmChangeGroupCostItem.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmChangeItemNo.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmChangeItemNo.resx"
+                    DependentUpon = "FrmChangeItemNo.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmChangeLine.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmChangeLine.resx"
+                    DependentUpon = "FrmChangeLine.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmFindSize.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmFindSize.resx"
+                    DependentUpon = "FrmFindSize.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmInv_line.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInv_line.resx"
+                    DependentUpon = "FrmInv_line.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmInv_line_DetailShow.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInv_line_DetailShow.resx"
+                    DependentUpon = "FrmInv_line_DetailShow.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmInv_Price_Code.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInv_Price_Code.resx"
+                    DependentUpon = "FrmInv_Price_Code.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmInventoryAdjustment.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmInventoryAdjustment.resx"
+                    DependentUpon = "FrmInventoryAdjustment.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmItem_Quick_Add.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmItem_Quick_Add.resx"
+                    DependentUpon = "FrmItem_Quick_Add.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmItemDetailShow.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmItemDetailShow.resx"
+                    DependentUpon = "FrmItemDetailShow.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmItemHistory.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmItemHistory.resx"
+                    DependentUpon = "FrmItemHistory.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmItemProduct.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmItemProduct.resx"
+                    DependentUpon = "FrmItemProduct.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmItemVendors.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmItemVendors.resx"
+                    DependentUpon = "FrmItemVendors.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmReplaceLine.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmReplaceLine.resx"
+                    DependentUpon = "FrmReplaceLine.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmReplacePricecod.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmReplacePricecod.resx"
+                    DependentUpon = "FrmReplacePricecod.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSearchInv_line.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchInv_line.resx"
+                    DependentUpon = "FrmSearchInv_line.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSearchInventoryAdjustment.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchInventoryAdjustment.resx"
+                    DependentUpon = "FrmSearchInventoryAdjustment.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSearchItemCode.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchItemCode.resx"
+                    DependentUpon = "FrmSearchItemCode.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSearchSize.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchSize.resx"
+                    DependentUpon = "FrmSearchSize.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSelect.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSelect.resx"
+                    DependentUpon = "FrmSelect.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmShowPriceLevels.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmShowPriceLevels.resx"
+                    DependentUpon = "FrmShowPriceLevels.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSize.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSize.resx"
+                    DependentUpon = "FrmSize.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmUTQGShow.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmUTQGShow.resx"
+                    DependentUpon = "FrmUTQGShow.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "InvLine_Detail.vb"
+                    SubType = "UserControl"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "InvLine_Detail.resx"
+                    DependentUpon = "InvLine_Detail.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ItemNo.vb"
+                    SubType = "UserControl"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ItemNo.resx"
+                    DependentUpon = "ItemNo.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Line.vb"
+                    SubType = "UserControl"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Line.resx"
+                    DependentUpon = "Line.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RepInventoryAdj.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepInventoryAdj.vb"
+                />
+                <File
+                    RelPath = "RepInventoryAdj.vb"
+                    DependentUpon = "RepInventoryAdj.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepItemDetailShow.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepItemDetailShow.vb"
+                />
+                <File
+                    RelPath = "RepItemDetailShow.vb"
+                    DependentUpon = "RepItemDetailShow.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "UTQG.vb"
+                    SubType = "UserControl"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "UTQG.resx"
+                    DependentUpon = "UTQG.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+        <StartupServices>
+            <Service ID = "{CF845C55-C321-4742-B673-E6212D061ED9}" />
+        </StartupServices>
+    </VisualBasic>
+</VisualStudioProject>
+

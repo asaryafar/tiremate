@@ -1,0 +1,166 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrintInvItem" targetNamespace="http://www.tempuri.org/DSFrmPrintInvItem.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmPrintInvItem.xsd" xmlns="http://www.tempuri.org/DSFrmPrintInvItem.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrintInvItem" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SoldReport">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:decimal" />
+							<xs:element name="unit_price" type="xs:decimal" />
+							<xs:element name="fet" type="xs:decimal" />
+							<xs:element name="ext_price" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unit_cost" type="xs:decimal" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Detail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="ext_cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="unit_cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" type="xs:decimal" minOccurs="0" />
+							<xs:element name="vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="RefNo" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:date" minOccurs="0" />
+							<xs:element name="bill_credit" type="xs:string" minOccurs="0" />
+							<xs:element name="DeliveryReciept" type="xs:string" minOccurs="0" />
+							<xs:element name="NationalAccount" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="explanation" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="summery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:date" minOccurs="0" />
+							<xs:element name="type" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="unit_price" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_price" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unit_cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BiginQty">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="BeginingQty" type="xs:decimal" minOccurs="0" />
+							<xs:element name="QtyOut" type="xs:decimal" minOccurs="0" />
+							<xs:element name="QtyIn" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_item_x0020_" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="store_no" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="flagshow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OnHand" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ledger">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="refno" type="xs:string" />
+							<xs:element name="date" type="xs:date" minOccurs="0" />
+							<xs:element name="qtyin" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="qtyout" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="customer" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" nillable="true" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="store_no" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="vendor" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="bill_credit" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="Begining" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sales_transfer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unit_price" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_cost" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unit_cost" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="ID_sales_transfer" type="xs:string" />
+							<xs:element name="date_action" type="xs:date" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="store_to" type="xs:string" minOccurs="0" />
+							<xs:element name="store_from" type="xs:string" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="to_name" type="xs:string" minOccurs="0" />
+							<xs:element name="from_name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="STORE_SETUP">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSFrmPrintInvItemKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:BiginQty" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:keyref name="BiginQtybank_check" refer="mstns:DSFrmPrintInvItemKey1">
+			<xs:selector xpath=".//mstns:Ledger" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:keyref>
+		<xs:key name="DSFrmPrintInvItemKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:STORE_SETUP" />
+			<xs:field xpath="mstns:STORENO" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

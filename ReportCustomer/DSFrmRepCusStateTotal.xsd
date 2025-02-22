@@ -1,0 +1,201 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmRepCusStateTotal" targetNamespace="http://www.tempuri.org/DSFrmRepCusStateTotal.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmRepCusStateTotal.xsd" xmlns="http://www.tempuri.org/DSFrmRepCusStateTotal.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmRepCusStateTotal" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="SP_CustomerBalance">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TblReportSum">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="RefNo" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:string" minOccurs="0" />
+							<xs:element name="descript" type="xs:string" minOccurs="0" />
+							<xs:element name="charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment" type="xs:float" minOccurs="0" />
+							<xs:element name="StoreName" type="xs:string" minOccurs="0" />
+							<xs:element name="StoreCode" type="xs:string" minOccurs="0" />
+							<xs:element name="BalanceAmount" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SP_CustomerAging1to30">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_CUSTOMER" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SP_CustomerAgingNotDueYet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_CUSTOMER" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SP_CustomerAging61to90">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_CUSTOMER" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SP_CustomerAgingOver90">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_CUSTOMER" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SP_CustomerAging31to60">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COD_CUSTOMER" type="xs:string" />
+							<xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TblReportSumDtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="RefNo" type="xs:string" />
+							<xs:element name="date" type="xs:string" minOccurs="0" />
+							<xs:element name="descript" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="payment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="StoreName" type="xs:string" minOccurs="0" />
+							<xs:element name="StoreCode" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LOGO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cologo" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CustomersName">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_class" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_type" type="xs:string" minOccurs="0" />
+							<xs:element name="OrderName" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="PrintStatementDetailFlag" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="c1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c3" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c5" type="xs:decimal" minOccurs="0" />
+							<xs:element name="StoreCode" type="xs:string" minOccurs="0" />
+							<xs:element name="StoreName" type="xs:string" minOccurs="0" />
+							<xs:element name="flagcus" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagtype" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagclass" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagemail" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_statement" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="customer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="clas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerBalance" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="DSFrmRepCusStateTotalKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerAging1to30" />
+			<xs:field xpath="mstns:COD_CUSTOMER" />
+		</xs:unique>
+		<xs:unique name="DSFrmRepCusStateTotalKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerAgingNotDueYet" />
+			<xs:field xpath="mstns:COD_CUSTOMER" />
+		</xs:unique>
+		<xs:unique name="DSFrmRepCusStateTotalKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerAging61to90" />
+			<xs:field xpath="mstns:COD_CUSTOMER" />
+		</xs:unique>
+		<xs:unique name="DSFrmRepCusStateTotalKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerAgingOver90" />
+			<xs:field xpath="mstns:COD_CUSTOMER" />
+		</xs:unique>
+		<xs:unique name="DSFrmRepCusStateTotalKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:SP_CustomerAging31to60" />
+			<xs:field xpath="mstns:COD_CUSTOMER" />
+		</xs:unique>
+		<xs:unique name="CustomersName_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CustomersName" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:keyref name="CustomersNameTblReportSumDtl" refer="mstns:CustomersName_Constraint1" msdata:DeleteRule="Cascade">
+			<xs:selector xpath=".//mstns:TblReportSumDtl" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:keyref>
+		<xs:keyref name="CustomersNameTblReportSum" refer="mstns:CustomersName_Constraint1" msdata:DeleteRule="Cascade">
+			<xs:selector xpath=".//mstns:TblReportSum" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:keyref>
+		<xs:key name="DSFrmRepCusStateTotalKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:customer" />
+			<xs:field xpath="mstns:cod" />
+		</xs:key>
+		<xs:key name="DSFrmRepCusStateTotalKey7" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:clas" />
+			<xs:field xpath="mstns:cod" />
+		</xs:key>
+		<xs:key name="DSFrmRepCusStateTotalKey8" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:type" />
+			<xs:field xpath="mstns:cod" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

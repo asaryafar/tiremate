@@ -1,0 +1,59 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmItemHistory" targetNamespace="http://www.tempuri.org/DSFrmItemHistory.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmItemHistory.xsd" xmlns="http://www.tempuri.org/DSFrmItemHistory.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmItemHistory" msdata:IsDataSet="true" msdata:Locale="en-GB">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="BiginQty">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="BeginingQty" type="xs:int" minOccurs="0" />
+							<xs:element name="QtyOut" type="xs:int" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="QtyIn" type="xs:int" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_item_x0020_" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="store_no" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="flagshow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OnHand" type="xs:int" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ledger">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="refno" type="xs:string" />
+							<xs:element name="date" type="xs:string" minOccurs="0" />
+							<xs:element name="qtyin" msdata:ReadOnly="false" type="xs:int" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="qtyout" msdata:ReadOnly="false" type="xs:int" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="customer" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" nillable="true" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="store_no" msdata:ReadOnly="false" type="xs:int" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="vendor" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="bill_credit" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="Begining" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="OrderDate" type="xs:string" minOccurs="0" />
+							<xs:element name="kind" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="key1">
+			<xs:selector xpath=".//mstns:BiginQty" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

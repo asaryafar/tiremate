@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmItemVendors" targetNamespace="http://www.tempuri.org/DSFrmItemVendors.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmItemVendors.xsd" xmlns="http://www.tempuri.org/DSFrmItemVendors.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmItemVendors" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="inv_item_vendor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item_no" type="xs:string" />
+              <xs:element name="cod_vendor" type="xs:string" />
+              <xs:element name="ven_part_no" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

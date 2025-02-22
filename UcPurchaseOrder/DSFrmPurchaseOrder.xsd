@@ -1,0 +1,112 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPurchaseOrder" targetNamespace="http://www.tempuri.org/DSFrmPurchaseOrder.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmPurchaseOrder.xsd" xmlns="http://www.tempuri.org/DSFrmPurchaseOrder.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPurchaseOrder" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_buyer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="buyer_id" type="xs:string" />
+							<xs:element name="desc_buyer" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="date_po" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="buyer_id" type="xs:string" minOccurs="0" />
+							<xs:element name="house_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="vend_comments" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="frieght" type="xs:float" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="InvItemCost" type="xs:float" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="wieght_lbs" type="xs:string" minOccurs="0" />
+							<xs:element name="excost" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_headSearch1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="date_po" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="buyer_id" type="xs:string" minOccurs="0" />
+							<xs:element name="house_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="vend_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="TotalAmount" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="Buyer" type="xs:string" minOccurs="0" />
+							<xs:element name="Po_NoReceive" type="xs:string" minOccurs="0" />
+							<xs:element name="REMAINDER_x0020_" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_head1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="date_po" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="buyer_id" type="xs:string" minOccurs="0" />
+							<xs:element name="house_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="vend_comments" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_headSearch">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="date_po" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="shipto_cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="buyer_id" type="xs:string" minOccurs="0" />
+							<xs:element name="house_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="vend_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="buyer" type="xs:string" minOccurs="0" />
+							<xs:element name="TotalAmount" msdata:ReadOnly="true" type="xs:double" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="Po_NoReceive" type="xs:string" minOccurs="0" msprop:nullValue="''" />
+							<xs:element name="TotalAmountReceive" msdata:ReadOnly="true" type="xs:double" minOccurs="0"
+								msprop:nullValue="0" />
+							<xs:element name="Reminder" msdata:ReadOnly="true" msdata:Expression="TotalAmount-TotalAmountReceive"
+								type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_buyer" />
+			<xs:field xpath="mstns:buyer_id" />
+		</xs:unique>
+		<xs:unique name="Inv_purchase_order_head_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Inv_purchase_order_head" />
+			<xs:field xpath="mstns:po_no" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

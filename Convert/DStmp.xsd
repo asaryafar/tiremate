@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DStmp" targetNamespace="http://www.tempuri.org/DStmp.xsd" xmlns:mstns="http://www.tempuri.org/DStmp.xsd"
+	xmlns="http://www.tempuri.org/DStmp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DStmp" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="type_of_form" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="id_vehicle" type="xs:int" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="discount" type="xs:float" minOccurs="0" />
+							<xs:element name="tax" type="xs:float" minOccurs="0" />
+							<xs:element name="house_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="add_user" type="xs:short" minOccurs="0" />
+							<xs:element name="chg_user" type="xs:short" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="id_service_center_before" type="xs:string" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+							<xs:element name="Total" type="xs:decimal" minOccurs="0" />
+							<xs:element name="bef" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_head" />
+			<xs:field xpath="mstns:id_service_center" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,124 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmApPayment" targetNamespace="http://www.tempuri.org/DSFrmApPayment.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmApPayment.xsd" xmlns="http://www.tempuri.org/DSFrmApPayment.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmApPayment" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GridRecord">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_AP_payment" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Date" type="xs:string" minOccurs="0" />
+							<xs:element name="Refrenceno" type="xs:string" minOccurs="0" />
+							<xs:element name="Radif" type="xs:short" minOccurs="0" />
+							<xs:element name="RefrenceType" type="xs:string" minOccurs="0" />
+							<xs:element name="PaiedBefore" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OriginalAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountPay" type="xs:decimal" default="0" minOccurs="0" />
+							<xs:element name="CheckFlag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="DueDate" type="xs:string" minOccurs="0" />
+							<xs:element name="Remark" type="xs:string" minOccurs="0" />
+							<xs:element name="Id_AP_bill_dtl_dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="ID_Inv_Receive_product_Ap_Dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="ID_AP_paymentEdit" type="xs:int" minOccurs="0" />
+							<xs:element name="id_vendor_credit" type="xs:int" nillable="true" />
+							<xs:element name="PaiedBefore2" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_AP_payment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_AP_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Id_AP_bill_dtl_dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="ID_Inv_Receive_product_Ap_Dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="radif" type="xs:short" minOccurs="0" />
+							<xs:element name="amount_pay" type="xs:decimal" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="date_prepare" type="xs:string" />
+							<xs:element name="id_check" type="xs:int" minOccurs="0" />
+							<xs:element name="radif1" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_AP_bill_Dtl_Dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Id_AP_bill_dtl_dtl" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Id_AP_bill_dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="DateTransaction" type="xs:string" minOccurs="0" />
+							<xs:element name="Id_AP_bill_Head" type="xs:string" />
+							<xs:element name="sumpayment" type="xs:decimal" />
+							<xs:element name="sumoriginalamount" type="xs:decimal" />
+							<xs:element name="ID_AP_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="id_vendor_credit" type="xs:int" nillable="true" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_out_purchases">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="amount" type="xs:float" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="DateTransaction" type="xs:string" minOccurs="0" />
+							<xs:element name="sumoriginalamount" type="xs:double" minOccurs="0" />
+							<xs:element name="sumpayment" type="xs:decimal" />
+							<xs:element name="ID_AP_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="id_vendor_credit" type="xs:int" nillable="true" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_Receive_product_Ap_Dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_Inv_Receive_product_Ap_Dtl" msdata:ReadOnly="true" msdata:AutoIncrement="true"
+								type="xs:int" />
+							<xs:element name="id_receive_ref" type="xs:string" />
+							<xs:element name="amount" type="xs:decimal" />
+							<xs:element name="due_date" type="xs:string" />
+							<xs:element name="DateTransaction" type="xs:string" minOccurs="0" />
+							<xs:element name="sumoriginalamount" type="xs:decimal" />
+							<xs:element name="sumpayment" type="xs:decimal" />
+							<xs:element name="ID_AP_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="id_vendor_credit" type="xs:int" nillable="true" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GlDate">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="date_prepare" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="View_GL_vendor_creditReminder">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="SumCreadit" type="xs:decimal" />
+							<xs:element name="SumPayment" type="xs:decimal" />
+							<xs:element name="Reminder" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_vendor_credit" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSFrmApPaymentKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GridRecord" />
+			<xs:field xpath="mstns:ID_AP_payment" />
+		</xs:unique>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_AP_payment" />
+			<xs:field xpath="mstns:ID_AP_payment" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

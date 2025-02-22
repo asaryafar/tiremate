@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="e_s_Dataset" targetNamespace="http://www.tempuri.org/e_s_Dataset.xsd" xmlns:mstns="http://www.tempuri.org/e_s_Dataset.xsd"
+	xmlns="http://www.tempuri.org/e_s_Dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="e_s_Dataset" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="emp_setting">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="emp_ID" type="xs:long" />
+							<xs:element name="work_start_time" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="work_end_time" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="week_num" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_sun" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_mon" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_tue" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_wed" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_thu" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_fri" type="xs:boolean" minOccurs="0" />
+							<xs:element name="work_week_sat" type="xs:boolean" minOccurs="0" />
+							<xs:element name="week_start_day" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:emp_setting" />
+			<xs:field xpath="mstns:emp_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

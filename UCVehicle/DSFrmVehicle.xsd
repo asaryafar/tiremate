@@ -1,0 +1,102 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmVehicle" targetNamespace="http://www.tempuri.org/DSFrmVehicle.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmVehicle.xsd" xmlns="http://www.tempuri.org/DSFrmVehicle.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmVehicle" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="bas_color">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_color" type="xs:string" />
+              <xs:element name="desc_color" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_vehicle_model">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_make" type="xs:string" />
+              <xs:element name="cod_model" type="xs:string" />
+              <xs:element name="desc_model" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_zipcode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="state" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_kind_engine">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_kind_engine" type="xs:string" />
+              <xs:element name="desc_kind_engine" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_oil_type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_oil_type" type="xs:string" />
+              <xs:element name="desc_oil_type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_quarts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_quarts" type="xs:string" />
+              <xs:element name="desc_quarts" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_vehicle_type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_vehicle_type" type="xs:string" />
+              <xs:element name="desc_vehicle_type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_vehicle_company">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desc_make" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_make" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_color" />
+      <xs:field xpath="mstns:cod_color" />
+    </xs:unique>
+    <xs:unique name="bas_vehicle_model_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_vehicle_model" />
+      <xs:field xpath="mstns:cod_make" />
+      <xs:field xpath="mstns:cod_model" />
+    </xs:unique>
+    <xs:unique name="inv_tab_kind_engine_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_kind_engine" />
+      <xs:field xpath="mstns:cod_kind_engine" />
+    </xs:unique>
+    <xs:unique name="inv_tab_oil_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_oil_type" />
+      <xs:field xpath="mstns:cod_oil_type" />
+    </xs:unique>
+    <xs:unique name="inv_tab_quarts_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_quarts" />
+      <xs:field xpath="mstns:Cod_quarts" />
+    </xs:unique>
+    <xs:unique name="inv_tab_vehicle_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_vehicle_type" />
+      <xs:field xpath="mstns:cod_vehicle_type" />
+    </xs:unique>
+    <xs:unique name="bas_vehicle_company_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_vehicle_company" />
+      <xs:field xpath="mstns:cod_make" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

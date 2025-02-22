@@ -1,0 +1,128 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmCheckScreen" targetNamespace="http://www.tempuri.org/DSFrmCheckScreen.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmCheckScreen.xsd" xmlns="http://www.tempuri.org/DSFrmCheckScreen.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmCheckScreen" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="bank_check_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_check" type="xs:int" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="GL_Account" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="memo_dtl" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="id_ap_payment" type="xs:long" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_banks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="share_all_store" type="xs:boolean" minOccurs="0" />
+							<xs:element name="store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="account_no" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="zip" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_1" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_2" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_2" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_3" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_3" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_4" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_4" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_5" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_5" type="xs:boolean" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="contact_name" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_Account" type="xs:string" minOccurs="0" />
+							<xs:element name="start_check_no" type="xs:string" minOccurs="0" />
+							<xs:element name="next_check_no" type="xs:string" minOccurs="0" />
+							<xs:element name="default_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="inactive" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_account_type" type="xs:string" minOccurs="0" />
+							<xs:element name="routing_numbers" type="xs:string" minOccurs="0" />
+							<xs:element name="Bank_ID" type="xs:string" minOccurs="0" />
+							<xs:element name="Web_Page" type="xs:string" minOccurs="0" />
+							<xs:element name="User_ID" type="xs:string" minOccurs="0" />
+							<xs:element name="Password" type="xs:string" minOccurs="0" />
+							<xs:element name="Security_code" type="xs:string" minOccurs="0" />
+							<xs:element name="online_banking" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bank_check">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_check" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_bank" type="xs:short" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_check" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="address_payee" type="xs:string" minOccurs="0" />
+							<xs:element name="memo_check" type="xs:string" minOccurs="0" />
+							<xs:element name="invoice_no" type="xs:string" minOccurs="0" />
+							<xs:element name="manual_check" type="xs:boolean" minOccurs="0" />
+							<xs:element name="print_later" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cleared_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="check_status" type="xs:string" minOccurs="0" />
+							<xs:element name="id_debit_deposit_head" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_AP_payment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="date_prepare" type="xs:string" />
+							<xs:element name="Payment" type="xs:decimal" />
+							<xs:element name="id_ap_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PrintDtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_check" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_check" type="xs:decimal" minOccurs="0" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" />
+							<xs:element name="dte" type="xs:string" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_Inv_Receive_product_Ap_Dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="Id_AP_bill_dtl_dtl" type="xs:int" minOccurs="0" />
+							<xs:element name="VendorRefno" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_banks" />
+			<xs:field xpath="mstns:id_bank" />
+		</xs:unique>
+		<xs:unique name="bank_check_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bank_check" />
+			<xs:field xpath="mstns:id_check" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

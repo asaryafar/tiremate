@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="e_Dataset" targetNamespace="http://www.tempuri.org/e_Dataset.xsd" xmlns:mstns="http://www.tempuri.org/e_Dataset.xsd" xmlns="http://www.tempuri.org/e_Dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="e_Dataset" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="employee">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee_code" type="xs:string" />
+              <xs:element name="f_name" type="xs:string" minOccurs="0" />
+              <xs:element name="m_name" type="xs:string" minOccurs="0" />
+              <xs:element name="l_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:employee" />
+      <xs:field xpath="mstns:employee_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

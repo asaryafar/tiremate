@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmSearchReferenceNoVendorCredit" targetNamespace="http://www.tempuri.org/DSFrmSearchReferenceNoVendorCredit.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmSearchReferenceNoVendorCredit.xsd" xmlns="http://www.tempuri.org/DSFrmSearchReferenceNoVendorCredit.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmSearchReferenceNoVendorCredit" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GL_vendor_credit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_vendor_credit" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="date_credit" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Remark" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="id_vendor_credit_head" type="xs:integer" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

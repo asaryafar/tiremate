@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmEmployeeSaving" targetNamespace="http://www.tempuri.org/DSFrmEmployeeSaving.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmEmployeeSaving.xsd" xmlns="http://www.tempuri.org/DSFrmEmployeeSaving.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmEmployeeSaving" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="pay_tab_saving_main">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="saving_cod" type="xs:string" />
+              <xs:element name="saving_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account_employee" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account_employer" type="xs:string" minOccurs="0" />
+              <xs:element name="before_tax" type="xs:boolean" minOccurs="0" />
+              <xs:element name="percent_gross_pay_employee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="percent_gross_pay_employer" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pay_saving_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="saving_cod" type="xs:string" />
+              <xs:element name="date_start" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_employee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_employer" type="xs:decimal" minOccurs="0" />
+              <xs:element name="time_saving_removal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="active" type="xs:boolean" minOccurs="0" />
+              <xs:element name="saving_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pay_tab_saving_main" />
+      <xs:field xpath="mstns:saving_cod" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

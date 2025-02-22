@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DsFrmCloseDay" targetNamespace="http://www.tempuri.org/DsFrmCloseDay.xsd" xmlns:mstns="http://www.tempuri.org/DsFrmCloseDay.xsd"
+	xmlns="http://www.tempuri.org/DsFrmCloseDay.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DsFrmCloseDay" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Average">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TABLENAME" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="IDHEAD" type="xs:string" />
+							<xs:element name="radif" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="Date1" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="idjournal" type="xs:int" minOccurs="0" />
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="AddSubtract_x0020_" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="QtyPrice" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="AVERAGE_COST" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_journal_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_journal" type="xs:int" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_reference" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_amount_debit" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="GL_journal_amount_credit" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_journal_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_GL_journal" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="GL_journal_date" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_reference" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_journal_type_code" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_picture" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bank_check">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_check" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_bank" type="xs:short" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_check" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="address_payee" type="xs:string" minOccurs="0" />
+							<xs:element name="memo_check" type="xs:string" minOccurs="0" />
+							<xs:element name="invoice_no" type="xs:string" minOccurs="0" />
+							<xs:element name="manual_check" type="xs:boolean" minOccurs="0" />
+							<xs:element name="print_later" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cleared_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="check_status" type="xs:string" minOccurs="0" />
+							<xs:element name="id_debit_deposit_head" type="xs:int" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+							<xs:element name="GL_Account" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Gl_AccountBank" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_journal_dtl" />
+			<xs:field xpath="mstns:id_GL_journal" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+		<xs:unique name="GL_journal_head_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_journal_head" />
+			<xs:field xpath="mstns:id_GL_journal" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

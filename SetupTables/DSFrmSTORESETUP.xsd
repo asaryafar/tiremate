@@ -1,0 +1,76 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmSTORESETUP" targetNamespace="http://www.tempuri.org/DSFrmSTORESETUP.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmSTORESETUP.xsd" xmlns="http://www.tempuri.org/DSFrmSTORESETUP.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmSTORESETUP" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Store_Setup">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_sales_tax">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_sales_tax" type="xs:string" />
+							<xs:element name="desc_sales_tax" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="employee_name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_zipcode">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="state" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Store_Setup" />
+			<xs:field xpath="mstns:STORENO" />
+		</xs:unique>
+		<xs:unique name="cust_sales_tax_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_sales_tax" />
+			<xs:field xpath="mstns:cod_sales_tax" />
+		</xs:unique>
+		<xs:unique name="employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:employee_code" />
+		</xs:unique>
+		<xs:unique name="GL_account_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_account" />
+			<xs:field xpath="mstns:GL_account" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

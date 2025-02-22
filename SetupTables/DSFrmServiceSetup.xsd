@@ -1,0 +1,230 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmServiceSetup" targetNamespace="http://www.tempuri.org/DSFrmServiceSetup.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmServiceSetup.xsd" xmlns="http://www.tempuri.org/DSFrmServiceSetup.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmServiceSetup" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="bas_zipcode">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="state" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_tab_class">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_class" type="xs:string" />
+							<xs:element name="desc_class" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_tab_source">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_source" type="xs:string" />
+							<xs:element name="desc_source" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_tab_territory">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_territory" type="xs:string" />
+							<xs:element name="desc_territory" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_tab_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_type" type="xs:string" />
+							<xs:element name="desc_type" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_oil_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_oil_type" type="xs:string" />
+							<xs:element name="desc_oil_type" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_quarts">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_quarts" type="xs:string" />
+							<xs:element name="desc_quarts" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_vehicle_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vehicle_type" type="xs:string" />
+							<xs:element name="desc_vehicle_type" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_service_category">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="service_category" type="xs:string" />
+							<xs:element name="desc_srvice_category" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_service_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="service_type" type="xs:string" />
+							<xs:element name="service_type_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="asset_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="cost_goods_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="income_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="return_GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_line">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="features" type="xs:string" minOccurs="0" />
+							<xs:element name="benefits" type="xs:string" minOccurs="0" />
+							<xs:element name="treadwear" type="xs:string" minOccurs="0" />
+							<xs:element name="traction" type="xs:string" minOccurs="0" />
+							<xs:element name="temperature" type="xs:string" minOccurs="0" />
+							<xs:element name="limit_warranty" type="xs:string" minOccurs="0" />
+							<xs:element name="construction" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="image_remark" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="tread_life" type="xs:string" minOccurs="0" />
+							<xs:element name="wet_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="quiet_ride" type="xs:string" minOccurs="0" />
+							<xs:element name="handling" type="xs:string" minOccurs="0" />
+							<xs:element name="winter_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="nud_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="overall_score" type="xs:string" minOccurs="0" />
+							<xs:element name="dry_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="ride_comfort" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_buyer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="buyer_id" type="xs:string" />
+							<xs:element name="desc_buyer" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_vendor_class">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="class_vendor" type="xs:string" />
+							<xs:element name="desc_class" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_vendor_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="vendor_type" type="xs:string" />
+							<xs:element name="desc_vendor_type" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_expense_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="STORE_SETUP">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_TAB_AR_TERM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AR_terms" type="xs:string" />
+							<xs:element name="KIND_AR" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_NET_DUE_IN" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ST_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_NET_DUE_BEFORE" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_IF_ISSUED_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DD_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_NO_OF_PAYMENT" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_BEFORE_DAY" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_tab_class" />
+			<xs:field xpath="mstns:cod_class" />
+		</xs:unique>
+		<xs:unique name="cust_tab_source_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_tab_source" />
+			<xs:field xpath="mstns:cod_source" />
+		</xs:unique>
+		<xs:unique name="cust_tab_territory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_tab_territory" />
+			<xs:field xpath="mstns:cod_territory" />
+		</xs:unique>
+		<xs:unique name="cust_tab_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_tab_type" />
+			<xs:field xpath="mstns:cod_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_oil_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_oil_type" />
+			<xs:field xpath="mstns:cod_oil_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_quarts_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_quarts" />
+			<xs:field xpath="mstns:cod_quarts" />
+		</xs:unique>
+		<xs:unique name="inv_tab_vehicle_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_vehicle_type" />
+			<xs:field xpath="mstns:cod_vehicle_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_service_category_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_service_category" />
+			<xs:field xpath="mstns:service_category" />
+		</xs:unique>
+		<xs:unique name="inv_tab_service_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_service_type" />
+			<xs:field xpath="mstns:service_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_line_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_line" />
+			<xs:field xpath="mstns:line" />
+		</xs:unique>
+		<xs:unique name="inv_buyer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_buyer" />
+			<xs:field xpath="mstns:buyer_id" />
+		</xs:unique>
+		<xs:unique name="inv_tab_vendor_class_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_vendor_class" />
+			<xs:field xpath="mstns:class_vendor" />
+		</xs:unique>
+		<xs:unique name="inv_tab_vendor_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_vendor_type" />
+			<xs:field xpath="mstns:vendor_type" />
+		</xs:unique>
+		<xs:unique name="GL_TAB_AR_TERM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_TAB_AR_TERM" />
+			<xs:field xpath="mstns:AR_terms" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

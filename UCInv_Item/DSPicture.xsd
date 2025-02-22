@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSPicture" targetNamespace="http://www.tempuri.org/DSPicture.xsd" xmlns:mstns="http://www.tempuri.org/DSPicture.xsd" xmlns="http://www.tempuri.org/DSPicture.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSPicture" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="inv_tab_line">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="line" type="xs:string" />
+              <xs:element name="image_remark" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="item_no" type="xs:string" />
+              <xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_line" />
+      <xs:field xpath="mstns:line" />
+    </xs:unique>
+    <xs:unique name="inv_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_item" />
+      <xs:field xpath="mstns:item_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,164 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmReceiveReturnProduct" targetNamespace="http://www.tempuri.org/DSFrmReceiveReturnProduct.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmReceiveReturnProduct.xsd" xmlns="http://www.tempuri.org/DSFrmReceiveReturnProduct.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmReceiveReturnProduct" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Inv_Receive_Products_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_receive_ref" type="xs:string" />
+							<xs:element name="date_receive" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="bill_credit" type="xs:string" minOccurs="0" />
+							<xs:element name="bill_receive" type="xs:boolean" minOccurs="0" />
+							<xs:element name="ap_term" type="xs:string" minOccurs="0" />
+							<xs:element name="receipt_bill_date" type="xs:string" minOccurs="0" />
+							<xs:element name="vendor_ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="house_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="vend_comments" type="xs:string" minOccurs="0" />
+							<xs:element name="Discount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="prepaid" type="xs:boolean" minOccurs="0" msprop:nullValue="0" nillable="0"
+								default="0" />
+							<xs:element name="tax" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LOGO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cologo" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_Receive_product_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_receive_ref" type="xs:string" />
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="InvItemCost" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="ExCost" type="xs:float" minOccurs="0" />
+							<xs:element name="wieght_lbs" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="frieght" type="xs:float" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="InvItemCost" type="xs:float" minOccurs="0" />
+							<xs:element name="cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_purchase_order_dtl2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="po_no" type="xs:string" />
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_TAB_AR_TERM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AR_terms" type="xs:string" />
+							<xs:element name="KIND_AR" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_NET_DUE_IN" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ST_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_NET_DUE_BEFORE" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_IF_ISSUED_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DD_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_NO_OF_PAYMENT" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_BEFORE_DAY" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_Receive_product_Ap_Dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_Inv_Receive_product_Ap_Dtl" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1"
+								type="xs:int" />
+							<xs:element name="id_receive_ref" type="xs:string" />
+							<xs:element name="amount" type="xs:decimal" />
+							<xs:element name="due_date" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Ap_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="due_date" type="xs:string" />
+							<xs:element name="amount" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_vendor_credit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_vendor_credit" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="date_credit" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_credit" type="xs:decimal" />
+							<xs:element name="Remark" type="xs:string" minOccurs="0" />
+							<xs:element name="ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="id_vendor_credit_head" type="xs:int" minOccurs="0" />
+							<xs:element name="id_receive_ref" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Inv_Receive_Products_head" />
+			<xs:field xpath="mstns:id_receive_ref" />
+		</xs:unique>
+		<xs:unique name="Inv_purchase_order_dtl2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Inv_purchase_order_dtl2" />
+			<xs:field xpath="mstns:po_no" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="GL_TAB_AR_TERM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_TAB_AR_TERM" />
+			<xs:field xpath="mstns:AR_terms" />
+		</xs:unique>
+		<xs:unique name="Inv_Receive_product_Ap_Dtl_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Inv_Receive_product_Ap_Dtl" />
+			<xs:field xpath="mstns:ID_Inv_Receive_product_Ap_Dtl" />
+		</xs:unique>
+		<xs:unique name="GL_vendor_credit_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_vendor_credit" />
+			<xs:field xpath="mstns:id_vendor_credit" />
+		</xs:unique>
+		<xs:keyref name="Inv_Receive_Products_headInv_Receive_product_Ap_Dtl" refer="mstns:Constraint1">
+			<xs:selector xpath=".//mstns:Inv_Receive_product_Ap_Dtl" />
+			<xs:field xpath="mstns:id_receive_ref" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

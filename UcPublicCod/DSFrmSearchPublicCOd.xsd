@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmSearchPublicCOd" targetNamespace="http://www.tempuri.org/DSFrmSearchPublicCOd.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmSearchPublicCOd.xsd" xmlns="http://www.tempuri.org/DSFrmSearchPublicCOd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmSearchPublicCOd" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="inv_tab_public">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_main" type="xs:string" />
+              <xs:element name="cod_table_public" type="xs:string" />
+              <xs:element name="desc_table" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_tab_public" />
+      <xs:field xpath="mstns:cod_main" />
+      <xs:field xpath="mstns:cod_table_public" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

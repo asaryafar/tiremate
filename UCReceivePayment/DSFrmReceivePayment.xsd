@@ -1,0 +1,188 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmReceivePayment" targetNamespace="http://www.tempuri.org/DSFrmReceivePayment.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmReceivePayment.xsd" xmlns="http://www.tempuri.org/DSFrmReceivePayment.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmReceivePayment" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="bas_cc_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cc_type" type="xs:string" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LOGO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cologo" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag_deposit_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+							<xs:element name="Paid_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ID_payment_due" msdata:ReadOnly="true" type="xs:int" />
+							<xs:element name="Discount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Store_Setup">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Refrence_no" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_deposit_Detail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_payment_due" type="xs:int" />
+							<xs:element name="ID_payment_Paid" type="xs:int" />
+							<xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GridRecord">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="InvoiceNo" type="xs:string" />
+							<xs:element name="InvoiceDate" type="xs:string" minOccurs="0" />
+							<xs:element name="OriginalAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Payment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CheckFlag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AmountDue" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OldPayment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DateForSort" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="Discount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="ThisTableID" msdata:AutoIncrement="true" type="xs:long" />
+							<xs:element name="ID_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="StoreNo" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_Adj_Flag" type="xs:int" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account_adjustment_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="InvoiceNo" type="xs:string" />
+							<xs:element name="InvoiceDate" type="xs:string" minOccurs="0" />
+							<xs:element name="Payment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="CheckFlag" type="xs:int" minOccurs="0" />
+							<xs:element name="DateForSort" type="xs:string" minOccurs="0" />
+							<xs:element name="Discount" type="xs:int" minOccurs="0" />
+							<xs:element name="OriginalAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="InvoiceNo" type="xs:string" />
+							<xs:element name="InvoiceDate" type="xs:string" minOccurs="0" />
+							<xs:element name="OriginalAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" type="xs:decimal" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="Discount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="Discount1" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DateForSort" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="Payment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AR_Adj_Flag" type="xs:int" minOccurs="0" />
+							<xs:element name="CheckFlag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_deposit_ForAdj">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="refrence_no_Adjustment" type="xs:string" minOccurs="0" />
+							<xs:element name="flag_deposit_bank" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_debit_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_debit_deposit" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_debit_deposit_head" type="xs:int" minOccurs="0" />
+							<xs:element name="type_transaction" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="id_check" type="xs:int" minOccurs="0" />
+							<xs:element name="id_transfer" type="xs:int" minOccurs="0" />
+							<xs:element name="id_external_cash" type="xs:int" minOccurs="0" />
+							<xs:element name="id_ATM" type="xs:int" minOccurs="0" />
+							<xs:element name="id_adjustment_no" type="xs:int" minOccurs="0" />
+							<xs:element name="debit_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="deposit_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="Cleared_bank" type="xs:boolean" />
+							<xs:element name="Memo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_cc_type" />
+			<xs:field xpath="mstns:cc_type" />
+		</xs:unique>
+		<xs:unique name="GL_account_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_account" />
+			<xs:field xpath="mstns:GL_account" />
+		</xs:unique>
+		<xs:unique name="DSFrmReceivePaymentKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Store_Setup" />
+			<xs:field xpath="mstns:STORENO" />
+		</xs:unique>
+		<xs:unique name="GL_payment_deposit_Detail_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_payment_deposit_Detail" />
+			<xs:field xpath="mstns:ID_payment_due" />
+			<xs:field xpath="mstns:ID_payment_Paid" />
+		</xs:unique>
+		<xs:unique name="DSFrmReceivePaymentKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GridRecord" />
+			<xs:field xpath="mstns:ThisTableID" />
+		</xs:unique>
+		<xs:unique name="GL_debit_deposit_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_debit_deposit" />
+			<xs:field xpath="mstns:id_debit_deposit" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmEmployeeBonus" targetNamespace="http://www.tempuri.org/DSFrmEmployeeBonus.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmEmployeeBonus.xsd" xmlns="http://www.tempuri.org/DSFrmEmployeeBonus.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmEmployeeBonus" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="pay_main_employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_pay_period" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="Other_Pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="PayrollDate" type="xs:string" minOccurs="0" />
+							<xs:element name="PaymentFlag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="gross_pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_check" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_banks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_tab_federal_tax_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="over_" type="xs:decimal" minOccurs="0" />
+							<xs:element name="but_not_over" type="xs:decimal" minOccurs="0" />
+							<xs:element name="percent_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dollor_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_federal_tax" type="xs:int" />
+							<xs:element name="withholding_allownce" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="stat_code" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_tab_state_tax_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="over_" type="xs:decimal" minOccurs="0" />
+							<xs:element name="but_not_over" type="xs:decimal" minOccurs="0" />
+							<xs:element name="percent_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_state_tax" type="xs:int" />
+							<xs:element name="standard_deduction" type="xs:decimal" minOccurs="0" />
+							<xs:element name="personal_allowance" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dependent_allowance" type="xs:decimal" minOccurs="0" />
+							<xs:element name="stat_code" type="xs:string" />
+							<xs:element name="dollor_tax" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_banks" />
+			<xs:field xpath="mstns:id_bank" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

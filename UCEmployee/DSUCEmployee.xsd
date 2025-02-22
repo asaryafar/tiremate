@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSUCEmployee" targetNamespace="http://www.tempuri.org/DSUCEmployee.xsd" xmlns:mstns="http://www.tempuri.org/DSUCEmployee.xsd"
+	xmlns="http://www.tempuri.org/DSUCEmployee.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSUCEmployee" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="employee_department">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_deparment" type="xs:string" />
+							<xs:element name="desc_department" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_expense_account" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_department_master" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee_position">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_position" type="xs:string" />
+							<xs:element name="desc_position" type="xs:string" minOccurs="0" />
+							<xs:element name="service_ok" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="m_name" type="xs:string" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+							<xs:element name="technecian" type="xs:boolean" minOccurs="0" />
+							<xs:element name="social_security_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_position" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_deparment" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_1" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_2" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_2" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_3" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_3" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_4" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_4" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_5" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_5" type="xs:boolean" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="notes" type="xs:string" minOccurs="0" />
+							<xs:element name="pic" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="birthday_date" type="xs:string" minOccurs="0" />
+							<xs:element name="hired_date" type="xs:string" minOccurs="0" />
+							<xs:element name="last_reiew_date" type="xs:string" minOccurs="0" />
+							<xs:element name="terminate_date" type="xs:string" minOccurs="0" />
+							<xs:element name="temporary_inactive" type="xs:boolean" minOccurs="0" />
+							<xs:element name="last_basis" type="xs:string" minOccurs="0" />
+							<xs:element name="last_period" type="xs:string" minOccurs="0" />
+							<xs:element name="last_status" type="xs:string" minOccurs="0" />
+							<xs:element name="last_salary" type="xs:decimal" minOccurs="0" />
+							<xs:element name="last_hourly" type="xs:decimal" minOccurs="0" />
+							<xs:element name="last_overtime" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Last_raise_date" type="xs:string" minOccurs="0" />
+							<xs:element name="Allowance_Federal" type="xs:short" minOccurs="0" />
+							<xs:element name="Allowance_state" type="xs:short" minOccurs="0" />
+							<xs:element name="Allowance_depndnts" type="xs:short" minOccurs="0" />
+							<xs:element name="Terminated" type="xs:boolean" minOccurs="0" />
+							<xs:element name="SalesPerson" type="xs:boolean" minOccurs="0" />
+							<xs:element name="UsePunchClock" type="xs:boolean" minOccurs="0" />
+							<xs:element name="StoreNo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Store_Setup">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee_department" />
+			<xs:field xpath="mstns:cod_deparment" />
+		</xs:unique>
+		<xs:unique name="employee_position_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee_position" />
+			<xs:field xpath="mstns:cod_position" />
+		</xs:unique>
+		<xs:unique name="employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:employee_code" />
+		</xs:unique>
+		<xs:key name="DSUCEmployeeKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Store_Setup" />
+			<xs:field xpath="mstns:STORENO" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

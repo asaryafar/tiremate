@@ -1,0 +1,366 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrintARCus" targetNamespace="http://www.tempuri.org/DSFrmPrintARCus.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmPrintARCus.xsd" xmlns="http://www.tempuri.org/DSFrmPrintARCus.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrintARCus" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CusChargeDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="Total" type="xs:decimal" minOccurs="0" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="payment4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adjustment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Due_Date" type="xs:date" minOccurs="0" />
+							<xs:element name="days_past" type="xs:string" minOccurs="0" />
+							<xs:element name="ar_term" type="xs:string" minOccurs="0" />
+							<xs:element name="debt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Adjustment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="adjustment" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Deposit2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="payment2" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Deposit4">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="payment4" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusChargeSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="NoInvoice" type="xs:int" minOccurs="0" />
+							<xs:element name="total" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adjustment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="debt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusARPayment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="date_receive_payment" type="xs:string" minOccurs="0" />
+							<xs:element name="refrence_no" type="xs:string" />
+							<xs:element name="amount_receive" type="xs:float" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="cod_company" type="xs:string" minOccurs="0" />
+							<xs:element name="pmt_method" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="overpay" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusARPaymentSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="AMOUNT" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="NoPay" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="overpay" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusARLedgerDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:string" minOccurs="0" />
+							<xs:element name="id" type="xs:string" />
+							<xs:element name="charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adj" type="xs:decimal" minOccurs="0" />
+							<xs:element name="due" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderDate" type="xs:string" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="Paid_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Down" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OVERPAID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusARLedgerSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adj" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="Paid_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Down" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OVERPAID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Balance" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FCalc" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusDuePastDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="Total" type="xs:decimal" minOccurs="0" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_2" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_notes" type="xs:string" minOccurs="0" />
+							<xs:element name="payment4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adjustment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="due_date" type="xs:date" minOccurs="0" />
+							<xs:element name="days_past" type="xs:int" minOccurs="0" />
+							<xs:element name="ar_term" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="debt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusDuePastSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="payment4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adjustment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="debt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="last_pay" type="xs:date" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_receive" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Aging">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="BalanceAmount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="c1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c3" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="c5" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="customerdue">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="c1" type="xs:string" minOccurs="0" />
+							<xs:element name="c2" type="xs:string" minOccurs="0" />
+							<xs:element name="c3" type="xs:string" minOccurs="0" />
+							<xs:element name="c4" type="xs:string" minOccurs="0" />
+							<xs:element name="c5" type="xs:string" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AgingDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="due" type="xs:string" minOccurs="0" />
+							<xs:element name="pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="paid" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id1" type="xs:string" minOccurs="0" />
+							<xs:element name="id2" type="xs:string" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PastDue">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="xs:string" />
+							<xs:element name="due" type="xs:string" minOccurs="0" />
+							<xs:element name="pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="paid" type="xs:decimal" minOccurs="0" />
+							<xs:element name="days" type="xs:int" minOccurs="0" />
+							<xs:element name="ARTerm" type="xs:string" minOccurs="0" />
+							<xs:element name="id1" type="xs:string" minOccurs="0" />
+							<xs:element name="id2" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_trtab_main">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="NoInvoice" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="total" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="payment4" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="payment2" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="adjustment" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="payment_amount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CusARLedgerDetail1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:string" minOccurs="0" />
+							<xs:element name="id" type="xs:string" />
+							<xs:element name="charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="credit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="adj" type="xs:decimal" minOccurs="0" />
+							<xs:element name="due" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="FlagShow" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderDate" type="xs:string" minOccurs="0" />
+							<xs:element name="ShowEmptyLine" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderName" type="xs:string" minOccurs="0" />
+							<xs:element name="Paid_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Down" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OVERPAID" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Balance" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DetailPaySum">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="f_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="date_receive_payment" type="xs:date" minOccurs="0" />
+							<xs:element name="refrence_no" type="xs:string" />
+							<xs:element name="amount_receive" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_company" type="xs:string" minOccurs="0" />
+							<xs:element name="pmt_method" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="other" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="OrderName" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="overpay" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DetailPayDtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="payment_amount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="refrence_no" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSFrmPrintARCusKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CusChargeSummery" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="DSFrmPrintARCusKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CusDuePastSummery" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="DSFrmPrintARCusKey7" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Aging" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="DSFrmPrintARCusKey8" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:customerdue" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="DSFrmPrintARCusKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:DetailPaySum" />
+			<xs:field xpath="mstns:refrence_no" />
+		</xs:unique>
+		<xs:keyref name="DetailPaySumDetailPayDtl" refer="mstns:DSFrmPrintARCusKey1">
+			<xs:selector xpath=".//mstns:DetailPayDtl" />
+			<xs:field xpath="mstns:refrence_no" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,199 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSInv_Item" targetNamespace="http://www.tempuri.org/DSInv_Item.xsd" xmlns:mstns="http://www.tempuri.org/DSInv_Item.xsd"
+	xmlns="http://www.tempuri.org/DSInv_Item.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSInv_Item" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_item_quick_refrence">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_quick_refrence" type="xs:string" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Month" type="xs:int" minOccurs="0" />
+							<xs:element name="SumQty" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="SumPrice" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Spicification">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="col1" type="xs:string" minOccurs="0" />
+							<xs:element name="col2" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="col3" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="col4" type="xs:string" minOccurs="0" />
+							<xs:element name="col5" type="xs:string" minOccurs="0" />
+							<xs:element name="col6" type="xs:string" minOccurs="0" />
+							<xs:element name="col7" type="xs:string" minOccurs="0" />
+							<xs:element name="col8" type="xs:string" minOccurs="0" />
+							<xs:element name="col9" type="xs:string" minOccurs="0" />
+							<xs:element name="col10" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item_vendor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="ven_part_no" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_type_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_item_type" type="xs:string" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Inv_ItemWheel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="cod_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="style" type="xs:string" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="upc" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="abbreviation_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_line" type="xs:string" minOccurs="0" />
+							<xs:element name="on_hand" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price1" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="treadwear" type="xs:string" minOccurs="0" />
+							<xs:element name="traction" type="xs:string" minOccurs="0" />
+							<xs:element name="temperature" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_onsale" type="xs:boolean" minOccurs="0" />
+							<xs:element name="amount_spiff" type="xs:boolean" minOccurs="0" />
+							<xs:element name="desc_table" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="wheel_size" type="xs:string" minOccurs="0" />
+							<xs:element name="ofset" type="xs:string" minOccurs="0" />
+							<xs:element name="bolt_pattern" type="xs:string" minOccurs="0" />
+							<xs:element name="max_diameter" type="xs:string" minOccurs="0" />
+							<xs:element name="lug_size" type="xs:string" minOccurs="0" />
+							<xs:element name="ReplcamentCost" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_ItemAutoPart">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="cod_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="style" type="xs:string" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="upc" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="abbreviation_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_line" type="xs:string" minOccurs="0" />
+							<xs:element name="on_hand" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price1" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="treadwear" type="xs:string" minOccurs="0" />
+							<xs:element name="traction" type="xs:string" minOccurs="0" />
+							<xs:element name="temperature" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_onsale" type="xs:boolean" minOccurs="0" />
+							<xs:element name="amount_spiff" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="core_cost" type="xs:float" minOccurs="0" />
+							<xs:element name="ReplcamentCost" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Store_Setup">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="cod_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="style" type="xs:string" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="upc" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="abbreviation_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_line" type="xs:string" minOccurs="0" />
+							<xs:element name="on_hand" msdata:ReadOnly="true" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price1" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="treadwear" type="xs:string" minOccurs="0" />
+							<xs:element name="traction" type="xs:string" minOccurs="0" />
+							<xs:element name="temperature" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_onsale" type="xs:boolean" minOccurs="0" />
+							<xs:element name="amount_spiff" type="xs:boolean" minOccurs="0" />
+							<xs:element name="service_description" type="xs:string" minOccurs="0" />
+							<xs:element name="tire_size" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_table" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="cod_warehouse" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_location" type="xs:string" minOccurs="0" />
+							<xs:element name="ReplcamentCost" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="printitemdetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="itemno" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:int" minOccurs="0" />
+							<xs:element name="price" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FEt" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Etension" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+						<xs:attribute name="check1" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_item_quick_refrence" />
+			<xs:field xpath="mstns:cod_quick_refrence" />
+		</xs:unique>
+		<xs:unique name="inv_tab_type_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_type_item" />
+			<xs:field xpath="mstns:cod_item_type" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

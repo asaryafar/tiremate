@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmOutsidePurchase" targetNamespace="http://www.tempuri.org/DSFrmOutsidePurchase.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmOutsidePurchase.xsd" xmlns="http://www.tempuri.org/DSFrmOutsidePurchase.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmOutsidePurchase" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_tab_line">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_TAB_AR_TERM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AR_terms" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DSFrmOutsidePurchaseKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_line" />
+			<xs:field xpath="mstns:line" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

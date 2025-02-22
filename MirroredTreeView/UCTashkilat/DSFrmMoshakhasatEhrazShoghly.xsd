@@ -1,0 +1,128 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmMoshakhasatEhrazShoghly" targetNamespace="http://www.tempuri.org/DSFrmMoshakhasatEhrazShoghly.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmMoshakhasatEhrazShoghly.xsd" xmlns="http://www.tempuri.org/DSFrmMoshakhasatEhrazShoghly.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmMoshakhasatEhrazShoghly" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="tas_bas_group_estekhdami">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desc_group_estekhdami" type="xs:string" />
+              <xs:element name="code_group_estekhdami" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_bas_madrak_tahsili">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_madrak_tahsili" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="desc_madrak_tahsili" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_bas_rasteh">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_rasteh" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="desc_rasteh" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_bas_reshteh_shoghli">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_reshteh_shoghli" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="desc_reshteh_shoghli" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_bas_reshteh_tahsili">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_reshteh_tahsili" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="desc_reshteh_tahsili" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_tr_shoghlha_madrak_reshteha">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_madrak_tahsili" type="xs:short" />
+              <xs:element name="code_reshteh_tahsili" type="xs:short" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="code_bandar" type="xs:string" />
+              <xs:element name="code_markaz" type="xs:short" minOccurs="0" />
+              <xs:element name="desc_reshteh_tahsili" type="xs:string" />
+              <xs:element name="flag" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtGrdReshteMadrak">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_reshteh_tahsili" type="xs:string" minOccurs="0" />
+              <xs:element name="desc_reshteh_tahsili" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DtGrdMadrak">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code_madrak_tahsili" type="xs:string" />
+              <xs:element name="code_reshteh_tahsili" type="xs:string" />
+              <xs:element name="desc_madrak_tahsili" type="xs:string" minOccurs="0" />
+              <xs:element name="flag" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tas_tr_rasteh_reshteh">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_rasteh_reshteh" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+              <xs:element name="code_rasteh" type="xs:short" />
+              <xs:element name="code_reshteh_shoghli" type="xs:short" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="code_bandar" type="xs:short" />
+              <xs:element name="code_group_estekhdami_from" type="xs:string" minOccurs="0" />
+              <xs:element name="code_group_estekhdami_to" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_bas_group_estekhdami" />
+      <xs:field xpath="mstns:code_group_estekhdami" />
+    </xs:unique>
+    <xs:unique name="tas_bas_madrak_tahsili_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_bas_madrak_tahsili" />
+      <xs:field xpath="mstns:code_madrak_tahsili" />
+    </xs:unique>
+    <xs:unique name="tas_bas_rasteh_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_bas_rasteh" />
+      <xs:field xpath="mstns:code_rasteh" />
+    </xs:unique>
+    <xs:unique name="tas_bas_reshteh_shoghli_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_bas_reshteh_shoghli" />
+      <xs:field xpath="mstns:code_reshteh_shoghli" />
+    </xs:unique>
+    <xs:unique name="tas_bas_reshteh_tahsili_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_bas_reshteh_tahsili" />
+      <xs:field xpath="mstns:code_reshteh_tahsili" />
+    </xs:unique>
+    <xs:unique name="DSFrmMoshakhasatEhrazShoghlyKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_tr_shoghlha_madrak_reshteha" />
+      <xs:field xpath="mstns:code_madrak_tahsili" />
+      <xs:field xpath="mstns:code_reshteh_tahsili" />
+    </xs:unique>
+    <xs:unique name="DSFrmMoshakhasatEhrazShoghlyKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DtGrdMadrak" />
+      <xs:field xpath="mstns:code_madrak_tahsili" />
+      <xs:field xpath="mstns:code_reshteh_tahsili" />
+    </xs:unique>
+    <xs:unique name="tas_tr_rasteh_reshteh_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tas_tr_rasteh_reshteh" />
+      <xs:field xpath="mstns:id_rasteh_reshteh" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,54 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmRepTechnicians" targetNamespace="http://www.tempuri.org/DSFrmRepTechnicians.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmRepTechnicians.xsd" xmlns="http://www.tempuri.org/DSFrmRepTechnicians.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmRepTechnicians" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="col1" type="xs:string" minOccurs="0" />
+							<xs:element name="col2" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee_position">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="col1" type="xs:string" minOccurs="0" />
+							<xs:element name="col2" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FUTA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="social_security_no" type="xs:string" minOccurs="0" msdata:ReadOnly="false" />
+							<xs:element name="gross_pay" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FUTA" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EXCEED" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Taxable" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+		<xs:unique name="employee_position_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee_position" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,108 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsAssessFinanceCharge" targetNamespace="http://www.tempuri.org/DsAssessFinanceCharge.xsd" xmlns:mstns="http://www.tempuri.org/DsAssessFinanceCharge.xsd" xmlns="http://www.tempuri.org/DsAssessFinanceCharge.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsAssessFinanceCharge" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="assess">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Assess" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="LastFinanceCharge" type="xs:string" />
+              <xs:element name="CustomerName" type="xs:string" />
+              <xs:element name="Company" type="xs:string" minOccurs="0" />
+              <xs:element name="PastDueAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinanceCharge" type="xs:double" minOccurs="0" />
+              <xs:element name="cod_customer" type="xs:string" />
+              <xs:element name="FinanceChargeDay" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bedehi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+              <xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="payment_type" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+              <xs:element name="Company" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AssessDtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FinanceCharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cod_customer" type="xs:string" />
+              <xs:element name="id_service_center" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pardakt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="datepardakht" type="xs:string" minOccurs="0" />
+              <xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+              <xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_payment_due" type="xs:int" />
+              <xs:element name="ID_payment_Paid" type="xs:int" />
+              <xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cod_customer" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account_adjustment_head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_customer" type="xs:string" />
+              <xs:element name="Sumamount_adjustment" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+              <xs:element name="id_service_center" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_vendor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="selected" msdata:ReadOnly="true" type="xs:boolean" minOccurs="0" />
+              <xs:element name="cod_vendor" type="xs:string" />
+              <xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AllDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_vendor" type="xs:string" />
+              <xs:element name="ID_AP_payment" type="xs:int" />
+              <xs:element name="id_vendor_credit_head" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DsAssessFinanceChargeKey3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:assess" />
+      <xs:field xpath="mstns:cod_customer" />
+    </xs:unique>
+    <xs:unique name="DsAssessFinanceChargeKey4" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AssessDtl" />
+      <xs:field xpath="mstns:cod_customer" />
+      <xs:field xpath="mstns:id_service_center" />
+    </xs:unique>
+    <xs:unique name="DsAssessFinanceChargeKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_adjustment_head" />
+      <xs:field xpath="mstns:cod_customer" />
+      <xs:field xpath="mstns:id_service_center" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:inv_vendor" />
+      <xs:field xpath="mstns:cod_vendor" />
+    </xs:unique>
+    <xs:keyref name="assessAssessDtl" refer="DsAssessFinanceChargeKey3">
+      <xs:selector xpath=".//mstns:AssessDtl" />
+      <xs:field xpath="mstns:cod_customer" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

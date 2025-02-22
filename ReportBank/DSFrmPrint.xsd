@@ -1,0 +1,141 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrint" targetNamespace="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmPrint.xsd"
+	xmlns="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrint" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="CheckDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:date" minOccurs="0" />
+							<xs:element name="address_payee" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_check" type="xs:decimal" minOccurs="0" />
+							<xs:element name="memo_check" type="xs:string" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagVendor" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CheckSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="GL_Account" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="Gl_account_group_subgroup1_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ATMDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_ATM" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="date_transaction" type="xs:date" minOccurs="0" />
+							<xs:element name="payee" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_ATM" type="xs:decimal" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="flagVendor" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Transfer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="date_transfer" type="xs:date" minOccurs="0" />
+							<xs:element name="amount_transfer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FrmBank" type="xs:string" minOccurs="0" />
+							<xs:element name="ToBank" type="xs:string" minOccurs="0" />
+							<xs:element name="memo" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Adjustment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="adjustment_date" type="xs:date" />
+							<xs:element name="Id_Adjustment_no" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="deposit_amount" type="xs:decimal" />
+							<xs:element name="debit_amount" type="xs:decimal" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CheckByAcountDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:date" minOccurs="0" />
+							<xs:element name="address_payee" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="GL_Account" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:string" minOccurs="0" msprop:nullValue="_empty" />
+							<xs:element name="FlagBank" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DepositListDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="date_doc" type="xs:date" minOccurs="0" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="deposit_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="id_debit_deposit_head" type="xs:int" minOccurs="0" />
+							<xs:element name="payment" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="check_no" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DepositListSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_debit_deposit_head" type="xs:int" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+							<xs:element name="amount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="date_doc" type="xs:date" minOccurs="0" />
+							<xs:element name="CashBank" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Net" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_cc_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cc_type" type="xs:string" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

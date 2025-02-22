@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmSearchSize" targetNamespace="http://www.tempuri.org/DSFrmSearchSize.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmSearchSize.xsd" xmlns="http://www.tempuri.org/DSFrmSearchSize.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmSearchSize" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="bas_vehicle_size">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_vehicle" type="xs:string" />
+              <xs:element name="cod_main" type="xs:string" />
+              <xs:element name="cod_size_main" type="xs:string" />
+              <xs:element name="cod_size_option" type="xs:string" minOccurs="0" />
+              <xs:element name="Desc_Main" type="xs:string" minOccurs="0" />
+              <xs:element name="Desc_Option" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_make" type="xs:string" />
+              <xs:element name="cod_model" type="xs:string" />
+              <xs:element name="make_year" type="xs:string" />
+              <xs:element name="options" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

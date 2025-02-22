@@ -1,0 +1,153 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrint" targetNamespace="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmPrint.xsd"
+	xmlns="http://www.tempuri.org/DSFrmPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrint" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_price" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_position" type="xs:string" minOccurs="0" />
+							<xs:element name="FEmp" type="xs:boolean" minOccurs="0" />
+							<xs:element name="fpos" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_select" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cost" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="svc" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="cat" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="type" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" minOccurs="0" />
+							<xs:element name="ext_Price" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="gross" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_cost" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl_Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="true" type="xs:boolean" minOccurs="0" />
+							<xs:element name="ext_Price" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ext_cost" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+							<xs:element name="gross" type="xs:decimal" minOccurs="0" msprop:nullValue="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PerformanceSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="price_Tire" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_Label" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_Fees" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_Out" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SaleDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="add_user" type="xs:short" minOccurs="0" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="price_Tire" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_Label" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_Fees" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="Fet" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_subtotal" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="tax" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="discount" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="total" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Name_customer" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="license_no_vehicle" type="xs:string" minOccurs="0" />
+							<xs:element name="Add_user_Name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Users">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserId" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="UserLogin" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Payroll">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="PayrollDate" type="xs:date" minOccurs="0" />
+							<xs:element name="loan" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="saving" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Advance" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Gurnish" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Federal" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Social" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Medicare" type="xs:decimal" minOccurs="0" msdata:ReadOnly="false" />
+							<xs:element name="StateTax" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="UnEmpTax" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="gross_pay" type="xs:decimal" minOccurs="0" msdata:ReadOnly="false" />
+							<xs:element name="NetPay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" msdata:ReadOnly="false" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FUTA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="name" msdata:ReadOnly="false" type="xs:string" minOccurs="0" />
+							<xs:element name="social_security_no" type="xs:string" minOccurs="0" msdata:ReadOnly="false" />
+							<xs:element name="gross_pay" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FUTA" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EXCEED" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Taxable" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:keyref name="service_center_dtl_Headerservice_center_dtl" refer="mstns:DSFrmPrintKey1">
+			<xs:selector xpath=".//mstns:service_center_dtl" />
+			<xs:field xpath="mstns:cod_technician" />
+		</xs:keyref>
+		<xs:unique name="DSFrmPrintKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_dtl_Header" />
+			<xs:field xpath="mstns:cod_technician" />
+		</xs:unique>
+		<xs:unique name="DSFrmPrintKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Users" />
+			<xs:field xpath="mstns:UserId" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmCashierForReturn" targetNamespace="http://www.tempuri.org/DSFrmCashierForReturn.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmCashierForReturn.xsd" xmlns="http://www.tempuri.org/DSFrmCashierForReturn.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmCashierForReturn" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="GL_account">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GL_account" type="xs:string" />
+              <xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+              <xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_cc_type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cc_type" type="xs:string" />
+              <xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_payment_deposit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_Paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_payment" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account" />
+      <xs:field xpath="mstns:GL_account" />
+    </xs:unique>
+    <xs:unique name="bas_cc_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_cc_type" />
+      <xs:field xpath="mstns:cc_type" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

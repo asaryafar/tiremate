@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmEmployeePunchClockCorrection" targetNamespace="http://www.tempuri.org/DSFrmEmployeePunchClockCorrection.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmEmployeePunchClockCorrection.xsd" xmlns="http://www.tempuri.org/DSFrmEmployeePunchClockCorrection.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmEmployeePunchClockCorrection" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="pay_punch_employee_in_out">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_punch_in" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="In_Time" type="xs:string" minOccurs="0" />
+							<xs:element name="action_date" type="xs:string" minOccurs="0" />
+							<xs:element name="punch_note_code" type="xs:string" minOccurs="0" />
+							<xs:element name="Out_Time" type="xs:string" minOccurs="0" />
+							<xs:element name="Hours" type="xs:string" minOccurs="0" />
+							<xs:element name="EmployeeFullName" type="xs:string" minOccurs="0" />
+							<xs:element name="id_punch_out" type="xs:int" minOccurs="0" />
+							<xs:element name="TotalHours" type="xs:string" minOccurs="0" />
+							<xs:element name="TotalDate" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:pay_punch_employee_in_out" />
+			<xs:field xpath="mstns:id_punch_in" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

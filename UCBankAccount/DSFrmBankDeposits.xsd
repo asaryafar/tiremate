@@ -1,0 +1,132 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmBankDeposits" targetNamespace="http://www.tempuri.org/DSFrmBankDeposits.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmBankDeposits.xsd" xmlns="http://www.tempuri.org/DSFrmBankDeposits.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmBankDeposits" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GL_transfer_amount">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_transfer" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_bank_from_transfer" type="xs:int" minOccurs="0" />
+							<xs:element name="id_bank_to_transfer" type="xs:int" minOccurs="0" />
+							<xs:element name="date_transfer" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_transfer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Memo" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_banks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_account">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GL_account" type="xs:string" />
+							<xs:element name="desc_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account_master" type="xs:string" minOccurs="0" />
+							<xs:element name="group_GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_trtab_main">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="CustomerFullName" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_cc_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cc_type" type="xs:string" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Pmt_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Payment_type" type="xs:string" />
+							<xs:element name="Payment_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_debit_deposit_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_debit_deposit_head" type="xs:int" />
+							<xs:element name="Expr1" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_debit_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="type_transaction" type="xs:string" minOccurs="0" />
+							<xs:element name="CustomerFullName" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="deposit_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="check_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="Memo" type="xs:string" minOccurs="0" />
+							<xs:element name="FlagCanEdit" type="xs:int" minOccurs="0" />
+							<xs:element name="id_external_cash" type="xs:int" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="deposit_amountForPrint" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Radif" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_debit_depositForEdit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="type_transaction" type="xs:string" minOccurs="0" />
+							<xs:element name="CustomerFullName" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="deposit_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ID_payment" type="xs:int" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="check_no" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="Memo" type="xs:string" minOccurs="0" />
+							<xs:element name="FlagCanEdit" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+							<xs:element name="id_external_cash" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_transfer_amount" />
+			<xs:field xpath="mstns:id_transfer" />
+		</xs:unique>
+		<xs:unique name="bas_banks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_banks" />
+			<xs:field xpath="mstns:id_bank" />
+		</xs:unique>
+		<xs:unique name="GL_account_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_account" />
+			<xs:field xpath="mstns:GL_account" />
+		</xs:unique>
+		<xs:unique name="bas_cc_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_cc_type" />
+			<xs:field xpath="mstns:cc_type" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

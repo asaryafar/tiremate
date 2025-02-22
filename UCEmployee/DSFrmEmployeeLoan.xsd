@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmEmployeeLoan" targetNamespace="http://www.tempuri.org/DSFrmEmployeeLoan.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmEmployeeLoan.xsd" xmlns="http://www.tempuri.org/DSFrmEmployeeLoan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmEmployeeLoan" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="pay_tab_loan_main">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="loan_cod" type="xs:string" />
+              <xs:element name="loan_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="max_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="before_tax" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pay_loan_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee_code" type="xs:string" />
+              <xs:element name="loan_cod" type="xs:string" />
+              <xs:element name="date_start" type="xs:string" />
+              <xs:element name="amount_loan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="costus" type="xs:decimal" minOccurs="0" />
+              <xs:element name="time_costus_pay" type="xs:short" minOccurs="0" />
+              <xs:element name="active" type="xs:boolean" minOccurs="0" />
+              <xs:element name="loan_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pay_tab_loan_main" />
+      <xs:field xpath="mstns:loan_cod" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

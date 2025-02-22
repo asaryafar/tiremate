@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSet1" targetNamespace="http://www.tempuri.org/DataSet1.xsd" xmlns:mstns="http://www.tempuri.org/DataSet1.xsd"
+	xmlns="http://www.tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSet1" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="service_out_purchases">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="amount" type="xs:decimal" />
+							<xs:element name="Due_Date" type="xs:string" />
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="DateTransaction" type="xs:string" minOccurs="0" />
+							<xs:element name="sumoriginalamount" type="xs:double" minOccurs="0" />
+							<xs:element name="sumpayment" type="xs:decimal" />
+							<xs:element name="vendorrefno" type="xs:string" minOccurs="0" />
+							<xs:element name="IDService_out_purchases_dtl" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

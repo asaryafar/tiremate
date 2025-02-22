@@ -1,0 +1,191 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmWorkOrders" targetNamespace="http://www.tempuri.org/DSFrmWorkOrders.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmWorkOrders.xsd" xmlns="http://www.tempuri.org/DSFrmWorkOrders.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmWorkOrders" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="employee_Name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="type_select" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_select" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" />
+							<xs:element name="price" type="xs:float" />
+							<xs:element name="fet" type="xs:float" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+							<xs:element name="COMMENT_ARTICLE" type="xs:string" minOccurs="0" />
+							<xs:element name="Ext_Price" type="xs:float" minOccurs="0" />
+							<xs:element name="FlagIsPackage" type="xs:int" default="0" minOccurs="0" />
+							<xs:element name="PricePlusFet" type="xs:float" minOccurs="0" />
+							<xs:element name="AVERAGE_COST" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="type_of_form" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="discount" type="xs:float" minOccurs="0" />
+							<xs:element name="tax" type="xs:float" minOccurs="0" />
+							<xs:element name="house_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="add_user" type="xs:short" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="abbreviation_name" type="xs:string" minOccurs="0" />
+							<xs:element name="chg_user" type="xs:short" minOccurs="0" />
+							<xs:element name="id_vehicle" type="xs:int" minOccurs="0" />
+							<xs:element name="id_service_center_before" type="xs:string" minOccurs="0" />
+							<xs:element name="license_no_vehicle" type="xs:string" minOccurs="0" />
+							<xs:element name="current_mileage" type="xs:float" minOccurs="0" />
+							<xs:element name="Total" type="xs:float" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_style">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LOGO">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cologo" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="ID" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_pakage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_pakage" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="type_select" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_select" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:float" minOccurs="0" />
+							<xs:element name="price" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_out_purchases">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="part_no" type="xs:string" minOccurs="0" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="fet" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price" type="xs:string" minOccurs="0" />
+							<xs:element name="markup" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" minOccurs="0" />
+							<xs:element name="invoice_no" type="xs:string" minOccurs="0" />
+							<xs:element name="invoice_date" type="xs:string" minOccurs="0" />
+							<xs:element name="due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="tracking_warranty" type="xs:boolean" minOccurs="0" />
+							<xs:element name="in_day" type="xs:short" minOccurs="0" />
+							<xs:element name="in_mile" type="xs:short" minOccurs="0" />
+							<xs:element name="tracking_core" type="xs:boolean" minOccurs="0" />
+							<xs:element name="core_value" type="xs:float" minOccurs="0" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Type_select">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_tire_adjustment">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="DOT_safety_code" type="xs:string" minOccurs="0" />
+							<xs:element name="DOT_serial_no" type="xs:string" minOccurs="0" />
+							<xs:element name="measured_tread_depth" type="xs:string" minOccurs="0" />
+							<xs:element name="condition_code" type="xs:string" minOccurs="0" />
+							<xs:element name="supplier_percent" type="xs:decimal" minOccurs="0" />
+							<xs:element name="costomer_portion" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AddUsers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserLogin" type="xs:string" minOccurs="0" />
+							<xs:element name="UserId" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ChgUsers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserLogin" type="xs:string" minOccurs="0" />
+							<xs:element name="UserId" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TempTable">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CustomerSigniture" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:employee_code" />
+		</xs:unique>
+		<xs:unique name="DSFrmWorkOrdersKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_dtl" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+		<xs:unique name="inv_tab_style_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_style" />
+			<xs:field xpath="mstns:style" />
+		</xs:unique>
+		<xs:unique name="inv_tab_pakage_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_pakage" />
+			<xs:field xpath="mstns:cod_pakage" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+		<xs:unique name="DSFrmWorkOrdersKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_out_purchases" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+		<xs:unique name="service_tire_adjustment_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_tire_adjustment" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

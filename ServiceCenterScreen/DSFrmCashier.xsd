@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmCashier" targetNamespace="http://www.tempuri.org/DSFrmCashier.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmCashier.xsd"
+	xmlns="http://www.tempuri.org/DSFrmCashier.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmCashier" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="bas_cc_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cc_type" type="xs:string" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cash_rendered" type="xs:decimal" minOccurs="0" />
+							<xs:element name="change_due" type="xs:decimal" minOccurs="0" />
+							<xs:element name="check_no" type="xs:string" minOccurs="0" />
+							<xs:element name="check_date" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_card_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_expire_date_year" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_expire_date_month" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_auth_no" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_TAB_AR_TERM">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AR_terms" type="xs:string" />
+							<xs:element name="KIND_AR" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_NET_DUE_IN" type="xs:short" minOccurs="0" />
+							<xs:element name="ST_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ST_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_NET_DUE_BEFORE" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_IF_ISSUED_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="DD_DISCOUNT_PERCENTAGE" type="xs:decimal" minOccurs="0" />
+							<xs:element name="DD_IF_PAY_WITHIN_DAYS" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_NO_OF_PAYMENT" type="xs:short" minOccurs="0" />
+							<xs:element name="MP_BEFORE_DAY" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_cc_type" />
+			<xs:field xpath="mstns:cc_type" />
+		</xs:unique>
+		<xs:unique name="GL_TAB_AR_TERM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_TAB_AR_TERM" />
+			<xs:field xpath="mstns:AR_terms" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

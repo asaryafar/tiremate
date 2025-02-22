@@ -1,0 +1,92 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmNermoodarSazmani" targetNamespace="http://www.tempuri.org/DSFrmNermoodarSazmani.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmNermoodarSazmani.xsd" xmlns="http://www.tempuri.org/DSFrmNermoodarSazmani.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmNermoodarSazmani" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="tas_bas_vahed">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_vahed" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="code_tashkilat" type="xs:short" />
+							<xs:element name="desc_vahed" type="xs:string" />
+							<xs:element name="code_master" type="xs:short" minOccurs="0" />
+							<xs:element name="code_radeh_sazemani" type="xs:short" />
+							<xs:element name="mahal_vahed" type="xs:string" minOccurs="0" />
+							<xs:element name="tel" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="code_bandar" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tas_bas_tashkilat">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code_tashkilat" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="desc_tashkilat" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tas_bas_radeh_sazemani">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code_radeh_sazemani" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="desc_radeh_sazemani" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tas_tr_vahedha_mashaghel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code_post_sazemani" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="somareh_post_sazemani" type="xs:string" />
+							<xs:element name="desc_post_sazemani" type="xs:string" />
+							<xs:element name="id_vahed" type="xs:short" />
+							<xs:element name="code_reshteh_shoghli" type="xs:short" />
+							<xs:element name="shrah_vazaef" type="xs:string" minOccurs="0" />
+							<xs:element name="activate" type="xs:boolean" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="code_bandar" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tas_tr_takhsis_postsazemani">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_post" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="code_post_sazemani" type="xs:short" minOccurs="0" />
+							<xs:element name="code_personal_takhsis" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="code_personal_eblagh" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="activate" type="xs:boolean" minOccurs="0" />
+							<xs:element name="date_takhsis" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="date_eblagh" type="xs:string" minOccurs="0" msprop:nullValue="_empty" nillable="true" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="code_bandar" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tas_bas_vahed" />
+			<xs:field xpath="mstns:id_vahed" />
+		</xs:unique>
+		<xs:unique name="tas_bas_radeh_sazemani_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tas_bas_radeh_sazemani" />
+			<xs:field xpath="mstns:code_radeh_sazemani" />
+		</xs:unique>
+		<xs:unique name="tas_tr_vahedha_mashaghel_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tas_tr_vahedha_mashaghel" />
+			<xs:field xpath="mstns:code_post_sazemani" />
+		</xs:unique>
+		<xs:unique name="tas_tr_takhsis_postsazemani_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:tas_tr_takhsis_postsazemani" />
+			<xs:field xpath="mstns:id_post" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

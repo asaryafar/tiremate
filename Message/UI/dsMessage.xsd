@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsMessage" targetNamespace="http://www.tempuri.org/dsMessage.xsd" xmlns:mstns="http://www.tempuri.org/dsMessage.xsd" xmlns="http://www.tempuri.org/dsMessage.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="dsMessage" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="message_send">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="counter" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="message_code" type="xs:int" />
+              <xs:element name="user_code" type="xs:int" />
+              <xs:element name="code_company" type="xs:string" minOccurs="0" />
+              <xs:element name="activation_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="visit_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="deleted" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user_message">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="message_code" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="user_code" type="xs:int" minOccurs="0" />
+              <xs:element name="company_code" type="xs:int" minOccurs="0" />
+              <xs:element name="message_body" type="xs:string" minOccurs="0" />
+              <xs:element name="create_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="reply_code" type="xs:int" minOccurs="0" />
+              <xs:element name="last_flag" type="xs:boolean" />
+              <xs:element name="deleted" type="xs:boolean" minOccurs="0" />
+              <xs:element name="message_subject" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:message_send" />
+      <xs:field xpath="mstns:counter" />
+    </xs:unique>
+    <xs:unique name="user_message_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:user_message" />
+      <xs:field xpath="mstns:message_code" />
+    </xs:unique>
+    <xs:keyref name="user_messagemessage_send" refer="user_message_Constraint1">
+      <xs:selector xpath=".//mstns:message_send" />
+      <xs:field xpath="mstns:message_code" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmSelectPaymentstoDeposit" targetNamespace="http://www.tempuri.org/DSFrmSelectPaymentstoDeposit.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmSelectPaymentstoDeposit.xsd" xmlns="http://www.tempuri.org/DSFrmSelectPaymentstoDeposit.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmSelectPaymentstoDeposit" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GL_payment_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_payment" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag_deposit_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="PaymenyDepositType" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="PmtMethod" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="CustomerFullName" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="id_bank" type="xs:short" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type" type="xs:string" minOccurs="0" />
+							<xs:element name="check_no" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="date_referYYYYMMDD" type="xs:string" minOccurs="0" />
+							<xs:element name="date_receive_payment" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_cc_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cc_type" type="xs:string" />
+							<xs:element name="cc_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_cc_type" />
+			<xs:field xpath="mstns:cc_type" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

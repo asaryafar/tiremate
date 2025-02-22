@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmChargeGroupCostItem" targetNamespace="http://www.tempuri.org/DSFrmChargeGroupCostItem.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmChargeGroupCostItem.xsd" xmlns="http://www.tempuri.org/DSFrmChargeGroupCostItem.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmChargeGroupCostItem" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_item_cost_transaction">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="date_cost_change" type="xs:string" />
+							<xs:element name="cost" type="xs:float" />
+							<xs:element name="last_flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="delivery" type="xs:float" minOccurs="0" />
+							<xs:element name="frieght" type="xs:float" minOccurs="0" />
+							<xs:element name="price_code" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_price1" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price2" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price3" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price4" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price5" type="xs:float" minOccurs="0" />
+							<xs:element name="amount_price6" type="xs:float" minOccurs="0" />
+							<xs:element name="flg1" type="xs:boolean" minOccurs="0" msprop:nullValue="0" nillable="false"
+								default="0" msdata:ReadOnly="false" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

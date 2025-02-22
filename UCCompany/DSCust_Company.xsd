@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSCust_Company" targetNamespace="http://www.tempuri.org/DSCust_Company.xsd" xmlns:mstns="http://www.tempuri.org/DSCust_Company.xsd" xmlns="http://www.tempuri.org/DSCust_Company.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSCust_Company" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="cust_company">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_company" type="xs:string" />
+              <xs:element name="abbreviation_name" type="xs:string" minOccurs="0" />
+              <xs:element name="complete_name" type="xs:string" minOccurs="0" />
+              <xs:element name="address" type="xs:string" minOccurs="0" />
+              <xs:element name="zip_code" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cust_company" />
+      <xs:field xpath="mstns:cod_company" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

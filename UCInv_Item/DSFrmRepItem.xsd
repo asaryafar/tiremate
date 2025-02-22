@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmRepItem" targetNamespace="http://www.tempuri.org/DSFrmRepItem.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmRepItem.xsd" xmlns="http://www.tempuri.org/DSFrmRepItem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DSFrmRepItem" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="item">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flag" type="xs:boolean" nillable="true" msprop:nullValue="false" />
+                            <xs:element name="code" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                            <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="inv_tab_type_item">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cod_item_type" type="xs:string" />
+                            <xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Line">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flag" type="xs:boolean" nillable="true" msprop:nullValue="false" />
+                            <xs:element name="code" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                            <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Brand">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flag" type="xs:boolean" nillable="true" msprop:nullValue="false" />
+                            <xs:element name="code" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                            <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Style">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flag" type="xs:boolean" nillable="true" msprop:nullValue="false" />
+                            <xs:element name="code" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                            <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Size">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flag" type="xs:boolean" nillable="true" msprop:nullValue="false" />
+                            <xs:element name="code" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                            <xs:element name="name" type="xs:string" minOccurs="0" nillable="true" msprop:nullValue="&quot;&quot;" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+        <xs:unique name="inv_tab_type_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:inv_tab_type_item" />
+            <xs:field xpath="mstns:cod_item_type" />
+        </xs:unique>
+    </xs:element>
+</xs:schema>

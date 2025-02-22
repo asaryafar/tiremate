@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmVehicleHistory" targetNamespace="http://www.tempuri.org/DSFrmVehicleHistory.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmVehicleHistory.xsd" xmlns="http://www.tempuri.org/DSFrmVehicleHistory.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmVehicleHistory" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="date_refer" type="xs:date" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="license_no_vehicle" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_model" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="add_user" type="xs:short" minOccurs="0" />
+							<xs:element name="vip_code" type="xs:string" minOccurs="0" />
+							<xs:element name="Total" type="xs:decimal" minOccurs="0" />
+							<xs:element name="type_of_form" type="xs:string" minOccurs="0" />
+							<xs:element name="Current_Mileage" type="xs:double" minOccurs="0" />
+							<xs:element name="add_user_Name" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_comment" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Users">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserId" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="UserLogin" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Users" />
+			<xs:field xpath="mstns:UserId" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

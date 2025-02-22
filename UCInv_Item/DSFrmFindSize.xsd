@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmFindSize" targetNamespace="http://www.tempuri.org/DSFrmFindSize.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmFindSize.xsd" xmlns="http://www.tempuri.org/DSFrmFindSize.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmFindSize" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="bas_vehicle_company">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desc_make" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_make" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_vehicle_model">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_model" type="xs:string" />
+              <xs:element name="desc_model" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="inv_tab_vehicle_type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="desc_vehicle_type" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_vehicle_type" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bas_vehicle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="make_year" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:bas_vehicle_company" />
+      <xs:field xpath="mstns:cod_make" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

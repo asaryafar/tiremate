@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSInv_tab_labor_service" targetNamespace="http://www.tempuri.org/DSInv_tab_labor_service.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSInv_tab_labor_service.xsd" xmlns="http://www.tempuri.org/DSInv_tab_labor_service.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSInv_tab_labor_service" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_tab_labor_service">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_service" type="xs:string" />
+							<xs:element name="desc_service" type="xs:string" minOccurs="0" />
+							<xs:element name="store_no" type="xs:string" minOccurs="0" />
+							<xs:element name="ext_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="service_type" type="xs:string" minOccurs="0" />
+							<xs:element name="service_category" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="require_technician" type="xs:boolean" minOccurs="0" />
+							<xs:element name="charge_shop_supply" type="xs:boolean" minOccurs="0" />
+							<xs:element name="schedule" type="xs:boolean" minOccurs="0" />
+							<xs:element name="avg_time" type="xs:float" minOccurs="0" />
+							<xs:element name="bay_no" type="xs:short" minOccurs="0" />
+							<xs:element name="reminder" type="xs:boolean" minOccurs="0" />
+							<xs:element name="miles" type="xs:float" minOccurs="0" />
+							<xs:element name="days" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_labor_service" />
+			<xs:field xpath="mstns:cod_service" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

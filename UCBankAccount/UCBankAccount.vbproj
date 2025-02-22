@@ -1,0 +1,1767 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{005553F0-2E1E-4AFB-AFDA-8EFB9A4F7982}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "UCBankAccount"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "UCBankAccount"
+                StartupObject = "UCBankAccount.(None)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "Janus.Windows.ButtonBar.v2"
+                    AssemblyName = "Janus.Windows.ButtonBar.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ButtonBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.CalendarCombo.v2"
+                    AssemblyName = "Janus.Windows.CalendarCombo.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.CalendarCombo.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Common.v2"
+                    AssemblyName = "Janus.Windows.Common.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Common.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.ExplorerBar.v2"
+                    AssemblyName = "Janus.Windows.ExplorerBar.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.ExplorerBar.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.GridEX.v2"
+                    AssemblyName = "Janus.Windows.GridEX.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.GridEX.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.Schedule.v2"
+                    AssemblyName = "Janus.Windows.Schedule.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.Schedule.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.TimeLine.v2"
+                    AssemblyName = "Janus.Windows.TimeLine.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.TimeLine.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "Janus.Windows.UI.v2"
+                    AssemblyName = "Janus.Windows.UI.v2"
+                    HintPath = "F:\Program Files\Janus Systems\Controls for Microsoft .NET\Windows Forms Controls v2\Bin\Janus.Windows.UI.v2.dll"
+                    AssemblyFolderKey = "hklm\janus.windows.schedule.v2"
+                />
+                <Reference
+                    Name = "CommonClass"
+                    Project = "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "EmailAndWebAddress"
+                    Project = "{4BDA9AB3-B41B-4DE9-8501-3628063943AE}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCPhone"
+                    Project = "{BA1BA9D4-B039-4B92-8EE2-70E057921B0C}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCVehicle"
+                    Project = "{A517E50B-F0BE-4481-B15F-F5F3A6218D11}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCVendor"
+                    Project = "{2C87BA05-66B0-4D2A-A649-0AC21D2536CD}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCZipCode"
+                    Project = "{040B8511-95EF-497C-BF0E-2EE24FA22E2A}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "CalcUtils"
+                    Project = "{CA30DA09-E6A1-437D-B371-8EB0E3B801B0}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcUserOperation"
+                    Project = "{24266D1A-E7CB-42A8-86E8-2413D676355E}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCCustomer"
+                    Project = "{526EB5B9-D149-4DF8-879D-754EE3B61D6D}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCCommentButton"
+                    Project = "{9D6B1ADA-2DAC-4A73-84E8-DE06F19A9AA9}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "CalendarCombo"
+                    Project = "{30965394-1B22-4CAB-9EA2-51BB89A3C927}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "F:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "Calendar"
+                    Project = "{D4DE1986-9699-47ED-A434-1A716A985243}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "WorkOrderUtility"
+                    Project = "{CB7066F0-7BE1-457B-B6F7-FF22998F9E50}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcPurchaseOrder"
+                    Project = "{D69BE3D6-35CA-4DC4-8160-1A181B917470}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcReceiveReturnProduct"
+                    Project = "{A07501F0-F7E2-43D8-BAAC-1AF1BEABDEDF}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UCInv_Item"
+                    Project = "{459CB30E-C24C-439E-A67A-8A830F7676CB}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "UcInterStoreSale"
+                    Project = "{FBDE6CC5-650C-4DC8-A87A-97FFBABE09F7}"
+                    Package = "{F184B08F-C81C-45F6-A57F-5ABD9991F28F}"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Shared"
+                    AssemblyName = "CrystalDecisions.Shared"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Shared.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.ReportSource"
+                    AssemblyName = "CrystalDecisions.ReportSource"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.ReportSource.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.CrystalReports.Engine"
+                    AssemblyName = "CrystalDecisions.CrystalReports.Engine"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.CrystalReports.Engine.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Windows.Forms"
+                    AssemblyName = "CrystalDecisions.Windows.Forms"
+                    HintPath = "c:\program files\common files\crystal decisions\1.1\managed\CrystalDecisions.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DSFrmARTerms.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmARTerms.vb"
+                />
+                <File
+                    RelPath = "DSFrmARTerms.vb"
+                    DependentUpon = "DSFrmARTerms.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmBankAccount.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmBankAccount.vb"
+                />
+                <File
+                    RelPath = "DSFrmBankAccount.vb"
+                    DependentUpon = "DSFrmBankAccount.xsd"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmBankDeposits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmBankDeposits.vb"
+                />
+                <File
+                    RelPath = "DSFrmBankDeposits.vb"
+                    DependentUpon = "DSFrmBankDeposits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmBankDeposits.xsx"
+                    DependentUpon = "DSFrmBankDeposits.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmBankTransfer.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmBankTransfer.vb"
+                />
+                <File
+                    RelPath = "DSFrmBankTransfer.vb"
+                    DependentUpon = "DSFrmBankTransfer.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmBankTransfer.xsx"
+                    DependentUpon = "DSFrmBankTransfer.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmCashInvoices.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmCashInvoices.vb"
+                />
+                <File
+                    RelPath = "DSFrmCashInvoices.vb"
+                    DependentUpon = "DSFrmCashInvoices.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOut.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmCashPaidOut.vb"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOut.vb"
+                    DependentUpon = "DSFrmCashPaidOut.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOut.xsx"
+                    DependentUpon = "DSFrmCashPaidOut.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOutPrint.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmCashPaidOutPrint.vb"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOutPrint.vb"
+                    DependentUpon = "DSFrmCashPaidOutPrint.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmCashPaidOutPrint.xsx"
+                    DependentUpon = "DSFrmCashPaidOutPrint.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmCheckInvoices.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmCheckInvoices.vb"
+                />
+                <File
+                    RelPath = "DSFrmCheckInvoices.vb"
+                    DependentUpon = "DSFrmCheckInvoices.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDay.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDay.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDay.vb"
+                    DependentUpon = "DSFrmEndOfDay.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableAdjustments.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayAccountReceivableAdjustments.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableAdjustments.vb"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableAdjustments.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableCharges.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayAccountReceivableCharges.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableCharges.vb"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableCharges.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableCredits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayAccountReceivableCredits.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableCredits.vb"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableCredits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableCredits.xsx"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableCredits.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayAccountReceivableReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAccountReceivableReceipts.xsx"
+                    DependentUpon = "DSFrmEndOfDayAccountReceivableReceipts.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAdjustmentsSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayAdjustmentsSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAdjustmentsSales.vb"
+                    DependentUpon = "DSFrmEndOfDayAdjustmentsSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayAdjustmentsSales.xsx"
+                    DependentUpon = "DSFrmEndOfDayAdjustmentsSales.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayARReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayARReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayARReport.vb"
+                    DependentUpon = "DSFrmEndOfDayARReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayARReport.xsx"
+                    DependentUpon = "DSFrmEndOfDayARReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayATMCredits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayATMCredits.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayATMCredits.vb"
+                    DependentUpon = "DSFrmEndOfDayATMCredits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayATMWithdrawals.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayATMWithdrawals.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayATMWithdrawals.vb"
+                    DependentUpon = "DSFrmEndOfDayATMWithdrawals.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayBankTransfers.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayBankTransfers.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayBankTransfers.vb"
+                    DependentUpon = "DSFrmEndOfDayBankTransfers.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashInvoices.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCashInvoices.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashInvoices.vb"
+                    DependentUpon = "DSFrmEndOfDayCashInvoices.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashOtherReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCashOtherReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashOtherReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayCashOtherReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCashReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayCashReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCashReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReport.vb"
+                    DependentUpon = "DSFrmEndOfDayCashReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReport.xsx"
+                    DependentUpon = "DSFrmEndOfDayCashReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReturns.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCashReturns.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCashReturns.vb"
+                    DependentUpon = "DSFrmEndOfDayCashReturns.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCheckInvoices.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCheckInvoices.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCheckInvoices.vb"
+                    DependentUpon = "DSFrmEndOfDayCheckInvoices.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCheckReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCheckReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCheckReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayCheckReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCheckReceipts.xsx"
+                    DependentUpon = "DSFrmEndOfDayCheckReceipts.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayChecksWritten.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayChecksWritten.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayChecksWritten.vb"
+                    DependentUpon = "DSFrmEndOfDayChecksWritten.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCreditCardInvoices.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCreditCardInvoices.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCreditCardInvoices.vb"
+                    DependentUpon = "DSFrmEndOfDayCreditCardInvoices.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCreditCardReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayCreditCardReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayCreditCardReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayCreditCardReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayDetails.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayDetails.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayDetails.vb"
+                    DependentUpon = "DSFrmEndOfDayDetails.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayFeesReturns.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayFeesReturns.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayFeesReturns.vb"
+                    DependentUpon = "DSFrmEndOfDayFeesReturns.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryAdjustment.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventoryAdjustment.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryAdjustment.vb"
+                    DependentUpon = "DSFrmEndOfDayInventoryAdjustment.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryInterStoreSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventoryInterStoreSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryInterStoreSales.vb"
+                    DependentUpon = "DSFrmEndOfDayInventoryInterStoreSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryPurchaseOrders.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventoryPurchaseOrders.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryPurchaseOrders.vb"
+                    DependentUpon = "DSFrmEndOfDayInventoryPurchaseOrders.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryReceipts.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventoryReceipts.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryReceipts.vb"
+                    DependentUpon = "DSFrmEndOfDayInventoryReceipts.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventorySales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventorySales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventorySales.vb"
+                    DependentUpon = "DSFrmEndOfDayInventorySales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventorySales.xsx"
+                    DependentUpon = "DSFrmEndOfDayInventorySales.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryTransfers.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayInventoryTransfers.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayInventoryTransfers.vb"
+                    DependentUpon = "DSFrmEndOfDayInventoryTransfers.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayLaborSuppliesReturns.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayLaborSuppliesReturns.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayLaborSuppliesReturns.vb"
+                    DependentUpon = "DSFrmEndOfDayLaborSuppliesReturns.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayLaborSuppliesSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayLaborSuppliesSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayLaborSuppliesSales.vb"
+                    DependentUpon = "DSFrmEndOfDayLaborSuppliesSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayLaborSuppliesSales.xsx"
+                    DependentUpon = "DSFrmEndOfDayLaborSuppliesSales.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherCredits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOtherCredits.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherCredits.vb"
+                    DependentUpon = "DSFrmEndOfDayOtherCredits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherDebits.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOtherDebits.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherDebits.vb"
+                    DependentUpon = "DSFrmEndOfDayOtherDebits.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherExemptions.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOtherExemptions.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherExemptions.vb"
+                    DependentUpon = "DSFrmEndOfDayOtherExemptions.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOtherExemptions.xsx"
+                    DependentUpon = "DSFrmEndOfDayOtherExemptions.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOutsidePurchasesReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesReport.vb"
+                    DependentUpon = "DSFrmEndOfDayOutsidePurchasesReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesReport.xsx"
+                    DependentUpon = "DSFrmEndOfDayOutsidePurchasesReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesReturns.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOutsidePurchasesReturns.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesReturns.vb"
+                    DependentUpon = "DSFrmEndOfDayOutsidePurchasesReturns.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayOutsidePurchasesSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesSales.vb"
+                    DependentUpon = "DSFrmEndOfDayOutsidePurchasesSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayOutsidePurchasesSales.xsx"
+                    DependentUpon = "DSFrmEndOfDayOutsidePurchasesSales.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayProductsReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayProductsReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayProductsReport.vb"
+                    DependentUpon = "DSFrmEndOfDayProductsReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayProductsReport.xsx"
+                    DependentUpon = "DSFrmEndOfDayProductsReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDaySalesReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDaySalesReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDaySalesReport.vb"
+                    DependentUpon = "DSFrmEndOfDaySalesReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDaySalesReport.xsx"
+                    DependentUpon = "DSFrmEndOfDaySalesReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayServicesReport.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayServicesReport.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayServicesReport.vb"
+                    DependentUpon = "DSFrmEndOfDayServicesReport.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayServicesReport.xsx"
+                    DependentUpon = "DSFrmEndOfDayServicesReport.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayTirePartsSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayTirePartsSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayTirePartsSales.vb"
+                    DependentUpon = "DSFrmEndOfDayTirePartsSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayTirePartsSales.xsx"
+                    DependentUpon = "DSFrmEndOfDayTirePartsSales.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayTotalSales.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmEndOfDayTotalSales.vb"
+                />
+                <File
+                    RelPath = "DSFrmEndOfDayTotalSales.vb"
+                    DependentUpon = "DSFrmEndOfDayTotalSales.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmSearchBankDeposit.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmSearchBankDeposit.vb"
+                />
+                <File
+                    RelPath = "DSFrmSearchBankDeposit.vb"
+                    DependentUpon = "DSFrmSearchBankDeposit.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmSearchCashPaidOut.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmSearchCashPaidOut.vb"
+                />
+                <File
+                    RelPath = "DSFrmSearchCashPaidOut.vb"
+                    DependentUpon = "DSFrmSearchCashPaidOut.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmSearchCashPaidOut.xsx"
+                    DependentUpon = "DSFrmSearchCashPaidOut.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DSFrmSelectPaymentstoDeposit.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "DSFrmSelectPaymentstoDeposit.vb"
+                />
+                <File
+                    RelPath = "DSFrmSelectPaymentstoDeposit.vb"
+                    DependentUpon = "DSFrmSelectPaymentstoDeposit.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "DSFrmSelectPaymentstoDeposit.xsx"
+                    DependentUpon = "DSFrmSelectPaymentstoDeposit.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "FrmARTerms.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmARTerms.resx"
+                    DependentUpon = "FrmARTerms.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmBankAccount.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmBankAccount.resx"
+                    DependentUpon = "FrmBankAccount.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmBankDeposits.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmBankDeposits.resx"
+                    DependentUpon = "FrmBankDeposits.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmBankTransfer.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmBankTransfer.resx"
+                    DependentUpon = "FrmBankTransfer.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmCashPaidOut.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmCashPaidOut.resx"
+                    DependentUpon = "FrmCashPaidOut.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmCashPaidOutPrint.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmCashPaidOutPrint.resx"
+                    DependentUpon = "FrmCashPaidOutPrint.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmCashPaidOutPrintGrd.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmCashPaidOutPrintGrd.resx"
+                    DependentUpon = "FrmCashPaidOutPrintGrd.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDay.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDay.resx"
+                    DependentUpon = "FrmEndOfDay.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableAdjustments.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableAdjustments.resx"
+                    DependentUpon = "FrmEndOfDayAccountReceivableAdjustments.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableCharges.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableCharges.resx"
+                    DependentUpon = "FrmEndOfDayAccountReceivableCharges.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableCredits.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableCredits.resx"
+                    DependentUpon = "FrmEndOfDayAccountReceivableCredits.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAccountReceivableReceipts.resx"
+                    DependentUpon = "FrmEndOfDayAccountReceivableReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAdjustmentsSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayAdjustmentsSales.resx"
+                    DependentUpon = "FrmEndOfDayAdjustmentsSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayARReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayARReport.resx"
+                    DependentUpon = "FrmEndOfDayARReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayATMCredits.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayATMCredits.resx"
+                    DependentUpon = "FrmEndOfDayATMCredits.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayATMWithdrawals.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayATMWithdrawals.resx"
+                    DependentUpon = "FrmEndOfDayATMWithdrawals.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayBankTransfers.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayBankTransfers.resx"
+                    DependentUpon = "FrmEndOfDayBankTransfers.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashInvoices.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashInvoices.resx"
+                    DependentUpon = "FrmEndOfDayCashInvoices.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashOtherReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashOtherReceipts.resx"
+                    DependentUpon = "FrmEndOfDayCashOtherReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashPaidOut.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashPaidOut.resx"
+                    DependentUpon = "FrmEndOfDayCashPaidOut.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReceipts.resx"
+                    DependentUpon = "FrmEndOfDayCashReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReport.resx"
+                    DependentUpon = "FrmEndOfDayCashReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCashReturns.resx"
+                    DependentUpon = "FrmEndOfDayCashReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckInvoices.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckInvoices.resx"
+                    DependentUpon = "FrmEndOfDayCheckInvoices.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckOtherReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckOtherReceipts.resx"
+                    DependentUpon = "FrmEndOfDayCheckOtherReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCheckReceipts.resx"
+                    DependentUpon = "FrmEndOfDayCheckReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayChecksWritten.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayChecksWritten.resx"
+                    DependentUpon = "FrmEndOfDayChecksWritten.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCreditCardInvoices.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCreditCardInvoices.resx"
+                    DependentUpon = "FrmEndOfDayCreditCardInvoices.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCreditCardReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayCreditCardReceipts.resx"
+                    DependentUpon = "FrmEndOfDayCreditCardReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayFeesReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayFeesReturns.resx"
+                    DependentUpon = "FrmEndOfDayFeesReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayFeesSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayFeesSales.resx"
+                    DependentUpon = "FrmEndOfDayFeesSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryAdjustment.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryAdjustment.resx"
+                    DependentUpon = "FrmEndOfDayInventoryAdjustment.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryInterStoreSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryInterStoreSales.resx"
+                    DependentUpon = "FrmEndOfDayInventoryInterStoreSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryPurchaseOrders.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryPurchaseOrders.resx"
+                    DependentUpon = "FrmEndOfDayInventoryPurchaseOrders.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryReceipts.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryReceipts.resx"
+                    DependentUpon = "FrmEndOfDayInventoryReceipts.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventorySales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventorySales.resx"
+                    DependentUpon = "FrmEndOfDayInventorySales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryTransfers.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayInventoryTransfers.resx"
+                    DependentUpon = "FrmEndOfDayInventoryTransfers.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayLaborSuppliesReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayLaborSuppliesReturns.resx"
+                    DependentUpon = "FrmEndOfDayLaborSuppliesReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayLaborSuppliesSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayLaborSuppliesSales.resx"
+                    DependentUpon = "FrmEndOfDayLaborSuppliesSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherCredits.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherCredits.resx"
+                    DependentUpon = "FrmEndOfDayOtherCredits.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherDebits.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherDebits.resx"
+                    DependentUpon = "FrmEndOfDayOtherDebits.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherExemptions.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOtherExemptions.resx"
+                    DependentUpon = "FrmEndOfDayOtherExemptions.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesReport.resx"
+                    DependentUpon = "FrmEndOfDayOutsidePurchasesReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesReturns.resx"
+                    DependentUpon = "FrmEndOfDayOutsidePurchasesReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayOutsidePurchasesSales.resx"
+                    DependentUpon = "FrmEndOfDayOutsidePurchasesSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayProductsReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayProductsReport.resx"
+                    DependentUpon = "FrmEndOfDayProductsReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDaySalesReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDaySalesReport.resx"
+                    DependentUpon = "FrmEndOfDaySalesReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayServicesReport.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayServicesReport.resx"
+                    DependentUpon = "FrmEndOfDayServicesReport.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTirePartsReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTirePartsReturns.resx"
+                    DependentUpon = "FrmEndOfDayTirePartsReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTirePartsSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTirePartsSales.resx"
+                    DependentUpon = "FrmEndOfDayTirePartsSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTotalReturns.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTotalReturns.resx"
+                    DependentUpon = "FrmEndOfDayTotalReturns.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTotalSales.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmEndOfDayTotalSales.resx"
+                    DependentUpon = "FrmEndOfDayTotalSales.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmRepBankDeposit.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "FrmRepBankDeposit1.vb"
+                />
+                <File
+                    RelPath = "FrmRepBankDeposit1.vb"
+                    DependentUpon = "FrmRepBankDeposit.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "FrmSearchBankDeposit.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchBankDeposit.resx"
+                    DependentUpon = "FrmSearchBankDeposit.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSearchCashPaidOut.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSearchCashPaidOut.resx"
+                    DependentUpon = "FrmSearchCashPaidOut.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FrmSelectPaymentstoDeposit.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FrmSelectPaymentstoDeposit.resx"
+                    DependentUpon = "FrmSelectPaymentstoDeposit.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "RepCashPaidOut.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepCashPaidOut.vb"
+                />
+                <File
+                    RelPath = "RepCashPaidOut.vb"
+                    DependentUpon = "RepCashPaidOut.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay1.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay1.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay1.vb"
+                    DependentUpon = "RepEndOfDay1.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay2.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay2.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay2.vb"
+                    DependentUpon = "RepEndOfDay2.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay3.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay3.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay3.vb"
+                    DependentUpon = "RepEndOfDay3.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay4.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay4.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay4.vb"
+                    DependentUpon = "RepEndOfDay4.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay5.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay51.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay51.vb"
+                    DependentUpon = "RepEndOfDay5.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "RepEndOfDay6.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "RepEndOfDay6.vb"
+                />
+                <File
+                    RelPath = "RepEndOfDay6.vb"
+                    DependentUpon = "RepEndOfDay6.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+            </Include>
+        </Files>
+        <StartupServices>
+            <Service ID = "{CF845C55-C321-4742-B673-E6212D061ED9}" />
+        </StartupServices>
+    </VisualBasic>
+</VisualStudioProject>
+

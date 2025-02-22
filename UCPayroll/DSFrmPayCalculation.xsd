@@ -1,0 +1,233 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPayCalculation" targetNamespace="http://www.tempuri.org/DSFrmPayCalculation.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmPayCalculation.xsd" xmlns="http://www.tempuri.org/DSFrmPayCalculation.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPayCalculation" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="pay_deduction_employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="deduction_cod" type="xs:string" />
+							<xs:element name="from_date_deduction" type="xs:string" />
+							<xs:element name="to_date_deduction" type="xs:string" />
+							<xs:element name="amount_deduction" type="xs:decimal" minOccurs="0" />
+							<xs:element name="active" type="xs:boolean" minOccurs="0" />
+							<xs:element name="deduction_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="befor_tax" type="xs:boolean" minOccurs="0" />
+							<xs:element name="percent_gross_pay" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_Garnishment_employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="date_start" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_garnishment" type="xs:decimal" minOccurs="0" />
+							<xs:element name="active" type="xs:boolean" minOccurs="0" />
+							<xs:element name="beforetax" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_loan_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="loan_cod" type="xs:string" />
+							<xs:element name="date_start" type="xs:string" />
+							<xs:element name="amount_loan" type="xs:decimal" minOccurs="0" />
+							<xs:element name="costus" type="xs:decimal" minOccurs="0" />
+							<xs:element name="time_costus_pay" type="xs:short" minOccurs="0" />
+							<xs:element name="before_tax" type="xs:boolean" minOccurs="0" />
+							<xs:element name="loan_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="active" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_saving_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="saving_cod" type="xs:string" />
+							<xs:element name="date_start" type="xs:string" minOccurs="0" />
+							<xs:element name="amount_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="amount_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="time_saving_removal" type="xs:decimal" minOccurs="0" />
+							<xs:element name="active" type="xs:boolean" minOccurs="0" />
+							<xs:element name="saving_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="before_tax" type="xs:boolean" minOccurs="0" />
+							<xs:element name="percent_gross_pay_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="percent_gross_pay_employer" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_tab_federal_tax_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="over_" type="xs:decimal" minOccurs="0" />
+							<xs:element name="but_not_over" type="xs:decimal" minOccurs="0" />
+							<xs:element name="percent_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dollor_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_federal_tax" type="xs:int" />
+							<xs:element name="withholding_allownce" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="social_sec_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="medi_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_employee" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_employer" type="xs:decimal" minOccurs="0" />
+							<xs:element name="unemplyment_wagelimit" type="xs:decimal" minOccurs="0" />
+							<xs:element name="stat_code" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_tab_state_tax_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="over_" type="xs:decimal" minOccurs="0" />
+							<xs:element name="but_not_over" type="xs:decimal" minOccurs="0" />
+							<xs:element name="percent_tax" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_state_tax" type="xs:int" />
+							<xs:element name="standard_deduction" type="xs:decimal" minOccurs="0" />
+							<xs:element name="personal_allowance" type="xs:decimal" minOccurs="0" />
+							<xs:element name="dependent_allowance" type="xs:decimal" minOccurs="0" />
+							<xs:element name="stat_code" type="xs:string" />
+							<xs:element name="dollor_tax" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_banks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_bank" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_main_employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_pay_period" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="day_work" type="xs:decimal" minOccurs="0" />
+							<xs:element name="time_work" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other_Pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="gross_pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="id_check" type="xs:int" minOccurs="0" />
+							<xs:element name="PayrollDate" type="xs:string" minOccurs="0" />
+							<xs:element name="Max_PayrollDate" type="xs:string" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="FullName" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_advance_employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_deduction" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="pay_date" type="xs:string" />
+							<xs:element name="pay_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="active" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employeeCombo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="EmployeeFullName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Last_BasisCombo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Last_PeriodCombo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="MaxPayrollDate" type="xs:string" minOccurs="0" />
+							<xs:element name="last_period" type="xs:string" minOccurs="0" />
+							<xs:element name="last_basis" type="xs:string" minOccurs="0" />
+							<xs:element name="gross_pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Other_Pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="EmployeeFullName" type="xs:string" minOccurs="0" />
+							<xs:element name="salary" type="xs:decimal" minOccurs="0" />
+							<xs:element name="FlagPardakht" type="xs:boolean" minOccurs="0" />
+							<xs:element name="last_overtime" type="xs:decimal" minOccurs="0" />
+							<xs:element name="last_status" type="xs:string" minOccurs="0" />
+							<xs:element name="Allowance_Federal" type="xs:short" minOccurs="0" />
+							<xs:element name="Allowance_state" type="xs:short" minOccurs="0" />
+							<xs:element name="Allowance_depndnts" type="xs:short" minOccurs="0" />
+							<xs:element name="id_pay_period" type="xs:int" minOccurs="0" />
+							<xs:element name="time_work_Hour" type="xs:string" minOccurs="0" />
+							<xs:element name="time_work_Minute" type="xs:string" minOccurs="0" />
+							<xs:element name="time_work" type="xs:string" minOccurs="0" />
+							<xs:element name="PaymentFlag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="YearWeeks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WeekNo" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="Desc" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Years">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="YearNo" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:pay_Garnishment_employee" />
+			<xs:field xpath="mstns:id_deduction" />
+		</xs:unique>
+		<xs:unique name="bas_banks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_banks" />
+			<xs:field xpath="mstns:id_bank" />
+		</xs:unique>
+		<xs:unique name="pay_main_employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:pay_main_employee" />
+			<xs:field xpath="mstns:employee_code" />
+		</xs:unique>
+		<xs:unique name="pay_advance_employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:pay_advance_employee" />
+			<xs:field xpath="mstns:id_deduction" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,116 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmRepCusSale" targetNamespace="http://www.tempuri.org/DSFrmRepCusSale.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmRepCusSale.xsd" xmlns="http://www.tempuri.org/DSFrmRepCusSale.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmRepCusSale" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="clas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="source">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="territory">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="description" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="customer">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="List">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="customer_no" type="xs:string" nillable="true" />
+							<xs:element name="f_name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="complete_name" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="city" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="zip" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="CustSince" type="xs:date" minOccurs="0" nillable="true" />
+							<xs:element name="desc_type" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="desc_source" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="state" type="xs:string" minOccurs="0" nillable="true" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:clas" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+		<xs:unique name="cust_tab_source_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:source" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+		<xs:unique name="cust_tab_territory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:territory" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+		<xs:unique name="cust_tab_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:type" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+		<xs:unique name="employee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:cod" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

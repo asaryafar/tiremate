@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmSearchReadyComments" targetNamespace="http://www.tempuri.org/DSFrmSearchReadyComments.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmSearchReadyComments.xsd" xmlns="http://www.tempuri.org/DSFrmSearchReadyComments.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmSearchReadyComments" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Bas_Ready_Comment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommentCode" type="xs:string" />
+              <xs:element name="CommentDesc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Bas_Ready_Comment" />
+      <xs:field xpath="mstns:CommentCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

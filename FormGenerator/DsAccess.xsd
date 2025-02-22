@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsAccess" targetNamespace="http://www.tempuri.org/DsAccess.xsd" xmlns:mstns="http://www.tempuri.org/DsAccess.xsd" xmlns="http://www.tempuri.org/DsAccess.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsAccess" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="BaseTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FrmName" type="xs:string" minOccurs="0" />
+              <xs:element name="FrmHeight" type="xs:int" minOccurs="0" />
+              <xs:element name="FrmFilter" type="xs:string" minOccurs="0" />
+              <xs:element name="FrmDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="FrmCaption" type="xs:string" minOccurs="0" />
+              <xs:element name="FrmPicture" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FrmTable" type="xs:string" minOccurs="0" />
+              <xs:element name="FrmWidth" type="xs:int" minOccurs="0" />
+              <xs:element name="CMBCondition" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CMBDisplayName" type="xs:string" minOccurs="0" />
+              <xs:element name="CMBStatic" type="xs:string" minOccurs="0" />
+              <xs:element name="CMBTableName" type="xs:string" minOccurs="0" />
+              <xs:element name="CMBValueName" type="xs:string" minOccurs="0" />
+              <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+              <xs:element name="Enable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Fieldcaption" type="xs:string" minOccurs="0" />
+              <xs:element name="Fieldheight" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldLocationX" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldLocationY" type="xs:int" minOccurs="0" />
+              <xs:element name="Fieldname" type="xs:string" minOccurs="0" />
+              <xs:element name="FieldObjectType" type="xs:string" minOccurs="0" />
+              <xs:element name="FieldType" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Fieldwidth" type="xs:short" minOccurs="0" />
+              <xs:element name="FillZero" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsMandatory" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Isprimary" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MaxLength" type="xs:int" minOccurs="0" />
+              <xs:element name="NoDecimal" type="xs:int" minOccurs="0" />
+              <xs:element name="prime" msdata:AutoIncrement="true" type="xs:int" minOccurs="0" />
+              <xs:element name="TabIndex" type="xs:int" minOccurs="0" />
+              <xs:element name="UpdateDisabled" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FlgNew" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FlgDel" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

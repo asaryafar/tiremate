@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmInventorySetup" targetNamespace="http://www.tempuri.org/DSFrmInventorySetup.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmInventorySetup.xsd" xmlns="http://www.tempuri.org/DSFrmInventorySetup.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmInventorySetup" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="STORE_SETUP">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="STORENO" type="xs:string" />
+							<xs:element name="STORENAME" type="xs:string" minOccurs="0" />
+							<xs:element name="SHORTNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_type_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_item_type" type="xs:string" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_price_code">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="price_code" type="xs:string" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price1_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price1_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price2_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price2_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price3_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price3_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price4_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price4_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price5_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price5_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price6_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price6_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:STORE_SETUP" />
+			<xs:field xpath="mstns:STORENO" />
+		</xs:unique>
+		<xs:unique name="inv_tab_type_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_type_item" />
+			<xs:field xpath="mstns:cod_item_type" />
+		</xs:unique>
+		<xs:unique name="inv_price_code_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_price_code" />
+			<xs:field xpath="mstns:price_code" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsFrmPrintAllApPayment" targetNamespace="http://www.tempuri.org/DsFrmPrintAllApPayment.xsd" xmlns:mstns="http://www.tempuri.org/DsFrmPrintAllApPayment.xsd" xmlns="http://www.tempuri.org/DsFrmPrintAllApPayment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsFrmPrintAllApPayment" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="AllDate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date_prepare" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_AllPreAndPaidGl_Ap_Bill_Dtl_Dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vendorrefno" type="xs:string" minOccurs="0" />
+              <xs:element name="preparedate" type="xs:string" />
+              <xs:element name="due_date" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_pay" type="xs:decimal" />
+              <xs:element name="sumoriginalamount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sumpayment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+              <xs:element name="DateTransaction" type="xs:string" minOccurs="0" />
+              <xs:element name="id_check" type="xs:int" minOccurs="0" />
+              <xs:element name="id_vendor_credit_head" type="xs:int" minOccurs="0" />
+              <xs:element name="name_bank" type="xs:string" minOccurs="0" />
+              <xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_check" type="xs:decimal" minOccurs="0" />
+              <xs:element name="date_of_check" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

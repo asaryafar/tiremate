@@ -1,0 +1,202 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmPrintVendor" targetNamespace="http://www.tempuri.org/DSFrmPrintVendor.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmPrintVendor.xsd" xmlns="http://www.tempuri.org/DSFrmPrintVendor.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmPrintVendor" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="UnpaidDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_class" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_buyer" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:date" minOccurs="0" />
+							<xs:element name="due" type="xs:date" minOccurs="0" />
+							<xs:element name="Original" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="pay" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="ref" type="xs:string" minOccurs="0" />
+							<xs:element name="store" type="xs:string" />
+							<xs:element name="AP" type="xs:string" minOccurs="0" />
+							<xs:element name="Disco" type="xs:double" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="OrderDate" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="UnpaidSummery">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Original" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="pay" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="disco" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="due" type="xs:date" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CashDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="Original" type="xs:double" minOccurs="0" />
+							<xs:element name="pay" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AmountDue" type="xs:double" minOccurs="0" />
+							<xs:element name="disco" type="xs:double" minOccurs="0" />
+							<xs:element name="due" type="xs:date" minOccurs="0" />
+							<xs:element name="PastDue" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="Remain10Day" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="Remain30Day" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="Remain60Day" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="Remain90Day" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="Over90Day" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+							<xs:element name="ref" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CreditSummary">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="amount_credit" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CreditDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="amount_credit" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="date_credit" type="xs:date" minOccurs="0" />
+							<xs:element name="Remark" type="xs:string" minOccurs="0" />
+							<xs:element name="due_date" type="xs:date" minOccurs="0" />
+							<xs:element name="id_vendor_credit" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InventoryPurchasesDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="id_receive_ref" type="xs:string" />
+							<xs:element name="date_receive" type="xs:date" minOccurs="0" />
+							<xs:element name="vendor_ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="TotalPrice" type="xs:double" minOccurs="0" />
+							<xs:element name="TotalQty" type="xs:double" minOccurs="0" />
+							<xs:element name="receipt_bill_date" type="xs:date" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OutsidePurchasesDetail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="ItemNo" type="xs:string" minOccurs="0" />
+							<xs:element name="ItemDesc" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:decimal" />
+							<xs:element name="ExtPrice" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ExtCost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="VendorRef" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="Line" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InventoryPurchasesSummary">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="TotalPrice" type="xs:double" minOccurs="0" />
+							<xs:element name="TotalQty" type="xs:double" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="OutsidePurchasesSummary">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="qty" type="xs:decimal" />
+							<xs:element name="ExtPrice" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ExtCost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="cod_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PaymentDtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="date" type="xs:date" minOccurs="0" />
+							<xs:element name="Original" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="pay" msdata:ReadOnly="false" type="xs:decimal" minOccurs="0" />
+							<xs:element name="ref" type="xs:string" minOccurs="0" />
+							<xs:element name="store" type="xs:string" minOccurs="0" />
+							<xs:element name="date_of_check" type="xs:date" minOccurs="0" />
+							<xs:element name="no_of_check" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+							<xs:element name="name_bank" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="VendorList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_vendor_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_class" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="city" type="xs:string" minOccurs="0" />
+							<xs:element name="state" type="xs:string" minOccurs="0" />
+							<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+							<xs:element name="phone" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="ap_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Vendor_bill">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="Id_AP_bill_Head" type="xs:string" />
+							<xs:element name="ref_no" type="xs:string" minOccurs="0" />
+							<xs:element name="Ref_date" type="xs:date" minOccurs="0" />
+							<xs:element name="Amount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="Min_due_date" type="xs:date" minOccurs="0" />
+							<xs:element name="disco" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

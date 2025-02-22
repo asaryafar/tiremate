@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSInv_tab_pakage" targetNamespace="http://www.tempuri.org/DSInv_tab_pakage.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSInv_tab_pakage.xsd" xmlns="http://www.tempuri.org/DSInv_tab_pakage.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSInv_tab_pakage" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_tab_pakage_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_pakage" type="xs:string" />
+							<xs:element name="desc_pakage" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_pakage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_pakage" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="type_select" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_select" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_pakage_head" />
+			<xs:field xpath="mstns:cod_pakage" />
+		</xs:unique>
+		<xs:unique name="inv_tab_pakage_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_pakage" />
+			<xs:field xpath="mstns:cod_pakage" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmStateTax" targetNamespace="http://www.tempuri.org/DSFrmStateTax.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmStateTax.xsd" xmlns="http://www.tempuri.org/DSFrmStateTax.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmStateTax" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="bas_zipcode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="state" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Employee_tab_status">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stat_code" type="xs:string" />
+              <xs:element name="stat_desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pay_tab_state_tax_head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="year_Status" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+              <xs:element name="Id_State_Tax" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pay_tab_state_tax_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="over_" type="xs:decimal" minOccurs="0" />
+              <xs:element name="but_not_over" type="xs:decimal" minOccurs="0" />
+              <xs:element name="percent_tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="radif" type="xs:short" />
+              <xs:element name="dollor_tax" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Employee_tab_status" />
+      <xs:field xpath="mstns:stat_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

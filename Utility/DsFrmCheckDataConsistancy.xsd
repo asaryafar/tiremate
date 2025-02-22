@@ -1,0 +1,251 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DsFrmCheckDataConsistancy1" targetNamespace="http://www.tempuri.org/DsFrmCheckDataConsistancy1.xsd" xmlns:mstns="http://www.tempuri.org/DsFrmCheckDataConsistancy1.xsd" xmlns="http://www.tempuri.org/DsFrmCheckDataConsistancy1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DsFrmCheckDataConsistancy1" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="GL_account_adjustment_head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no" type="xs:string" />
+              <xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_adjustment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="date_adjustment" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" type="xs:string" minOccurs="0" />
+              <xs:element name="GL_account" type="xs:string" minOccurs="0" />
+              <xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+              <xs:element name="Gl_receive_payment_Refrence_no" type="xs:string" minOccurs="0" />
+              <xs:element name="finance_charge_flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Old_Amount_adjustment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FromStoreNo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_payment_deposit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_service_center" type="xs:string" />
+              <xs:element name="sumpayment" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Note" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="service_center_head">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_service_center" type="xs:string" />
+              <xs:element name="type_of_form" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+              <xs:element name="id_vehicle" type="xs:int" minOccurs="0" />
+              <xs:element name="date_refer" type="xs:string" minOccurs="0" />
+              <xs:element name="discount" type="xs:float" minOccurs="0" />
+              <xs:element name="tax" type="xs:float" minOccurs="0" />
+              <xs:element name="house_comment" type="xs:string" minOccurs="0" />
+              <xs:element name="cust_comment" type="xs:string" minOccurs="0" />
+              <xs:element name="add_user" type="xs:short" minOccurs="0" />
+              <xs:element name="chg_user" type="xs:short" minOccurs="0" />
+              <xs:element name="po_no" type="xs:string" minOccurs="0" />
+              <xs:element name="id_service_center_before" type="xs:string" minOccurs="0" />
+              <xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Customer_Balance">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_customer" type="xs:string" />
+              <xs:element name="BalanceAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="notdue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="a1to30" type="xs:decimal" minOccurs="0" />
+              <xs:element name="a31to60" type="xs:decimal" minOccurs="0" />
+              <xs:element name="a61to90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="over90" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sumall1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BalanceSP" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerAging31to60">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerAging61to90">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerAgingNotDueYet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerAgingOver90">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerAging1to30">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_CustomerBalance">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_CUSTOMER" type="xs:string" />
+              <xs:element name="BalanceAmount" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Adjustmentall">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no" type="xs:string" />
+              <xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+              <xs:element name="amount_adjustment_head" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_adjustment_Dtl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_adjustment_Dtl_Dtl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Note" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account_adjustment_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no" type="xs:string" />
+              <xs:element name="sumdtl" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account_adjustment_dtl_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no" type="xs:string" />
+              <xs:element name="sumdtlDtl" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Gl_Payment_deposit_head_dtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="payment_amount1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_payment" type="xs:int" />
+              <xs:element name="payment_amount2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Glreceivepayment">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no" type="xs:string" />
+              <xs:element name="Head_Amount" type="xs:float" minOccurs="0" />
+              <xs:element name="Detail_Amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="refrence_no_Adjustment" type="xs:string" minOccurs="0" />
+              <xs:element name="sumpayment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amount_adjustment" type="xs:decimal" minOccurs="0" />
+              <xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="outpo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_service_center" type="xs:string" />
+              <xs:element name="radif" type="xs:short" />
+              <xs:element name="type_select" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_select" type="xs:string" minOccurs="0" />
+              <xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+              <xs:element name="qty" type="xs:decimal" />
+              <xs:element name="price" type="xs:decimal" />
+              <xs:element name="fet" type="xs:decimal" />
+              <xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+              <xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMENT_ARTICLE" type="xs:string" minOccurs="0" />
+              <xs:element name="AVERAGE_COST" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_adjustment_head" />
+      <xs:field xpath="mstns:refrence_no" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_payment_deposit" />
+      <xs:field xpath="mstns:id_service_center" />
+    </xs:unique>
+    <xs:unique name="service_center_head_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:service_center_head" />
+      <xs:field xpath="mstns:id_service_center" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Customer_Balance" />
+      <xs:field xpath="mstns:cod_customer" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key4" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerAging31to60" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key5" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerAging61to90" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key6" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerAgingNotDueYet" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key7" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerAgingOver90" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key8" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerAging1to30" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DataSet1Key9" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SP_CustomerBalance" />
+      <xs:field xpath="mstns:COD_CUSTOMER" />
+    </xs:unique>
+    <xs:unique name="DsFrmCheckDataConsistancy1Key1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_adjustment_dtl" />
+      <xs:field xpath="mstns:refrence_no" />
+    </xs:unique>
+    <xs:unique name="DsFrmCheckDataConsistancy1Key2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_adjustment_dtl_dtl" />
+      <xs:field xpath="mstns:refrence_no" />
+    </xs:unique>
+    <xs:unique name="Glreceivepayment_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Glreceivepayment" />
+      <xs:field xpath="mstns:refrence_no" />
+    </xs:unique>
+    <xs:unique name="outpo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:outpo" />
+      <xs:field xpath="mstns:id_service_center" />
+      <xs:field xpath="mstns:radif" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

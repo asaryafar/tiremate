@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmWeeklyTimeSheet" targetNamespace="http://www.tempuri.org/DSFrmWeeklyTimeSheet.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmWeeklyTimeSheet.xsd" xmlns="http://www.tempuri.org/DSFrmWeeklyTimeSheet.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmWeeklyTimeSheet" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EmployeeFullName" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="employee_code" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="employeeWeeklyTimeSheet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" />
+							<xs:element name="Day1" type="xs:string" minOccurs="0" />
+							<xs:element name="Day2" type="xs:string" minOccurs="0" />
+							<xs:element name="Day3" type="xs:string" minOccurs="0" />
+							<xs:element name="Day4" type="xs:string" minOccurs="0" />
+							<xs:element name="Day5" type="xs:string" minOccurs="0" />
+							<xs:element name="Day6" type="xs:string" minOccurs="0" />
+							<xs:element name="Day7" type="xs:string" minOccurs="0" />
+							<xs:element name="Total" type="xs:string" minOccurs="0" />
+							<xs:element name="FlagCanEdit" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="YearWeeks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WeekNo" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="Desc" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_punch_employee_in_out">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_punch_in_out" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="action_Time" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="in_out_type" type="xs:short" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pay_employee_timesheet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="employee_code" type="xs:string" minOccurs="0" />
+							<xs:element name="timesheet_date" type="xs:string" minOccurs="0" />
+							<xs:element name="action_time_hour" type="xs:string" minOccurs="0" />
+							<xs:element name="action_time_minute" type="xs:string" minOccurs="0" />
+							<xs:element name="calculate" type="xs:boolean" minOccurs="0" />
+							<xs:element name="Action_Time" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Years">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="YearNo" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:employee" />
+			<xs:field xpath="mstns:employee_code" />
+		</xs:unique>
+		<xs:unique name="pay_punch_employee_in_out_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:pay_punch_employee_in_out" />
+			<xs:field xpath="mstns:id_punch_in_out" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

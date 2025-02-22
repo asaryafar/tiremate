@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="DSFrmGlChartOfAccount" targetNamespace="http://www.tempuri.org/DSFrmGlChartOfAccount.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmGlChartOfAccount.xsd" xmlns="http://www.tempuri.org/DSFrmGlChartOfAccount.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="DSFrmGlChartOfAccount" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="GL_account_group">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="group_GL_account" type="xs:string" />
+              <xs:element name="desc_group_account" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account_group_subgroup1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gl_account_group_subgroup1_code" type="xs:string" />
+              <xs:element name="Gl_account_group_subgroup1_desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GL_account_group_subgroup2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Gl_account_group_subgroup2_code" type="xs:string" />
+              <xs:element name="Gl_account_group_subgroup2_desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_group" />
+      <xs:field xpath="mstns:group_GL_account" />
+    </xs:unique>
+    <xs:unique name="GL_account_group_subgroup1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_group_subgroup1" />
+      <xs:field xpath="mstns:Gl_account_group_subgroup1_code" />
+    </xs:unique>
+    <xs:unique name="GL_account_group_subgroup2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GL_account_group_subgroup2" />
+      <xs:field xpath="mstns:Gl_account_group_subgroup2_code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

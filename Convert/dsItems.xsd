@@ -1,0 +1,707 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="dsItems" targetNamespace="http://www.tempuri.org/dsItems.xsd" xmlns:mstns="http://www.tempuri.org/dsItems.xsd"
+	xmlns="http://www.tempuri.org/dsItems.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="dsItems" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ArBalance">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CUSTOMER" type="xs:string" minOccurs="0" />
+							<xs:element name="Customer_x0020_Name" type="xs:string" minOccurs="0" />
+							<xs:element name="Net_x0020_Due" type="xs:string" minOccurs="0" />
+							<xs:element name="DUE_x0020_DATE" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="type_of_form" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="id_vehicle" type="xs:int" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="discount" type="xs:float" minOccurs="0" />
+							<xs:element name="tax" type="xs:float" minOccurs="0" />
+							<xs:element name="house_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_comment" type="xs:string" minOccurs="0" />
+							<xs:element name="add_user" type="xs:short" minOccurs="0" />
+							<xs:element name="chg_user" type="xs:short" minOccurs="0" />
+							<xs:element name="po_no" type="xs:string" minOccurs="0" />
+							<xs:element name="id_service_center_before" type="xs:string" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+							<xs:element name="Total" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cust_trtab_main">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" />
+							<xs:element name="vip_code" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_company" type="xs:string" minOccurs="0" />
+							<xs:element name="f_name" type="xs:string" minOccurs="0" />
+							<xs:element name="m_name" type="xs:string" minOccurs="0" />
+							<xs:element name="l_name" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_1" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_2" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_2" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_2" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_3" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_3" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_3" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_4" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_4" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_4" type="xs:boolean" minOccurs="0" />
+							<xs:element name="phone_5" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_5" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_5" type="xs:boolean" minOccurs="0" />
+							<xs:element name="driver_name1" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name2" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name3" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name4" type="xs:string" minOccurs="0" />
+							<xs:element name="DriverLicense" type="xs:string" minOccurs="0" />
+							<xs:element name="zip" type="xs:string" minOccurs="0" />
+							<xs:element name="email" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_sales_rep" type="xs:string" minOccurs="0" />
+							<xs:element name="social_security_no" type="xs:string" minOccurs="0" />
+							<xs:element name="cust_exempt_tax" type="xs:float" minOccurs="0" />
+							<xs:element name="scrap_check" type="xs:boolean" minOccurs="0" />
+							<xs:element name="scrap_value" type="xs:float" minOccurs="0" />
+							<xs:element name="credit_card_no" type="xs:string" minOccurs="0" />
+							<xs:element name="expiration_credit_date" type="xs:string" minOccurs="0" />
+							<xs:element name="credit_limited" type="xs:float" minOccurs="0" />
+							<xs:element name="AR_charge" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_term" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_sales_tax" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_price" type="xs:string" minOccurs="0" />
+							<xs:element name="discount" type="xs:float" minOccurs="0" />
+							<xs:element name="cod_type" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_source" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_class" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_territory" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_sales_report" type="xs:string" minOccurs="0" />
+							<xs:element name="user_id" type="xs:string" minOccurs="0" />
+							<xs:element name="user_password" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_statement" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_send_copy" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_finance_charge" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_require_PO" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_credit_hold" type="xs:boolean" minOccurs="0" />
+							<xs:element name="AR_accept_check" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cust_notes" type="xs:string" minOccurs="0" />
+							<xs:element name="Taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="inactive" type="xs:boolean" minOccurs="0" />
+							<xs:element name="customer_no" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Temp">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CusCode" type="xs:string" minOccurs="0" />
+							<xs:element name="Name" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="balance" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_service_center" type="xs:string" />
+							<xs:element name="radif" type="xs:short" />
+							<xs:element name="type_select" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_select" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_radif" type="xs:string" minOccurs="0" />
+							<xs:element name="qty" type="xs:decimal" />
+							<xs:element name="price" type="xs:decimal" />
+							<xs:element name="fet" type="xs:decimal" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="cod_technician" type="xs:string" minOccurs="0" />
+							<xs:element name="COMMENT_ARTICLE" type="xs:string" minOccurs="0" />
+							<xs:element name="AVERAGE_COST" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_deposit">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_payment" type="xs:int" />
+							<xs:element name="id_service_center" type="xs:string" minOccurs="0" />
+							<xs:element name="refrence_no" type="xs:string" minOccurs="0" />
+							<xs:element name="refer_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_type" type="xs:string" minOccurs="0" />
+							<xs:element name="payment_amount" type="xs:decimal" minOccurs="0" />
+							<xs:element name="flag_deposit_bank" type="xs:boolean" minOccurs="0" />
+							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GL_payment_AR">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID_payment" type="xs:int" />
+							<xs:element name="AR_terms" type="xs:string" minOccurs="0" />
+							<xs:element name="AR_due_date" type="xs:string" minOccurs="0" />
+							<xs:element name="Cancel_flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_brand">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="complete_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="abbreviation_desc_brand" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="tel" type="xs:string" minOccurs="0" />
+							<xs:element name="conect_personal" type="xs:string" minOccurs="0" />
+							<xs:element name="icon_brand" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_line">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_brand" type="xs:string" />
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="line" type="xs:string" />
+							<xs:element name="features" type="xs:string" minOccurs="0" />
+							<xs:element name="benefits" type="xs:string" minOccurs="0" />
+							<xs:element name="treadwear" type="xs:string" minOccurs="0" />
+							<xs:element name="traction" type="xs:string" minOccurs="0" />
+							<xs:element name="temperature" type="xs:string" minOccurs="0" />
+							<xs:element name="limit_warranty" type="xs:string" minOccurs="0" />
+							<xs:element name="construction" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="image_remark" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="tread_life" type="xs:string" minOccurs="0" />
+							<xs:element name="wet_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="quiet_ride" type="xs:string" minOccurs="0" />
+							<xs:element name="handling" type="xs:string" minOccurs="0" />
+							<xs:element name="winter_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="nud_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="overall_score" type="xs:string" minOccurs="0" />
+							<xs:element name="dry_traction" type="xs:string" minOccurs="0" />
+							<xs:element name="ride_comfort" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_style">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="style" type="xs:string" />
+							<xs:element name="desc_style" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+							<xs:element name="image_remark" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Style">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Style" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Line">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Line" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="Brand" type="xs:string" minOccurs="0" />
+							<xs:element name="Style" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_public">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_main" type="xs:string" />
+							<xs:element name="cod_table_public" type="xs:string" />
+							<xs:element name="desc_table" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ItemsListing">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Item_x0020_No_x0023_" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="Item_x0020_Type" type="xs:string" minOccurs="0" />
+							<xs:element name="SIZE" type="xs:string" minOccurs="0" />
+							<xs:element name="BRAND" type="xs:string" minOccurs="0" />
+							<xs:element name="LINE" type="xs:string" minOccurs="0" />
+							<xs:element name="STYLE" type="xs:string" minOccurs="0" />
+							<xs:element name="Vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="Quick_x0020_Ref_x0023_" type="xs:string" minOccurs="0" />
+							<xs:element name="Taxable" type="xs:string" minOccurs="0" />
+							<xs:element name="Store_x0020_No_x0023_" type="xs:string" minOccurs="0" />
+							<xs:element name="Qty" type="xs:double" minOccurs="0" />
+							<xs:element name="Rep_x0023__x0020_Cost" type="xs:string" minOccurs="0" />
+							<xs:element name="FET" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_Price" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_vendor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="desc_vendor" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="zipcode" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_1" type="xs:string" minOccurs="0" />
+							<xs:element name="extension_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_type_1" type="xs:string" minOccurs="0" />
+							<xs:element name="phone_main_1" type="xs:boolean" minOccurs="0" />
+							<xs:element name="vendor_since" type="xs:string" minOccurs="0" />
+							<xs:element name="vendor_type" type="xs:string" minOccurs="0" />
+							<xs:element name="class_vendor" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_vendor_class">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="class_vendor" type="xs:string" />
+							<xs:element name="desc_class" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_vendor_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="vendor_type" type="xs:string" />
+							<xs:element name="desc_vendor_type" type="xs:string" minOccurs="0" />
+							<xs:element name="GL_expense_account" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Vendor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Vendor" type="xs:double" minOccurs="0" />
+							<xs:element name="Company" type="xs:string" minOccurs="0" />
+							<xs:element name="Address" type="xs:string" minOccurs="0" />
+							<xs:element name="City" type="xs:string" minOccurs="0" />
+							<xs:element name="State" type="xs:string" minOccurs="0" />
+							<xs:element name="Zip_x0020_Code" type="xs:double" minOccurs="0" />
+							<xs:element name="Telephone" type="xs:string" minOccurs="0" />
+							<xs:element name="Vendor_x0020_Since" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Type" type="xs:string" minOccurs="0" />
+							<xs:element name="Class" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bas_zipcode">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="zipcode" type="xs:string" />
+							<xs:element name="city" type="xs:string" minOccurs="0" />
+							<xs:element name="county" type="xs:string" minOccurs="0" />
+							<xs:element name="state" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item_quick_refrence">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_quick_refrence" type="xs:string" />
+							<xs:element name="desc_quick_refrence" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="cod_item_type" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="cod_quick_refrence" type="xs:string" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="line" type="xs:string" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="picture" type="xs:base64Binary" minOccurs="0" />
+							<xs:element name="upc" type="xs:string" minOccurs="0" />
+							<xs:element name="consignment" type="xs:boolean" minOccurs="0" />
+							<xs:element name="discontinued" type="xs:boolean" minOccurs="0" />
+							<xs:element name="discontinued_date" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_type_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_item_type" type="xs:string" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_item_warehouse">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="cod_warehouse" type="xs:string" />
+							<xs:element name="on_hand" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item_vendor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="cod_vendor" type="xs:string" />
+							<xs:element name="ven_part_no" type="xs:string" minOccurs="0" />
+							<xs:element name="remark" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_item_cost_transaction">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="date_cost_change" type="xs:string" />
+							<xs:element name="cost" type="xs:float" />
+							<xs:element name="list_price" type="xs:float" minOccurs="0" />
+							<xs:element name="fet" type="xs:float" minOccurs="0" />
+							<xs:element name="delivery" type="xs:float" minOccurs="0" />
+							<xs:element name="frieght" type="xs:float" minOccurs="0" />
+							<xs:element name="price_code" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_discount_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="counter" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1"
+								type="xs:short" />
+							<xs:element name="item_no" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PriceCode">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Price_x0020_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="Price_x0020_Column1" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost1" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator1" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_1" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount1" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price1" type="xs:double" minOccurs="0" />
+							<xs:element name="Price_x0020_Column2" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost2" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator2" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_2" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount2" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price2" type="xs:double" minOccurs="0" />
+							<xs:element name="Price_x0020_Column3" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost3" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator3" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_3" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount3" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price3" type="xs:double" minOccurs="0" />
+							<xs:element name="Price_x0020_Column4" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost4" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator4" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_4" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount4" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price4" type="xs:double" minOccurs="0" />
+							<xs:element name="Price_x0020_Column5" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost5" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator5" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_5" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount5" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price5" type="xs:double" minOccurs="0" />
+							<xs:element name="Price_x0020_Column6" type="xs:string" minOccurs="0" />
+							<xs:element name="List_x0020_or_x0020_Cost6" type="xs:string" minOccurs="0" />
+							<xs:element name="Operator6" type="xs:string" minOccurs="0" />
+							<xs:element name="_x0025__x0020_or_x0020__x0024_6" type="xs:string" minOccurs="0" />
+							<xs:element name="Amount6" type="xs:double" minOccurs="0" />
+							<xs:element name="Odd_x0020_Price6" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BRAND">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Brand" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_price_code">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="price_code" type="xs:string" />
+							<xs:element name="desc_price_code" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price1_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price1_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price1_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price2_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price2_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price2_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price3_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price3_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price3_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price4_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price4_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price4_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price5_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price5_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price5_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_c_l_a_p" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_operator" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_d_persent" type="xs:string" minOccurs="0" />
+							<xs:element name="price6_amount" type="xs:float" minOccurs="0" />
+							<xs:element name="price6_odd_price" type="xs:float" minOccurs="0" />
+							<xs:element name="price6_price_level" type="xs:string" minOccurs="0" />
+							<xs:element name="special_notice" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ITQty">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Item_x0020_No" type="xs:string" minOccurs="0" />
+							<xs:element name="DESCRIPTION" type="xs:string" minOccurs="0" />
+							<xs:element name="LOCATION" type="xs:string" minOccurs="0" />
+							<xs:element name="QTY" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Service">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Service" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="Type_x0020_of_x0020_Service" type="xs:string" minOccurs="0" />
+							<xs:element name="Category" type="xs:string" minOccurs="0" />
+							<xs:element name="Taxable" type="xs:string" minOccurs="0" />
+							<xs:element name="Attachment_x0020_Service" type="xs:string" minOccurs="0" />
+							<xs:element name="Style" type="xs:string" minOccurs="0" />
+							<xs:element name="Price_x0020_1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_3" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_5" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Price_x0020_6" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Require_x0020_Technician" type="xs:string" minOccurs="0" />
+							<xs:element name="Charge_x0020_Shop_x0020_Supplies" type="xs:string" minOccurs="0" />
+							<xs:element name="Reminder" type="xs:string" minOccurs="0" />
+							<xs:element name="Schedule" type="xs:string" minOccurs="0" />
+							<xs:element name="Cost" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Average_x0020_Time" type="xs:string" minOccurs="0" />
+							<xs:element name="Bay_x0020_No" type="xs:string" minOccurs="0" />
+							<xs:element name="Miles" type="xs:string" minOccurs="0" />
+							<xs:element name="Days" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_service_type">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="service_type" type="xs:string" />
+							<xs:element name="service_type_desc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_labor_service">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_service" type="xs:string" />
+							<xs:element name="desc_service" type="xs:string" minOccurs="0" />
+							<xs:element name="ext_desc" type="xs:string" minOccurs="0" />
+							<xs:element name="service_type" type="xs:string" minOccurs="0" />
+							<xs:element name="service_category" type="xs:string" minOccurs="0" />
+							<xs:element name="cost" type="xs:float" minOccurs="0" />
+							<xs:element name="use_cost" type="xs:boolean" minOccurs="0" />
+							<xs:element name="taxable" type="xs:boolean" minOccurs="0" />
+							<xs:element name="require_technician" type="xs:boolean" minOccurs="0" />
+							<xs:element name="charge_shop_supply" type="xs:boolean" minOccurs="0" />
+							<xs:element name="schedule" type="xs:boolean" minOccurs="0" />
+							<xs:element name="avg_time" type="xs:float" minOccurs="0" />
+							<xs:element name="use_avg_time" type="xs:boolean" minOccurs="0" />
+							<xs:element name="bay_no" type="xs:short" minOccurs="0" />
+							<xs:element name="use_bay_no" type="xs:boolean" minOccurs="0" />
+							<xs:element name="reminder" type="xs:boolean" minOccurs="0" />
+							<xs:element name="miles" type="xs:float" minOccurs="0" />
+							<xs:element name="days" type="xs:float" minOccurs="0" />
+							<xs:element name="type_b_t_d_v_r" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_labor_service_price">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id_price_labor_service" msdata:ReadOnly="true" msdata:AutoIncrement="true"
+								type="xs:short" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="1" />
+							<xs:element name="cod_service" type="xs:string" />
+							<xs:element name="style" type="xs:string" minOccurs="0" />
+							<xs:element name="price_rate" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level1" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level2" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level3" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level4" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level5" type="xs:decimal" minOccurs="0" />
+							<xs:element name="price_level6" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_itemtemp">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="desc_item" type="xs:string" minOccurs="0" />
+							<xs:element name="BeginQty" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_head" />
+			<xs:field xpath="mstns:id_service_center" />
+		</xs:unique>
+		<xs:unique name="cust_trtab_main_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:cust_trtab_main" />
+			<xs:field xpath="mstns:cod_customer" />
+		</xs:unique>
+		<xs:unique name="service_center_dtl_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_dtl" />
+			<xs:field xpath="mstns:id_service_center" />
+			<xs:field xpath="mstns:radif" />
+		</xs:unique>
+		<xs:unique name="GL_payment_deposit_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_payment_deposit" />
+			<xs:field xpath="mstns:ID_payment" />
+		</xs:unique>
+		<xs:unique name="GL_payment_AR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GL_payment_AR" />
+			<xs:field xpath="mstns:ID_payment" />
+		</xs:unique>
+		<xs:unique name="inv_tab_brand_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_brand" />
+			<xs:field xpath="mstns:cod_brand" />
+		</xs:unique>
+		<xs:unique name="inv_tab_line_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_line" />
+			<xs:field xpath="mstns:line" />
+		</xs:unique>
+		<xs:unique name="inv_tab_style_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_style" />
+			<xs:field xpath="mstns:style" />
+		</xs:unique>
+		<xs:unique name="inv_tab_public_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_public" />
+			<xs:field xpath="mstns:cod_main" />
+			<xs:field xpath="mstns:cod_table_public" />
+		</xs:unique>
+		<xs:unique name="inv_vendor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_vendor" />
+			<xs:field xpath="mstns:cod_vendor" />
+		</xs:unique>
+		<xs:unique name="inv_tab_vendor_class_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_vendor_class" />
+			<xs:field xpath="mstns:class_vendor" />
+		</xs:unique>
+		<xs:unique name="inv_tab_vendor_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_vendor_type" />
+			<xs:field xpath="mstns:vendor_type" />
+		</xs:unique>
+		<xs:unique name="bas_zipcode_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:bas_zipcode" />
+			<xs:field xpath="mstns:zipcode" />
+		</xs:unique>
+		<xs:unique name="inv_item_quick_refrence_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_item_quick_refrence" />
+			<xs:field xpath="mstns:cod_quick_refrence" />
+		</xs:unique>
+		<xs:unique name="inv_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_item" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="inv_tab_type_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_type_item" />
+			<xs:field xpath="mstns:cod_item_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_item_warehouse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_item_warehouse" />
+			<xs:field xpath="mstns:item_no" />
+			<xs:field xpath="mstns:cod_warehouse" />
+		</xs:unique>
+		<xs:unique name="inv_item_vendor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_item_vendor" />
+			<xs:field xpath="mstns:item_no" />
+			<xs:field xpath="mstns:cod_vendor" />
+		</xs:unique>
+		<xs:unique name="inv_item_cost_transaction_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_item_cost_transaction" />
+			<xs:field xpath="mstns:item_no" />
+			<xs:field xpath="mstns:date_cost_change" />
+		</xs:unique>
+		<xs:unique name="inv_discount_item_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_discount_item" />
+			<xs:field xpath="mstns:counter" />
+		</xs:unique>
+		<xs:unique name="inv_price_code_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_price_code" />
+			<xs:field xpath="mstns:price_code" />
+		</xs:unique>
+		<xs:unique name="inv_tab_service_type_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_service_type" />
+			<xs:field xpath="mstns:service_type" />
+		</xs:unique>
+		<xs:unique name="inv_tab_labor_service_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_labor_service" />
+			<xs:field xpath="mstns:cod_service" />
+		</xs:unique>
+		<xs:unique name="inv_tab_labor_service_price_Constraint1" msdata:ConstraintName="Constraint1"
+			msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_labor_service_price" />
+			<xs:field xpath="mstns:id_price_labor_service" />
+		</xs:unique>
+		<xs:unique name="dsItemsKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ITQty" />
+			<xs:field xpath="mstns:Item_x0020_No" />
+		</xs:unique>
+		<xs:keyref name="GL_payment_depositGL_payment_AR" refer="mstns:GL_payment_deposit_Constraint1"
+			msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//mstns:GL_payment_AR" />
+			<xs:field xpath="mstns:ID_payment" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

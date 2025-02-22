@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmThankCard" targetNamespace="http://www.tempuri.org/DSFrmThankCard.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmThankCard.xsd" xmlns="http://www.tempuri.org/DSFrmThankCard.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmThankCard" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="TextReport">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:short" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="WritingText" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_head">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_customer" type="xs:string" minOccurs="0" />
+							<xs:element name="NameCus" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="address" type="xs:string" minOccurs="0" />
+							<xs:element name="ZipCus" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="phone" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="Vehicle" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+							<xs:element name="desc_service" type="xs:string" minOccurs="0" />
+							<xs:element name="date_refer" type="xs:string" minOccurs="0" />
+							<xs:element name="make_year" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_labor_service">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="days" type="xs:int" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:TextReport" />
+			<xs:field xpath="mstns:Code" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

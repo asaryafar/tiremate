@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmFind" targetNamespace="http://www.tempuri.org/DSFrmFind.xsd" xmlns:mstns="http://www.tempuri.org/DSFrmFind.xsd"
+	xmlns="http://www.tempuri.org/DSFrmFind.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmFind" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ss">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code" type="xs:string" />
+							<xs:element name="descript" type="xs:string" minOccurs="0" />
+							<xs:element name="one" type="xs:string" minOccurs="0" />
+							<xs:element name="two" type="xs:string" minOccurs="0" />
+							<xs:element name="three" type="xs:string" minOccurs="0" />
+							<xs:element name="four" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:string"
+								minOccurs="0" />
+							<xs:element name="five" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:string"
+								minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="kar_personal">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code" type="xs:string" minOccurs="0" />
+							<xs:element name="dscript" type="xs:string" minOccurs="0" />
+							<xs:element name="one" type="xs:string" minOccurs="0" />
+							<xs:element name="two" type="xs:string" minOccurs="0" />
+							<xs:element name="three" type="xs:string" minOccurs="0" />
+							<xs:element name="four" type="xs:string" minOccurs="0" />
+							<xs:element name="five" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

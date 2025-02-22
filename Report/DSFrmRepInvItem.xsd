@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSFrmRepInvItem" targetNamespace="http://www.tempuri.org/DSFrmRepInvItem.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSFrmRepInvItem.xsd" xmlns="http://www.tempuri.org/DSFrmRepInvItem.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSFrmRepInvItem" msdata:IsDataSet="true" msdata:Locale="fa-IR">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="code" type="xs:string" minOccurs="0" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_type_item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_item_type" type="xs:string" />
+							<xs:element name="desc_item_type" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Line">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="code" type="xs:string" minOccurs="0" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Brand">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="code" type="xs:string" minOccurs="0" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Style">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+							<xs:element name="code" type="xs:string" minOccurs="0" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="vendor">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="store">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="cons">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="code" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="flag" msdata:ReadOnly="false" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:vendor" />
+			<xs:field xpath="mstns:code" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

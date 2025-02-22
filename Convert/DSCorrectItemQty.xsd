@@ -1,0 +1,106 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DSCorrectItemQty" targetNamespace="http://www.tempuri.org/DSCorrectItemQty.xsd"
+	xmlns:mstns="http://www.tempuri.org/DSCorrectItemQty.xsd" xmlns="http://www.tempuri.org/DSCorrectItemQty.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DSCorrectItemQty" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="inv_adjustment_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="Qty" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Receipt">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Return">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:double" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_sales_transfer_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="Qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="service_center_dtl">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_select" type="xs:string" msprop:nullValue="  " nillable="true" default="  " />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" msprop:nullValue="0"
+								default="0" nillable="true" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="inv_tab_item_warehouse">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="item_no" type="xs:string" />
+							<xs:element name="cod_warehouse" type="xs:string" />
+							<xs:element name="on_hand" type="xs:float" minOccurs="0" />
+							<xs:element name="Begining_Balance_Qty" type="xs:float" minOccurs="0" />
+							<xs:element name="cod_location" type="xs:string" minOccurs="0" />
+							<xs:element name="comitted" type="xs:float" minOccurs="0" />
+							<xs:element name="on_order" type="xs:float" minOccurs="0" />
+							<xs:element name="min_stock" type="xs:float" minOccurs="0" />
+							<xs:element name="max_stock" type="xs:float" minOccurs="0" />
+							<xs:element name="reorde" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CommitedQty">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="cod_select" type="xs:string" />
+							<xs:element name="qty" msdata:ReadOnly="true" type="xs:decimal" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DSCorrectItemQtyKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_adjustment_dtl" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="DSCorrectItemQtyKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Receipt" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="DSCorrectItemQtyKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Return" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="DSCorrectItemQtyKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_sales_transfer_dtl" />
+			<xs:field xpath="mstns:item_no" />
+		</xs:unique>
+		<xs:unique name="DSCorrectItemQtyKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:service_center_dtl" />
+			<xs:field xpath="mstns:cod_select" />
+		</xs:unique>
+		<xs:unique name="Constraint1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:inv_tab_item_warehouse" />
+			<xs:field xpath="mstns:item_no" />
+			<xs:field xpath="mstns:cod_warehouse" />
+		</xs:unique>
+		<xs:key name="DSCorrectItemQtyKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:CommitedQty" />
+			<xs:field xpath="mstns:cod_select" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

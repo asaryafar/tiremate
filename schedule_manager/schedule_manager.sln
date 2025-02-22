@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schedule_manager", "schedule_manager.csproj", "{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "main_project", "..\main_project\main_project.csproj", "{55CF3213-BCBA-408B-9481-BA6D9A5BCB3F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CommonClass", "..\CommonClass\CommonClass.vbproj", "{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}.Debug.ActiveCfg = Debug|.NET
+		{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}.Debug.Build.0 = Debug|.NET
+		{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}.Release.ActiveCfg = Release|.NET
+		{77F0CEA5-7FC3-41DE-94DD-A1FECC60BB17}.Release.Build.0 = Release|.NET
+		{55CF3213-BCBA-408B-9481-BA6D9A5BCB3F}.Debug.ActiveCfg = Debug|.NET
+		{55CF3213-BCBA-408B-9481-BA6D9A5BCB3F}.Debug.Build.0 = Debug|.NET
+		{55CF3213-BCBA-408B-9481-BA6D9A5BCB3F}.Release.ActiveCfg = Release|.NET
+		{55CF3213-BCBA-408B-9481-BA6D9A5BCB3F}.Release.Build.0 = Release|.NET
+		{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}.Debug.ActiveCfg = Debug|.NET
+		{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}.Debug.Build.0 = Debug|.NET
+		{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}.Release.ActiveCfg = Release|.NET
+		{AD6A0DF7-51EB-4AF7-BBE5-C8084F796B95}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
