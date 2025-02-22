@@ -1479,7 +1479,7 @@ Public Class FrmFederalTax
     End Sub
     Private Sub SaveButtonControl()
         If Status = MainModule.WorkStates.Edit Or Status = MainModule.WorkStates.AddNew Then
-            If Cmbstat_code.Text.Trim.Length > 0 And Numyear_tax.Text >= 1990 And Numyear_tax.Text <= 2020 Then
+            If Cmbstat_code.Text.Trim.Length > 0 And Numyear_tax.Text >= 1990 And Numyear_tax.Text <= 2060 Then
                 BtnSave.Enabled = True
                 MSave.Enabled = True
             Else
