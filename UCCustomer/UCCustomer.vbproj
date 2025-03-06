@@ -454,7 +454,7 @@
                 />
                 <File
                     RelPath = "FrmChangeCustomerSaleTax.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -464,7 +464,7 @@
                 />
                 <File
                     RelPath = "FrmCustomer.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -474,7 +474,7 @@
                 />
                 <File
                     RelPath = "FrmCustomer_Quick_Add.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -484,7 +484,7 @@
                 />
                 <File
                     RelPath = "FrmCustomerBalance.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -494,7 +494,7 @@
                 />
                 <File
                     RelPath = "FrmCustomerHistory.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -504,7 +504,7 @@
                 />
                 <File
                     RelPath = "FrmCustomerVehicles.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -514,7 +514,7 @@
                 />
                 <File
                     RelPath = "FrmDriverName.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -524,7 +524,7 @@
                 />
                 <File
                     RelPath = "FrmReceivePayment.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -534,7 +534,7 @@
                 />
                 <File
                     RelPath = "FrmReceivePaymentMultiStoreOld.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -554,7 +554,7 @@
                 />
                 <File
                     RelPath = "FrmSearchCustomerCode.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File
@@ -564,7 +564,7 @@
                 />
                 <File
                     RelPath = "FrmSearchReferenceNo.vb"
-                    SubType = "Code"
+                    SubType = "Form"
                     BuildAction = "Compile"
                 />
                 <File

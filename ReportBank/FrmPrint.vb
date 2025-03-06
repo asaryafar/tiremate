@@ -1404,26 +1404,37 @@ Public Class FrmPrint
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
         Select Case KindOfReport
             Case KindReport.CheckDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCheckDetail)
+                Call GridToExcel2(FileName, GrdCheckDetail)
             Case KindReport.DepositDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdDepositListDetail)
+                Call GridToExcel2(FileName, GrdDepositListDetail)
             Case KindReport.ATMDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdATMDetail)
+                Call GridToExcel2(FileName, GrdATMDetail)
             Case KindReport.Transfer
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdTransfer)
+                Call GridToExcel2(FileName, GrdTransfer)
             Case KindReport.Adjustment
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdAdj)
+                Call GridToExcel2(FileName, GrdAdj)
             Case KindReport.CheckByAcountDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCheckByAcount)
+                Call GridToExcel2(FileName, GrdCheckByAcount)
             Case Else
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCheckSummery)
+                Call GridToExcel2(FileName, GrdCheckSummery)
         End Select
 
     End Sub

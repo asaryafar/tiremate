@@ -3143,32 +3143,43 @@ Public Class FrmPrintARCus
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
         Select Case KindOfReport
             Case KindReport.customerARChargeDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCusChargeDetail)
+                Call GridToExcel2(FileName, GrdCusChargeDetail)
             Case KindReport.customerARChargeSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCusChargeSummery)
+                Call GridToExcel2(FileName, GrdCusChargeSummery)
             Case KindReport.CustomerARPaymentDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCusPaymentDetail)
+                Call GridToExcel2(FileName, GrdCusPaymentDetail)
             Case KindReport.CustomerARPaymentSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCusPaymentSummery)
+                Call GridToExcel2(FileName, GrdCusPaymentSummery)
             Case KindReport.CustomerARLedgerDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdcusLedgerDetail)
+                Call GridToExcel2(FileName, GrdcusLedgerDetail)
             Case KindReport.CustomerARLedgerSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdcusLedgerSummery)
+                Call GridToExcel2(FileName, GrdcusLedgerSummery)
             Case KindReport.CustomerDuePastDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdPastDueDetail)
+                Call GridToExcel2(FileName, GrdPastDueDetail)
             Case KindReport.CustomerDuePastSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdPastDueSummery)
+                Call GridToExcel2(FileName, GrdPastDueSummery)
             Case KindReport.CustomerAgingDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdAging)
+                Call GridToExcel2(FileName, GrdAging)
             Case KindReport.CustomerAgingSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdAging)
+                Call GridToExcel2(FileName, GrdAging)
 
         End Select
 
@@ -3613,5 +3624,5 @@ Public Class FrmPrintARCus
         End If
     End Sub
 
-    
+
 End Class

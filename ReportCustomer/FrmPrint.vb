@@ -1116,18 +1116,30 @@ Public Class FrmPrint
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
         Select Case KindOfReport
             Case KindReport.customerSaleDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdDetail)
+                Call GridToExcel2(FileName, GrdDetail)
             Case KindReport.customerSaleSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdSummery)
+                Call GridToExcel2(FileName, GrdSummery)
             Case KindReport.CustomerListing
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdList)
+                Call GridToExcel2(FileName, GrdList)
 
         End Select
 
@@ -1205,7 +1217,7 @@ Public Class FrmPrint
         rpt.SetParameterValue("Parstorename", OleDbReaderForStore.Item("STORENAME") & "")
         rpt.SetParameterValue("Parstorno", OleDbReaderForStore.Item("SHORTNAME") & "")
 
-        rpt.SetParameterValue("pardate", Format(Now(),  "MM/dd/yyyy"))
+        rpt.SetParameterValue("pardate", Format(Now(), "MM/dd/yyyy"))
         rpt.SetParameterValue("partime", Format(Now(), "Short Time"))
         rpt.SetParameterValue("Parrepname", "Customer Sales Report In Detail")
         rpt.SetParameterValue("Parfilter", StrFilter)
@@ -1232,7 +1244,7 @@ Public Class FrmPrint
         rpt.SetParameterValue("Parstorename", OleDbReaderForStore.Item("STORENAME") & "")
         rpt.SetParameterValue("Parstorno", OleDbReaderForStore.Item("SHORTNAME") & "")
 
-        rpt.SetParameterValue("pardate", Format(Now(),  "MM/dd/yyyy"))
+        rpt.SetParameterValue("pardate", Format(Now(), "MM/dd/yyyy"))
         rpt.SetParameterValue("partime", Format(Now(), "Short Time"))
         rpt.SetParameterValue("Parrepname", "Customer Sales Report In Summery")
         rpt.SetParameterValue("Parfilter", StrFilter)
@@ -1258,7 +1270,7 @@ Public Class FrmPrint
         rpt.SetParameterValue("Parstorename", OleDbReaderForStore.Item("STORENAME") & "")
         rpt.SetParameterValue("Parstorno", OleDbReaderForStore.Item("SHORTNAME") & "")
 
-        rpt.SetParameterValue("pardate", Format(Now(),  "MM/dd/yyyy"))
+        rpt.SetParameterValue("pardate", Format(Now(), "MM/dd/yyyy"))
         rpt.SetParameterValue("partime", Format(Now(), "Short Time"))
         rpt.SetParameterValue("Parrepname", " Customer Listing Report ")
         rpt.SetParameterValue("Parfilter", StrFilter)

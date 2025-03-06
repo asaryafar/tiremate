@@ -940,18 +940,29 @@ Public Class FrmPrintTraffic
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
         Select Case KindOfReport
             Case KindReport.StoreTrafficAnalysis
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdStore)
+                Call GridToExcel2(FileName, GrdStore)
             Case KindReport.FrequencyAnalysisList
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdSummery)
+                Call GridToExcel2(FileName, GrdSummery)
             Case KindReport.NewCustomerList, KindReport.InactiveCusList
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdList)
+                Call GridToExcel2(FileName, GrdList)
 
         End Select
 

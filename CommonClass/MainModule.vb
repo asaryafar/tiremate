@@ -562,6 +562,30 @@ Public Module MainModule
         Next J
         SW1.Close()
     End Function
+    Public Function GridToExcel2(ByVal FileName As String, ByVal Grid As GridEX)
+        Dim ColCount As Int16
+        Dim RowCount As Int16
+        Dim I, J As Int16
+        Dim Table As GridEXTable = Grid.RootTable()
+        Dim CurrentRow As GridEXRow
+        Dim SW1 As System.IO.StreamWriter = New System.IO.StreamWriter(FileName, False, System.Text.Encoding.Default)
+
+        ColCount = Table.Columns.Count
+        For I = 0 To ColCount - 1 Step 1
+            SW1.Write(Table.Columns.Item(I).Caption & ";")
+        Next I
+
+        RowCount = Grid.RowCount
+        For J = 0 To RowCount - 1 Step 1
+            Grid.Row = J
+            CurrentRow = Grid.GetRow
+            SW1.WriteLine("")
+            For I = 0 To ColCount - 1 Step 1
+                SW1.Write(CurrentRow.Cells(I).Text & ";")
+            Next I
+        Next J
+        SW1.Close()
+    End Function
     Public Class SoundClass
         Declare Auto Function PlaySound Lib "winmm.dll" (ByVal name _
            As String, ByVal hmod As Integer, ByVal flags As Integer) As Integer

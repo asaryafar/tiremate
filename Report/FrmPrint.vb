@@ -862,21 +862,36 @@ Public Class FrmPrint
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
+
+
+
+
         Select Case TypeForm
             Case KindForm.PPL
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, Grd2)
+                Call GridToExcel2(FileName, Grd2)
             Case KindForm.ICS
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, Grd3)
+                Call GridToExcel2(FileName, Grd3)
             Case KindForm.IVRSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdIVRSummery)
+                Call GridToExcel2(FileName, GrdIVRSummery)
 
             Case Else
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, Grd1)
+                Call GridToExcel2(FileName, Grd1)
 
         End Select
 
@@ -1018,162 +1033,162 @@ Public Class FrmPrint
 
             DAInvListReport.Fill(DsFrmPrint1.inv_item)
 
+        Else
+
+
+            If ItemType = "01" Then
+                'DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
+                '              " inv_item_quick_refrence.desc_quick_refrence, inv_tab_location_warehouse.cod_location AS location,1 as flag " & _
+                '              " FROM         inv_item INNER JOIN " & _
+                '          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                '          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                '          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                '          " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
+                '              " (SELECT     cod_table_public, desc_table " & _
+                '" FROM inv_tab_public " & _
+                '                 " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public INNER JOIN " & _
+                '          " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
+                '          " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
+                '          " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
+                '              " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
+                '" FROM inv_tab_location_warehouse " & _
+                '                 " ORDER BY cod_location) inv_tab_location_warehouse ON inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
+                '               " where inv_item.cod_item_type = '01' " & _
+                '                       IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
+                DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_line.line, inv_tab_brand.complete_desc_brand as one, inv_tab_style.desc_style as two, " & _
+                  " inv_item_quick_refrence.desc_quick_refrence as three, V_Location.cod_location as four,1 as repno,1 as flag,inv_tab_brand.cod_brand, inv_tab_style.style,inv_price_code.desc_price_code " & _
+                  " FROM         inv_item INNER JOIN " & _
+                  " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                  " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                  " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                  " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
+                  " (SELECT     cod_table_public, desc_table " & _
+                  " FROM inv_tab_public " & _
+                  " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public INNER JOIN " & _
+                  " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence LEFT OUTER JOIN " & _
+                  " V_Location ON inv_item.item_no = V_Location.item_no  LEFT OUTER JOIN " & _
+                  " inv_item_cost_transaction ON inv_item.item_no = inv_item_cost_transaction.item_no INNER JOIN " & _
+                  " inv_price_code ON inv_price_code.price_code = inv_item_cost_transaction.price_code " & _
+                  " where inv_item.cod_item_type = '01' " & _
+                  IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
+                   " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence "
             Else
+                If ItemType = "04" Then
+                    'DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
+                    '" inv_item_quick_refrence.desc_quick_refrence, inv_tab_location_warehouse.cod_location AS location,1 as flag " & _
+                    '        " FROM         inv_item INNER JOIN " & _
+                    '      " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                    '      " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                    '      " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                    '      " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
+                    '      " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
+                    '      " (SELECT     cod_table_public, desc_table " & _
+                    '      " FROM inv_tab_public " & _
+                    '      " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public INNER JOIN " & _
+                    '      " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
+                    '      " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
+                    '      " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
+                    '      " FROM inv_tab_location_warehouse " & _
+                    '      " ORDER BY cod_location) inv_tab_location_warehouse ON " & _
+                    '      " inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
+                    '      " WHERE     (inv_item.cod_item_type = '04') " & _
+                    '                   IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
+                    DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_line.line, inv_tab_brand.complete_desc_brand as one, inv_tab_style.desc_style as two, " & _
+               " inv_item_quick_refrence.desc_quick_refrence as three, V_Location.cod_location AS four,1 as repno,1 as flag,inv_tab_brand.cod_brand, inv_tab_style.style ,inv_price_code.desc_price_code " & _
+               " FROM         inv_item INNER JOIN " & _
+               " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+               " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+               " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+               " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
+               " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
+               " (SELECT     cod_table_public, desc_table " & _
+               " FROM inv_tab_public " & _
+               " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
+               " V_Location ON inv_item.item_no = V_Location.item_no  LEFT OUTER JOIN " & _
+               " inv_item_cost_transaction ON inv_item.item_no = inv_item_cost_transaction.item_no INNER JOIN " & _
+               " inv_price_code ON inv_price_code.price_code = inv_item_cost_transaction.price_code " & _
+               " WHERE     (inv_item.cod_item_type = '04') " & _
+               IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
+                   " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence "
 
-
-                If ItemType = "01" Then
-                    'DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
-                    '              " inv_item_quick_refrence.desc_quick_refrence, inv_tab_location_warehouse.cod_location AS location,1 as flag " & _
-                    '              " FROM         inv_item INNER JOIN " & _
-                    '          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                    '          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                    '          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                    '          " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
-                    '              " (SELECT     cod_table_public, desc_table " & _
-                    '" FROM inv_tab_public " & _
-                    '                 " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public INNER JOIN " & _
-                    '          " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
-                    '          " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
-                    '          " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
-                    '              " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
-                    '" FROM inv_tab_location_warehouse " & _
-                    '                 " ORDER BY cod_location) inv_tab_location_warehouse ON inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
-                    '               " where inv_item.cod_item_type = '01' " & _
-                    '                       IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
-                    DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_line.line, inv_tab_brand.complete_desc_brand as one, inv_tab_style.desc_style as two, " & _
-                      " inv_item_quick_refrence.desc_quick_refrence as three, V_Location.cod_location as four,1 as repno,1 as flag,inv_tab_brand.cod_brand, inv_tab_style.style,inv_price_code.desc_price_code " & _
+                Else
+                    'DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,0 as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
+                    '              " inv_item_quick_refrence.desc_quick_refrence,1 as flag " & _
+                    '           " FROM         inv_item INNER JOIN " & _
+                    '           " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                    '           " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                    '           " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                    '           " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
+                    '           " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
+                    '           " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
+                    '           " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
+                    '           " FROM inv_tab_location_warehouse " & _
+                    '           " ORDER BY cod_location) inv_tab_location_warehouse ON " & _
+                    '           " inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
+                    '           " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                    '           IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
+                    'IIf(StrWhere.Trim.Length = 0, "", "where " & StrWhere)
+                    DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,0 as size,inv_tab_line.line, inv_tab_brand.complete_desc_brand as one,  inv_tab_style.desc_style as two, " & _
+                      " inv_item_quick_refrence.desc_quick_refrence as three,V_Location.cod_location as four,1 as repno,1 as flag ,inv_tab_brand.cod_brand, inv_tab_style.style ,inv_price_code.desc_price_code " & _
                       " FROM         inv_item INNER JOIN " & _
                       " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
                       " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
                       " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                      " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
-                      " (SELECT     cod_table_public, desc_table " & _
-                      " FROM inv_tab_public " & _
-                      " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public INNER JOIN " & _
                       " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence LEFT OUTER JOIN " & _
                       " V_Location ON inv_item.item_no = V_Location.item_no  LEFT OUTER JOIN " & _
                       " inv_item_cost_transaction ON inv_item.item_no = inv_item_cost_transaction.item_no INNER JOIN " & _
                       " inv_price_code ON inv_price_code.price_code = inv_item_cost_transaction.price_code " & _
-                      " where inv_item.cod_item_type = '01' " & _
-                      IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-                       " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence "
-                Else
-                    If ItemType = "04" Then
-                        'DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
-                        '" inv_item_quick_refrence.desc_quick_refrence, inv_tab_location_warehouse.cod_location AS location,1 as flag " & _
-                        '        " FROM         inv_item INNER JOIN " & _
-                        '      " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                        '      " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                        '      " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                        '      " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
-                        '      " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
-                        '      " (SELECT     cod_table_public, desc_table " & _
-                        '      " FROM inv_tab_public " & _
-                        '      " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public INNER JOIN " & _
-                        '      " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
-                        '      " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
-                        '      " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
-                        '      " FROM inv_tab_location_warehouse " & _
-                        '      " ORDER BY cod_location) inv_tab_location_warehouse ON " & _
-                        '      " inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
-                        '      " WHERE     (inv_item.cod_item_type = '04') " & _
-                        '                   IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
-                        DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item, inv_tab_public.desc_table as size, inv_tab_line.line, inv_tab_brand.complete_desc_brand as one, inv_tab_style.desc_style as two, " & _
-                   " inv_item_quick_refrence.desc_quick_refrence as three, V_Location.cod_location AS four,1 as repno,1 as flag,inv_tab_brand.cod_brand, inv_tab_style.style ,inv_price_code.desc_price_code " & _
-                   " FROM         inv_item INNER JOIN " & _
-                   " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                   " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                   " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                   " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
-                   " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
-                   " (SELECT     cod_table_public, desc_table " & _
-                   " FROM inv_tab_public " & _
-                   " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
-                   " V_Location ON inv_item.item_no = V_Location.item_no  LEFT OUTER JOIN " & _
-                   " inv_item_cost_transaction ON inv_item.item_no = inv_item_cost_transaction.item_no INNER JOIN " & _
-                   " inv_price_code ON inv_price_code.price_code = inv_item_cost_transaction.price_code " & _
-                   " WHERE     (inv_item.cod_item_type = '04') " & _
-                   IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-                       " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence "
+                      " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                        IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
+                      " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence"
 
-                    Else
-                        'DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,0 as size, inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_tab_style.desc_style, " & _
-                        '              " inv_item_quick_refrence.desc_quick_refrence,1 as flag " & _
-                        '           " FROM         inv_item INNER JOIN " & _
-                        '           " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                        '           " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                        '           " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                        '           " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence INNER JOIN " & _
-                        '           " inv_tab_item_warehouse ON inv_item.item_no = inv_tab_item_warehouse.item_no INNER JOIN " & _
-                        '           " inv_tab_wharehouse ON inv_tab_item_warehouse.cod_warehouse = inv_tab_wharehouse.cod_warehouse INNER JOIN " & _
-                        '           " (SELECT     TOP 1 cod_location, cod_warehouse, cod_location " & _
-                        '           " FROM inv_tab_location_warehouse " & _
-                        '           " ORDER BY cod_location) inv_tab_location_warehouse ON " & _
-                        '           " inv_tab_wharehouse.cod_warehouse = inv_tab_location_warehouse.cod_warehouse " & _
-                        '           " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                        '           IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere)
-                        'IIf(StrWhere.Trim.Length = 0, "", "where " & StrWhere)
-                        DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,0 as size,inv_tab_line.line, inv_tab_brand.complete_desc_brand as one,  inv_tab_style.desc_style as two, " & _
-                          " inv_item_quick_refrence.desc_quick_refrence as three,V_Location.cod_location as four,1 as repno,1 as flag ,inv_tab_brand.cod_brand, inv_tab_style.style ,inv_price_code.desc_price_code " & _
-                          " FROM         inv_item INNER JOIN " & _
-                          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                          " inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence LEFT OUTER JOIN " & _
-                          " V_Location ON inv_item.item_no = V_Location.item_no  LEFT OUTER JOIN " & _
-                          " inv_item_cost_transaction ON inv_item.item_no = inv_item_cost_transaction.item_no INNER JOIN " & _
-                          " inv_price_code ON inv_price_code.price_code = inv_item_cost_transaction.price_code " & _
-                          " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                            IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-                          " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line,inv_item_quick_refrence.desc_quick_refrence"
-
-                    End If
                 End If
-                DsFrmPrint1.inv_item.Clear()
-                DAInvListReport.Fill(DsFrmPrint1.inv_item)
             End If
+            DsFrmPrint1.inv_item.Clear()
+            DAInvListReport.Fill(DsFrmPrint1.inv_item)
+        End If
 
-            If DsFrmPrint1.inv_item.Count = 0 Then
-                MsgBox("there is no item for this report")
-                Me.Close()
-            End If
+        If DsFrmPrint1.inv_item.Count = 0 Then
+            MsgBox("there is no item for this report")
+            Me.Close()
+        End If
 
-            'If FItem Then
-            '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
-            '        If DSMAIN.Tables("item").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).item_no)).Length > 0 Then
-            '            DsFrmPrint1.inv_item(i).flagitem = 1
-            '        End If
-            '    Next
-            'End If
-            'If FLine Then
-            '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
-            '        If DSMAIN.Tables("line").Select("flag=1 and name = " & Qt(DsFrmPrint1.inv_item(i).line)).Length > 0 Then
-            '            DsFrmPrint1.inv_item(i).flagline = 1
-            '        End If
-            '    Next
-            'End If
-            'If FBrand Then
-            '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
-            '        If DSMAIN.Tables("brand").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).cod_brand)).Length > 0 Then
-            '            DsFrmPrint1.inv_item(i).flagbrand = 1
-            '        End If
-            '    Next
-            'End If
-            'If FStyle Then
-            '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
-            '        If DSMAIN.Tables("style").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).style)).Length > 0 Then
-            '            DsFrmPrint1.inv_item(i).flagstyle = 1
-            '        End If
-            '    Next
-            'End If
-            Panel1.Visible = False
-            Grd1.Height = 384
+        'If FItem Then
+        '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
+        '        If DSMAIN.Tables("item").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).item_no)).Length > 0 Then
+        '            DsFrmPrint1.inv_item(i).flagitem = 1
+        '        End If
+        '    Next
+        'End If
+        'If FLine Then
+        '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
+        '        If DSMAIN.Tables("line").Select("flag=1 and name = " & Qt(DsFrmPrint1.inv_item(i).line)).Length > 0 Then
+        '            DsFrmPrint1.inv_item(i).flagline = 1
+        '        End If
+        '    Next
+        'End If
+        'If FBrand Then
+        '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
+        '        If DSMAIN.Tables("brand").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).cod_brand)).Length > 0 Then
+        '            DsFrmPrint1.inv_item(i).flagbrand = 1
+        '        End If
+        '    Next
+        'End If
+        'If FStyle Then
+        '    For i As Integer = 0 To DsFrmPrint1.inv_item.Count - 1
+        '        If DSMAIN.Tables("style").Select("flag=1 and code = " & Qt(DsFrmPrint1.inv_item(i).style)).Length > 0 Then
+        '            DsFrmPrint1.inv_item(i).flagstyle = 1
+        '        End If
+        '    Next
+        'End If
+        Panel1.Visible = False
+        Grd1.Height = 384
 
-            'DsFrmPrint1.inv_item.DefaultView.RowFilter = "  flagstyle=true and  flagbrand=true and  flagline=true and  flagitem = true"
-            Grd1.SetDataBinding(DsFrmPrint1.inv_item, "")
+        'DsFrmPrint1.inv_item.DefaultView.RowFilter = "  flagstyle=true and  flagbrand=true and  flagline=true and  flagitem = true"
+        Grd1.SetDataBinding(DsFrmPrint1.inv_item, "")
 
-            Grd1.RootTable.Columns.Item(4).Visible = False
-            Grd1.BringToFront()
+        Grd1.RootTable.Columns.Item(4).Visible = False
+        Grd1.BringToFront()
 
     End Sub
     Private Sub FillDataSet2()
@@ -1563,7 +1578,7 @@ Public Class FrmPrint
                                   " WHERE     inv_item.cod_item_type NOT IN('01','04')" & _
                                 IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
                            " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
-      
+
             DAInvListReport.Fill(DsFrmPrint1.InventoryStatusReport)
 
             DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, " & _
@@ -1607,63 +1622,63 @@ Public Class FrmPrint
             DAInvListReport.Fill(DsFrmPrint1.InventoryStatusReport)
 
         Else
-        If ItemType = "01" Then
-            DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, " & _
-                " v_lastsold.datesold AS two, v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
-                " FROM         inv_item INNER JOIN " & _
-                " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN  " & _
-                " (SELECT     cod_table_public, desc_table " & _
-                " FROM inv_tab_public  " & _
-                " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
-                " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
-                " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
-                " v_lastrcv ON inv_item.item_no = v_lastrcv.item_no LEFT OUTER JOIN " & _
-                " v_lastadj ON inv_item.item_no = v_lastadj.item_no INNER JOIN " & _
-                "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
-                " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-               " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
-
-        Else
-            If ItemType = "04" Then
+            If ItemType = "01" Then
                 DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, " & _
-                      " v_lastsold.datesold AS two, v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
-                      " FROM         inv_item INNER JOIN " & _
-                      " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                      " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                      " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                      " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
-                      " (SELECT     cod_table_public, desc_table " & _
-                      " FROM inv_tab_public  " & _
-                      " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
-                      " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
-                      " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
-                      " v_lastadj ON inv_item.item_no = v_lastadj.item_no LEFT OUTER JOIN " & _
-                      " v_lastrcv ON inv_item.item_no = v_lastrcv.item_no INNER JOIN " & _
-                      "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
-                      " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                      IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-               " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
-            Else
-                DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, v_lastsold.datesold AS two, " & _
-                      " v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
-                      " FROM         inv_item INNER JOIN " & _
-                      " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                      " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                      " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand LEFT OUTER JOIN " & _
-                      " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
-                      " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
-                      " v_lastrcv  ON inv_item.item_no = v_lastrcv.item_no LEFT OUTER JOIN " & _
-                      " v_lastadj ON inv_item.item_no = v_lastadj.item_no INNER JOIN " & _
-                      "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
-                      " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                    " v_lastsold.datesold AS two, v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
+                    " FROM         inv_item INNER JOIN " & _
+                    " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                    " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                    " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                    " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN  " & _
+                    " (SELECT     cod_table_public, desc_table " & _
+                    " FROM inv_tab_public  " & _
+                    " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
+                    " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
+                    " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
+                    " v_lastrcv ON inv_item.item_no = v_lastrcv.item_no LEFT OUTER JOIN " & _
+                    " v_lastadj ON inv_item.item_no = v_lastadj.item_no INNER JOIN " & _
+                    "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
+                    " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
                     IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
-               " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
+                   " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
+
+            Else
+                If ItemType = "04" Then
+                    DAInvListReport.SelectCommand.CommandText = "SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, " & _
+                          " v_lastsold.datesold AS two, v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
+                          " FROM         inv_item INNER JOIN " & _
+                          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                          " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
+                          " (SELECT     cod_table_public, desc_table " & _
+                          " FROM inv_tab_public  " & _
+                          " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
+                          " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
+                          " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
+                          " v_lastadj ON inv_item.item_no = v_lastadj.item_no LEFT OUTER JOIN " & _
+                          " v_lastrcv ON inv_item.item_no = v_lastrcv.item_no INNER JOIN " & _
+                          "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
+                          " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                          IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
+                   " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
+                Else
+                    DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,  inv_tab_brand.complete_desc_brand AS size, inv_tab_line.line, V_Location.on_hand AS one, v_lastsold.datesold AS two, " & _
+                          " v_lastrcv.date_Rcv AS three, v_lastadj.date_adj AS four,V_Location.cod_location as five, 1 AS flag ,inv_tab_brand.cod_brand, inv_tab_style.style " & _
+                          " FROM         inv_item INNER JOIN " & _
+                          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand LEFT OUTER JOIN " & _
+                          " V_Location ON inv_item.item_no = V_Location.item_no LEFT OUTER JOIN " & _
+                          " v_lastsold ON inv_item.item_no = v_lastsold.cod_select LEFT OUTER JOIN " & _
+                          " v_lastrcv  ON inv_item.item_no = v_lastrcv.item_no LEFT OUTER JOIN " & _
+                          " v_lastadj ON inv_item.item_no = v_lastadj.item_no INNER JOIN " & _
+                          "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
+                          " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                        IIf(StrWhere.Trim.Length = 0, "", "and " & StrWhere) & _
+                   " order by   inv_tab_brand.complete_desc_brand, inv_tab_line.line, inv_item_quick_refrence.desc_quick_refrence "
+                End If
             End If
-        End If
             DsFrmPrint1.InventoryStatusReport.Clear()
             DAInvListReport.Fill(DsFrmPrint1.InventoryStatusReport)
         End If
@@ -1923,8 +1938,8 @@ Public Class FrmPrint
                                  " WHERE     inv_item.cod_item_type NOT IN ('01','04') " & _
                                  IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
                                  " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line "
- 
-        DAInvListReport.Fill(DsFrmPrint1.InventoryCountSheet)
+
+            DAInvListReport.Fill(DsFrmPrint1.InventoryCountSheet)
 
             DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh, V_Location.comitted AS QCounted,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
                    " FROM         inv_item INNER JOIN " & _
@@ -1960,38 +1975,38 @@ Public Class FrmPrint
             DAInvListReport.Fill(DsFrmPrint1.InventoryCountSheet)
 
         Else
-        If ItemType = "01" Then
-            DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
-                   " fROM         inv_item INNER JOIN " & _
-                   " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                   " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                   " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                   " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
-                   " (SELECT     cod_table_public, desc_table " & _
-                   " FROM inv_tab_public " & _
-                   " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
-                   " V_Location ON inv_item.item_no = V_Location.item_no INNER JOIN " & _
-                   "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
-                   " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                   IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
-               " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line "
-        Else
-            If ItemType = "04" Then
-                DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh, V_Location.comitted AS QCounted,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
-                      " FROM         inv_item INNER JOIN " & _
-                      " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
-                      " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
-                      " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
-                      " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
-                      " (SELECT     cod_table_public, desc_table " & _
-                      " FROM inv_tab_public  " & _
-                      " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
-                      " V_Location ON inv_item.item_no = V_Location.item_no INNER JOIN " & _
-                      "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
-                      " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
-                      IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
-                      " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line  "
+            If ItemType = "01" Then
+                DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
+                       " fROM         inv_item INNER JOIN " & _
+                       " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                       " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                       " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                       " inv_tab_tire_specification ON inv_item.item_no = inv_tab_tire_specification.item_no INNER JOIN " & _
+                       " (SELECT     cod_table_public, desc_table " & _
+                       " FROM inv_tab_public " & _
+                       " WHERE     cod_main = '01') inv_tab_public ON inv_tab_tire_specification.tire_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
+                       " V_Location ON inv_item.item_no = V_Location.item_no INNER JOIN " & _
+                       "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
+                       " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                       IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
+                   " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line "
             Else
+                If ItemType = "04" Then
+                    DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh, V_Location.comitted AS QCounted,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
+                          " FROM         inv_item INNER JOIN " & _
+                          " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
+                          " inv_tab_style ON inv_tab_line.style = inv_tab_style.style INNER JOIN " & _
+                          " inv_tab_brand ON inv_tab_line.cod_brand = inv_tab_brand.cod_brand INNER JOIN " & _
+                          " inv_tab_wheels_specification ON inv_item.item_no = inv_tab_wheels_specification.item_no INNER JOIN " & _
+                          " (SELECT     cod_table_public, desc_table " & _
+                          " FROM inv_tab_public  " & _
+                          " WHERE     cod_main = '01') inv_tab_public ON inv_tab_wheels_specification.wheel_size = inv_tab_public.cod_table_public LEFT OUTER JOIN " & _
+                          " V_Location ON inv_item.item_no = V_Location.item_no INNER JOIN " & _
+                          "  inv_item_quick_refrence ON inv_item.cod_quick_refrence = inv_item_quick_refrence.cod_quick_refrence " & _
+                          " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
+                          IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
+                          " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line  "
+                Else
                     DAInvListReport.SelectCommand.CommandText = " SELECT     inv_item.item_no, inv_item.desc_item,v_location.cod_location as bin, V_Location.on_hand AS qoh, V_Location.comitted AS qcounted,inv_tab_brand.complete_desc_brand as remarks, 1 AS flag ,inv_tab_line.line, inv_tab_brand.cod_brand, inv_tab_style.style,inv_item_quick_refrence.desc_quick_refrence " & _
                           " FROM         inv_item INNER JOIN " & _
                           " inv_tab_line ON inv_item.line = inv_tab_line.line INNER JOIN " & _
@@ -2002,10 +2017,10 @@ Public Class FrmPrint
                           " WHERE     inv_item.cod_item_type = " & Qt(ItemType) & _
                           IIf(StrWhere.Trim.Length = 0, "", " and " & StrWhere) & _
                           " order by    inv_item_quick_refrence.desc_quick_refrence,inv_tab_brand.complete_desc_brand, inv_tab_line.line "
+                End If
             End If
-        End If
-        DsFrmPrint1.InventoryCountSheet.Clear()
-        DAInvListReport.Fill(DsFrmPrint1.InventoryCountSheet)
+            DsFrmPrint1.InventoryCountSheet.Clear()
+            DAInvListReport.Fill(DsFrmPrint1.InventoryCountSheet)
 
         End If
 

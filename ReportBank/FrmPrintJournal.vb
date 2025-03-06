@@ -1266,14 +1266,26 @@ Public Class FrmPrintJournal
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
         Select Case KindOfReport
             Case KindReport.Income, KindReport.BalanceSHeet
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdIncome)
+                Call GridToExcel2(FileName, GrdIncome)
                 'Case KindReport.DepositDetail
                 '    Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdDepositListDetail)
                 'Case KindReport.ATMDetail

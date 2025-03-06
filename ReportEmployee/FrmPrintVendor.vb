@@ -2077,28 +2077,40 @@ IIf(StrWhere.Trim.Length > 0, " AND  " & StrWhere, "") & IIf(Date1.Trim.Length >
     End Sub
 
     Private Sub BtnEmail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEmail.Click
+        Dim SaveFileDialog1 As New SaveFileDialog
+        SaveFileDialog1.Filter = "CSV files (*.csv)|*.csv"
+        SaveFileDialog1.Title = "Save CSV File"
+        SaveFileDialog1.DefaultExt = "csv"
+        SaveFileDialog1.AddExtension = True
+        SaveFileDialog1.FileName = "report"
+
         Dim FileName As String
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.Cancel Then
+        If SaveFileDialog1.ShowDialog() = DialogResult.Cancel Then
             Exit Sub
         End If
-        FileName = "report.CSV"
+        FileName = SaveFileDialog1.FileName
+        If System.IO.Path.GetExtension(FileName) <> ".csv" Then
+            FileName = FileName.Replace(System.IO.Path.GetExtension(FileName), ".csv")
+
+        End If
+
         Select Case KindOfReport
             Case KindReport.UnpaidDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdUnPaidDtl)
+                Call GridToExcel2(FileName, GrdUnPaidDtl)
             Case KindReport.UnpaidSummery
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdUnPaidSummery)
+                Call GridToExcel2(FileName, GrdUnPaidSummery)
             Case KindReport.CreditDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCreditDetail)
+                Call GridToExcel2(FileName, GrdCreditDetail)
             Case KindReport.CreditSummary
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdCreditSummary)
+                Call GridToExcel2(FileName, GrdCreditSummary)
             Case KindReport.Payment
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdPayment)
+                Call GridToExcel2(FileName, GrdPayment)
             Case KindReport.VendorList
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdVendorList)
+                Call GridToExcel2(FileName, GrdVendorList)
             Case KindReport.vendorBillDtl, KindReport.VendorBillSum
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdVendorBill)
+                Call GridToExcel2(FileName, GrdVendorBill)
             Case KindReport.OutsidePurchaseCore, KindReport.OutsidePurchasesDetail
-                Call GridToExcel(FileName, FolderBrowserDialog1.SelectedPath, GrdOutsidePurchasesDetail)
+                Call GridToExcel2(FileName, GrdOutsidePurchasesDetail)
         End Select
     End Sub
 
