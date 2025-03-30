@@ -2959,7 +2959,7 @@ Public Class FrmCheckScreen
         End If
         Dim c As String = ""
         Dim j As Integer = 0
-        If DsFrmCheckScreen1.PrintDtl.Rows.Count >= 20 Then
+        If DsFrmCheckScreen1.PrintDtl.Rows.Count > 20 Then
             j = 20
         Else
             j = DsFrmCheckScreen1.PrintDtl.Rows.Count - 1
