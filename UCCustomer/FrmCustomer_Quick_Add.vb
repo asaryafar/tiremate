@@ -1176,12 +1176,61 @@ Public Class FrmCustomer_Quick_Add
             MsgFar("This Code is duplicate")
         End If
     End Function
+
+    Private Function CheckIsExistName() As Boolean
+        CheckIsExistName = False
+        If CmdGeneral.Connection.State <> ConnectionState.Open Then
+            CmdGeneral.Connection.Open()
+        End If
+        CmdGeneral.CommandText = "Select count(*) as countVar from cust_trtab_main where  ltrim(rtrim(isnull(f_name,'')))  + ltrim(rtrim(ISNULL(l_name,''))) =" & Qt(Txtf_name.Text.Trim() & TXTL_name.Text.Trim())
+        If CmdGeneral.ExecuteScalar = 1 Then
+            CheckIsExistName = True
+
+        End If
+    End Function
+    Private Function CheckIsCompany() As Boolean
+        CheckIsCompany = False
+        If CmdGeneral.Connection.State <> ConnectionState.Open Then
+            CmdGeneral.Connection.Open()
+        End If
+        CmdGeneral.CommandText = "Select count(*) as countVar from cust_trtab_main where  cod_company =" & Qt(CompanyName1.CompanyCod)
+        If CmdGeneral.ExecuteScalar = 1 Then
+            CheckIsCompany = True
+
+        End If
+    End Function
     Private Sub psave(Optional ByVal ThisChangeStatus As Boolean = True)
         If ThisFormStatus = MainModule.WorkStates.AddNew Then
             If CheckIsExist() Then
                 Exit Sub
             End If
+            If CheckIsExistName() Then
+                Dim c1 As New FrmWhatDoForMenu
+                c1.BtnLeftText = "No"
+                c1.BtnRightText = "Yes"
+                c1.ShowFarMsg("The Customer Exists. Do you want to add?")
+                If c1.DialogResult = DialogResult.Cancel Then
+                    Exit Sub
+                ElseIf c1.DialogResult = DialogResult.OK Then
+
+                End If
+            End If
+
+            If CheckIsCompany() Then
+                Dim c1 As New FrmWhatDoForMenu
+                c1.BtnLeftText = "No"
+                c1.BtnRightText = "Yes"
+                c1.ShowFarMsg("The Company Exists. Do you want to add?")
+                If c1.DialogResult = DialogResult.Cancel Then
+                    Exit Sub
+                ElseIf c1.DialogResult = DialogResult.OK Then
+
+                End If
+            End If
             Try
+                If CheckIsExist() Then
+                    Exit Sub
+                End If
                 Call AddNewCompany()
                 If CmdGeneral.Connection.State <> ConnectionState.Open Then
                     CmdGeneral.Connection.Open()
