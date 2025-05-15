@@ -73,10 +73,8 @@ Public Class FrmReceiveReturnProduct
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Vendor_Cod1 As UCVendor.Vendor_Cod
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents CommentButton_House As UCCommentButton.CommentButton
     Friend WithEvents BtnCustomerBalance As System.Windows.Forms.Button
     Friend WithEvents BtnCustomerHistory As System.Windows.Forms.Button
     Friend WithEvents BtnCustomerDetail As System.Windows.Forms.Button
@@ -113,14 +111,12 @@ Public Class FrmReceiveReturnProduct
     Friend WithEvents LblwEIGHT As System.Windows.Forms.Label
     Friend WithEvents ChkBillReceive As System.Windows.Forms.CheckBox
     Friend WithEvents TxtDueDate As CalendarCombo.CalendarCombo
-    Friend WithEvents CommentButton_Vendor As UCCommentButton.CommentButton
     Friend WithEvents CmbApTerm As System.Windows.Forms.ComboBox
     Friend WithEvents RbCredit As System.Windows.Forms.RadioButton
     Friend WithEvents DaInv_Receive_Products_head As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents CmdGeneral As System.Data.SqlClient.SqlCommand
     Friend WithEvents PhoneNo1 As UCPhone.PhoneNo
-    Friend WithEvents PhoneButton1 As UCPhone.PhoneButton
     Friend WithEvents SelectPo As Janus.Windows.EditControls.UIButton
     Friend WithEvents DaPoDetail As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents SqlCommand3 As System.Data.SqlClient.SqlCommand
@@ -167,6 +163,10 @@ Public Class FrmReceiveReturnProduct
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents TxtTax As CalcUtils.UcCalcText
     Friend WithEvents CmdItemPrice As Janus.Windows.EditControls.UIButton
+    Friend WithEvents Vendor_Cod1 As UCVendor.Vendor_Cod
+    Friend WithEvents PhoneButton1 As UCPhone.PhoneButton
+    Friend WithEvents CommentButton_House As UCCommentButton.CommentButton
+    Friend WithEvents CommentButton_Vendor As UCCommentButton.CommentButton
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(FrmReceiveReturnProduct))
@@ -212,6 +212,8 @@ Public Class FrmReceiveReturnProduct
         Me.LblCompanyName = New System.Windows.Forms.Label
         Me.LblStoreNo = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
+        Me.PhoneButton1 = New UCPhone.PhoneButton
+        Me.Vendor_Cod1 = New UCVendor.Vendor_Cod
         Me.Panel4 = New System.Windows.Forms.Panel
         Me.Panel6 = New System.Windows.Forms.Panel
         Me.SelectPo = New Janus.Windows.EditControls.UIButton
@@ -302,6 +304,8 @@ Public Class FrmReceiveReturnProduct
         Me.SqlUpdateCommand3 = New System.Data.SqlClient.SqlCommand
         Me.SqlDeleteCommand3 = New System.Data.SqlClient.SqlCommand
         Me.DaGl_vendor_credit = New System.Data.SqlClient.SqlDataAdapter
+        Me.CommentButton_House = New UCCommentButton.CommentButton
+        Me.CommentButton_Vendor = New UCCommentButton.CommentButton
         Me.PnlHead.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -313,11 +317,6 @@ Public Class FrmReceiveReturnProduct
         CType(Me.DsFrmReceiveReturnProduct1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GrdDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Cnn
-        '
-        Me.Cnn.ConnectionString = "workstation id=FARAJIXP;packet size=4096;user id=sa;data source=""."";persist secur" & _
-        "ity info=True;initial catalog=Tiremate_01;password=sa"
         '
         'imageList1
         '
@@ -740,6 +739,10 @@ Public Class FrmReceiveReturnProduct
         '
         Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.CommentButton_Vendor)
+        Me.Panel2.Controls.Add(Me.CommentButton_House)
+        Me.Panel2.Controls.Add(Me.PhoneButton1)
+        Me.Panel2.Controls.Add(Me.Vendor_Cod1)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.SelectPo)
         Me.Panel2.Controls.Add(Me.PhoneNo1)
@@ -759,6 +762,27 @@ Public Class FrmReceiveReturnProduct
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(348, 121)
         Me.Panel2.TabIndex = 0
+        '
+        'PhoneButton1
+        '
+        Me.PhoneButton1.Location = New System.Drawing.Point(313, 52)
+        Me.PhoneButton1.Name = "PhoneButton1"
+        Me.PhoneButton1.Size = New System.Drawing.Size(23, 23)
+        Me.PhoneButton1.TabIndex = 18
+        Me.PhoneButton1.ZEnabled = True
+        '
+        'Vendor_Cod1
+        '
+        Me.Vendor_Cod1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Vendor_Cod1.Connection = Me.Cnn
+        Me.Vendor_Cod1.Location = New System.Drawing.Point(58, 2)
+        Me.Vendor_Cod1.Name = "Vendor_Cod1"
+        Me.Vendor_Cod1.NotExitIfNotFound = False
+        Me.Vendor_Cod1.ReleaseIfNotFoundVendorCod = False
+        Me.Vendor_Cod1.Size = New System.Drawing.Size(101, 20)
+        Me.Vendor_Cod1.TabIndex = 17
+        Me.Vendor_Cod1.VendorCod = ""
+        Me.Vendor_Cod1.VendorCodLen = 6
         '
         'Panel4
         '
@@ -1986,6 +2010,36 @@ Public Class FrmReceiveReturnProduct
         Me.DaGl_vendor_credit.SelectCommand = Me.SqlSelectCommand5
         Me.DaGl_vendor_credit.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "GL_vendor_credit", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("id_vendor_credit", "id_vendor_credit"), New System.Data.Common.DataColumnMapping("cod_vendor", "cod_vendor"), New System.Data.Common.DataColumnMapping("date_credit", "date_credit"), New System.Data.Common.DataColumnMapping("amount_credit", "amount_credit"), New System.Data.Common.DataColumnMapping("Remark", "Remark"), New System.Data.Common.DataColumnMapping("ref_no", "ref_no"), New System.Data.Common.DataColumnMapping("due_date", "due_date"), New System.Data.Common.DataColumnMapping("id_vendor_credit_head", "id_vendor_credit_head"), New System.Data.Common.DataColumnMapping("id_receive_ref", "id_receive_ref")})})
         Me.DaGl_vendor_credit.UpdateCommand = Me.SqlUpdateCommand3
+        '
+        'CommentButton_House
+        '
+        Me.CommentButton_House.Location = New System.Drawing.Point(16, 94)
+        Me.CommentButton_House.Name = "CommentButton_House"
+        Me.CommentButton_House.Size = New System.Drawing.Size(102, 23)
+        Me.CommentButton_House.TabIndex = 19
+        Me.CommentButton_House.ZButtonText = Nothing
+        Me.CommentButton_House.ZCommentFormheight = 0
+        Me.CommentButton_House.ZCommentFormWidth = 0
+        Me.CommentButton_House.ZCommentText = Nothing
+        Me.CommentButton_House.ZEnabled = True
+        Me.CommentButton_House.ZMaxCommentLength = 32767
+        Me.CommentButton_House.ZShowInLeft = False
+        Me.CommentButton_House.ZShowInTop = False
+        '
+        'CommentButton_Vendor
+        '
+        Me.CommentButton_Vendor.Location = New System.Drawing.Point(135, 97)
+        Me.CommentButton_Vendor.Name = "CommentButton_Vendor"
+        Me.CommentButton_Vendor.Size = New System.Drawing.Size(102, 23)
+        Me.CommentButton_Vendor.TabIndex = 20
+        Me.CommentButton_Vendor.ZButtonText = Nothing
+        Me.CommentButton_Vendor.ZCommentFormheight = 0
+        Me.CommentButton_Vendor.ZCommentFormWidth = 0
+        Me.CommentButton_Vendor.ZCommentText = Nothing
+        Me.CommentButton_Vendor.ZEnabled = True
+        Me.CommentButton_Vendor.ZMaxCommentLength = 32767
+        Me.CommentButton_Vendor.ZShowInLeft = False
+        Me.CommentButton_Vendor.ZShowInTop = False
         '
         'FrmReceiveReturnProduct
         '
