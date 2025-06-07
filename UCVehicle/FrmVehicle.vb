@@ -2949,7 +2949,18 @@ Public Class FrmVehicle
     Friend Function PInsert() As Decimal
         PInsert = 0
         Call GetTxtCod_vehicleVar()
-        Call UpdateBeforVehicleFlag(TXTLicenseNo.Text)
+        'Call UpdateBeforVehicleFlag(TXTLicenseNo.Text)
+
+        If CheckIsExistLicenseNo() Then
+
+
+            MsgFar("This License No Exists!")
+
+            PInsert = 0
+            Exit Function
+
+        End If
+
         Try
             With CmdInsert
                 If .Connection.State <> ConnectionState.Open Then
@@ -2982,6 +2993,18 @@ Public Class FrmVehicle
             MsgBox("This license_no_vehicle Is Exist")
             PInsert = 0
         End Try
+    End Function
+
+    Private Function CheckIsExistLicenseNo() As Boolean
+        CheckIsExistLicenseNo = False
+        If CmdGeneral.Connection.State <> ConnectionState.Open Then
+            CmdGeneral.Connection.Open()
+        End If
+        CmdGeneral.CommandText = "Select count(*) as countVar from ser_tr_vehicle where  ltrim(rtrim(isnull(license_no_vehicle,'')))   =" & Qt(TXTLicenseNo.Text.Trim())
+        If CmdGeneral.ExecuteScalar = 1 Then
+            CheckIsExistLicenseNo = True
+
+        End If
     End Function
     Friend Function PUpdate(ByVal Thislicense_no_vehicle As String) As Boolean
         PUpdate = True
@@ -3566,17 +3589,17 @@ Public Class FrmVehicle
         MyFrmVehicle2.BtnChange.Enabled = False
         MyFrmVehicle2.ExitAfterSaveOrCancel = True
     End Sub
-    Sub UpdateBeforVehicleFlag(ByVal TXTLicenseNo As String)
-        If CmdGeneral.Connection.State <> ConnectionState.Open Then
-            CmdGeneral.Connection.Open()
-        End If
-        Try
-            CmdGeneral.CommandText = "update  ser_tr_vehicle set vehicle_active=0 where license_no_vehicle=" & Qt(TXTLicenseNo)
-            CmdGeneral.ExecuteNonQuery()
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-    End Sub
+    'Sub UpdateBeforVehicleFlag(ByVal TXTLicenseNo As String)
+    '    If CmdGeneral.Connection.State <> ConnectionState.Open Then
+    '        CmdGeneral.Connection.Open()
+    '    End If
+    '    Try
+    '        CmdGeneral.CommandText = "update  ser_tr_vehicle set vehicle_active=0 where license_no_vehicle=" & Qt(TXTLicenseNo)
+    '        CmdGeneral.ExecuteNonQuery()
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '    End Try
+    'End Sub
 
     Private Sub MyFrmVehicle2_AfterSave(ByVal Idload As Object) Handles MyFrmVehicle2.AfterSave
         Call PCancel()

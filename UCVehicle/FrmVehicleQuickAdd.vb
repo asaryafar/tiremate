@@ -832,8 +832,18 @@ Public Class FrmVehicleQuickAdd
         'TxtCreatedDate.Text = Now.Date
         'DteCurrentDate.Text = Now.Date
 
+        If CheckIsExistLicenseNo() Then
+
+           
+            MsgFar("This License No Exists!")
+
+            PInsert = 0
+            Exit Function
+
+        End If
+
         Call GetTxtCod_vehicleVar()
-        Call UpdateBeforVehicleFlag(TXTLicenseNo.Text)
+        'Call UpdateBeforVehicleFlag(TXTLicenseNo.Text)
         Try
             With CmdInsert
                 If .Connection.State <> ConnectionState.Open Then
@@ -866,6 +876,17 @@ Public Class FrmVehicleQuickAdd
             MsgBox("This license_no_vehicle Is Exist")
             PInsert = 0
         End Try
+    End Function
+    Private Function CheckIsExistLicenseNo() As Boolean
+        CheckIsExistLicenseNo = False
+        If CmdGeneral.Connection.State <> ConnectionState.Open Then
+            CmdGeneral.Connection.Open()
+        End If
+        CmdGeneral.CommandText = "Select count(*) as countVar from ser_tr_vehicle where  ltrim(rtrim(isnull(license_no_vehicle,'')))   =" & Qt(TXTLicenseNo.Text.Trim())
+        If CmdGeneral.ExecuteScalar = 1 Then
+            CheckIsExistLicenseNo = True
+
+        End If
     End Function
 
     Private Sub GetTxtCod_vehicleVar()
@@ -913,28 +934,28 @@ Public Class FrmVehicleQuickAdd
                 End If
 
             Else
-                    If Val(ValMakeNewcod_Vehicle) > 0 Then
-                        i = Len(ValMakeNewcod_Vehicle)
-                    Else
-                        i = 0
-                    End If
+                If Val(ValMakeNewcod_Vehicle) > 0 Then
+                    i = Len(ValMakeNewcod_Vehicle)
+                Else
+                    i = 0
+                End If
 
-                    Dim FirstPartVehicle As String = Mid(MakeNewCod_Vehicle, 1, Len(MakeNewCod_Vehicle) - i)
+                Dim FirstPartVehicle As String = Mid(MakeNewCod_Vehicle, 1, Len(MakeNewCod_Vehicle) - i)
 
-                    If ValMakeNewcod_Vehicle > 998 Then
-                        FirstPartVehicle = Chr(Asc(FirstPartVehicle) + 1)
-                        ValMakeNewcod_Vehicle = "000"
-
-                    End If
-
-                    If MakeNewCod_Vehicle.Length >= i Then
-                        MakeNewCod_Vehicle = FirstPartVehicle + Getcod(Str((Int(Val(ValMakeNewcod_Vehicle)) + 1)).Trim, Len(ValMakeNewcod_Vehicle))
-                    End If
-                    If MakeNewCod_Vehicle.Trim.Length > LenVehicleCod Then
-                        MakeNewCod_Vehicle = "A" + Getcod("1", LenVehicleCod - 1)
-                    End If
+                If ValMakeNewcod_Vehicle > 998 Then
+                    FirstPartVehicle = Chr(Asc(FirstPartVehicle) + 1)
+                    ValMakeNewcod_Vehicle = "000"
 
                 End If
+
+                If MakeNewCod_Vehicle.Length >= i Then
+                    MakeNewCod_Vehicle = FirstPartVehicle + Getcod(Str((Int(Val(ValMakeNewcod_Vehicle)) + 1)).Trim, Len(ValMakeNewcod_Vehicle))
+                End If
+                If MakeNewCod_Vehicle.Trim.Length > LenVehicleCod Then
+                    MakeNewCod_Vehicle = "A" + Getcod("1", LenVehicleCod - 1)
+                End If
+
+            End If
         Catch ex As Exception
             MakeNewCod_Vehicle = Getcod("1", LenVehicleCod)
         End Try
