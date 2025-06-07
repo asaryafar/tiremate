@@ -360,7 +360,7 @@ Public Module MainModule
         DescOfWorkOrderItem(4) = "OUT.PURCHASE"
         DescOfWorkOrderItem(5) = "COMMENTS"
         DescOfWorkOrderItem(6) = "ADJUSTMENT"
-        DescOfWorkOrderItem(7) = "TRADE"
+        DescOfWorkOrderItem(7) = "NON TAXABLE"
         DescOfWorkOrderItem(8) = "SHOP SUPPLY"
         DescOfWorkOrderItem(9) = "ADD TO BALANCE"
     End Sub

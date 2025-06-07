@@ -4791,7 +4791,7 @@ Public Class FrmWorkOrders
                         CurrentRow.Cells(6).Value = 1
                         CurrentRow.Cells(7).Value = 0
                         CurrentRow.Cells(8).Value = 0
-                        CurrentRow.Cells(9).Value = 1
+                        CurrentRow.Cells(9).Value = 0
                         'CurrentRow.Cells(10).Value = 0
                         CurrentRow.Cells(11).Value = ""
                         Call SelectRow(GrdDetail.Row, 6)
@@ -5393,6 +5393,8 @@ Public Class FrmWorkOrders
                             Mylabor_service.cod_Service = ThisPakageDataTable.Rows(i).Item("cod_select")
                             Mylabor_service.FindDesc(Mylabor_service.cod_Service)
                             dr("taxable") = Mylabor_service.Taxable
+                        Case "T"
+                            dr("taxable") = 0
                         Case Else
                             dr("taxable") = 1
                     End Select
@@ -5546,6 +5548,9 @@ Public Class FrmWorkOrders
                     End If
                     CmdGeneral.CommandText = "SELECT CommentDesc FROM  Bas_Ready_Comment WHERE CommentCode =" & Qt(ThisRowGrid.Cells(4).Value & "")
                     MyFrmSearchReadyComments_ReadyCommentFind(CmdGeneral.ExecuteScalar() & "", ThisRowGrid.Cells(4).Value & "")
+                Case "T"
+                    ThisRowGrid.Cells(9).Value = 0
+
             End Select
         Catch ex As Exception
             SayItemName = True
