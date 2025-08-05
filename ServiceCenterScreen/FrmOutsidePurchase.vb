@@ -789,6 +789,7 @@ Public Class FrmOutsidePurchase
         If LblVendorName.Text.Trim.Length = 0 Then
             Vendor_Cod1.Text = ""
         End If
+        ChkPrepaid.Checked = True
         'If Mid(Dtedue_date.Text, 1, 2).Trim.Length > 0 Then
         '    OleDbReaderForStore = RetrieveAccountsPayableSetupTable()
         '    Dtedue_date.Text = CDate(Dteinvoice_date.Text).Add(OleDbReaderForStore.Item("????"))

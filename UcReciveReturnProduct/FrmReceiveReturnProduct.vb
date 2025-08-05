@@ -2226,6 +2226,7 @@ Public Class FrmReceiveReturnProduct
         TxtDate.Text = Format(Now.Date, PubDateFormat)
         TxtDiscount.Text = ""
         TxtRef.Clear()
+        ChkBefPaied.Checked = True
         ClearTotals()
         CommentButton_Vendor.ZCommentText = ""
         CommentButton_House.ZCommentText = ""
@@ -3224,6 +3225,7 @@ Public Class FrmReceiveReturnProduct
                 RbBill.Checked = True
                 LblName.Text = "IR-Inventory Receipt"
                 Me.Text = "IR-Inventory Receipt"
+                ChkBefPaied.Checked = True
             Case "2"
                 RbBill.Checked = False
                 RbCredit.Checked = True

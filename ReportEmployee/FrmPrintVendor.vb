@@ -1384,7 +1384,7 @@ Public Class FrmPrintVendor
 "                           (SELECT     id_receive_ref " & _
 "                              FROM         View_AllUnPaidReceive_product_ap_Dtl)) AND  " & _
 "                       (View_AllUnPaidReceive_product_ap_Dtl.sumoriginalamount <> View_AllUnPaidReceive_product_ap_Dtl.sumpayment) AND  " & _
-"                       (NOT (Inv_Receive_product_Ap_Dtl.due_date IS NULL)) AND (LTRIM(RTRIM(Inv_Receive_product_Ap_Dtl.due_date)) <> '') " & _
+"                       (NOT (Inv_Receive_product_Ap_Dtl.due_date IS NULL)) AND (LTRIM(RTRIM(Inv_Receive_product_Ap_Dtl.due_date)) <> '')  and Inv_Receive_Products_head.Prepaid=0 " & _
   IIf(StrWhere.Trim.Length > 0, " and  " & StrWhere, "") & IIf(Date1.Trim.Length > 0, " and " & " dbo.ChangeDate(Inv_Receive_Products_head.date_receive) between " & Qt(ChangeDateToYYYYMMDD(Date1)) & " and " & Qt(ChangeDateToYYYYMMDD(Date2)), "") & _
  " ORDER BY inv_vendor.desc_vendor,Inv_Receive_Products_head.id_receive_ref, dbo.ChangeDate(Inv_Receive_product_Ap_Dtl.due_date) "
 
