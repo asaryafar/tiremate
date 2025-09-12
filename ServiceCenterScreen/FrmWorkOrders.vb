@@ -151,8 +151,6 @@ Public Class FrmWorkOrders
     Friend WithEvents BtnPrev As System.Windows.Forms.Button
     Friend WithEvents BtnPriceTires As System.Windows.Forms.Button
     Friend WithEvents BtnSave As System.Windows.Forms.Button
-    Friend WithEvents BtnCashierCopy As System.Windows.Forms.Button
-    Friend WithEvents BtnPriceTiresCopy As System.Windows.Forms.Button
     Friend WithEvents BtnCustomerBalance As System.Windows.Forms.Button
     Friend WithEvents BtnCustomerHistory As System.Windows.Forms.Button
     Friend WithEvents BtnCustomerDetail As System.Windows.Forms.Button
@@ -192,7 +190,6 @@ Public Class FrmWorkOrders
     Friend WithEvents CustomerCod1 As UCCustomer.CustomerCod
     Friend WithEvents License_No1 As UCVehicle.License_No
     Friend WithEvents PhoneNoMain As UCPhone.PhoneNo
-    Friend WithEvents PhoneButton1 As UCPhone.PhoneButton
     Friend WithEvents BtnFindSize As System.Windows.Forms.Button
     Friend WithEvents NumCurrent_mileage As CalcUtils.UcCalcText
     Friend WithEvents NumTax As CalcUtils.UcCalcText
@@ -251,6 +248,8 @@ Public Class FrmWorkOrders
     Friend WithEvents SqlSelectCommand1 As System.Data.SqlClient.SqlCommand
     Friend WithEvents DAGeneralLock As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents BtnResetTax As System.Windows.Forms.Button
+    Friend WithEvents PhoneDriverButton1 As UCPhone.PhoneDriverButton
+    Friend WithEvents LblDriverName As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(FrmWorkOrders))
@@ -275,19 +274,17 @@ Public Class FrmWorkOrders
         Me.CmbType = New Janus.Windows.EditControls.UIComboBox
         Me.LblType = New System.Windows.Forms.TextBox
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.PhoneDriverButton1 = New UCPhone.PhoneDriverButton
         Me.BtnResetTax = New System.Windows.Forms.Button
         Me.PhoneNoMain = New UCPhone.PhoneNo
         Me.CmbChgUser = New System.Windows.Forms.ComboBox
         Me.CmbAddUser = New System.Windows.Forms.ComboBox
-        Me.PhoneButton1 = New UCPhone.PhoneButton
         Me.CustomerCod1 = New UCCustomer.CustomerCod
         Me.Cnn = New System.Data.SqlClient.SqlConnection
         Me.TxtCustomerLName = New System.Windows.Forms.TextBox
         Me.TxtCustomerFName = New System.Windows.Forms.TextBox
         Me.BtnDownPayment = New System.Windows.Forms.Button
         Me.LblCustomerCompanyname = New System.Windows.Forms.Label
-        Me.BtnCashierCopy = New System.Windows.Forms.Button
-        Me.BtnPriceTiresCopy = New System.Windows.Forms.Button
         Me.TxtPo_No = New System.Windows.Forms.TextBox
         Me.Label12 = New System.Windows.Forms.Label
         Me.Label11 = New System.Windows.Forms.Label
@@ -301,6 +298,7 @@ Public Class FrmWorkOrders
         Me.Label8 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
         Me.TxtCustomerMName = New System.Windows.Forms.TextBox
+        Me.LblDriverName = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.NumCurrent_mileage = New CalcUtils.UcCalcText
         Me.License_No1 = New UCVehicle.License_No
@@ -661,18 +659,16 @@ Public Class FrmWorkOrders
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.PhoneDriverButton1)
         Me.Panel1.Controls.Add(Me.BtnResetTax)
         Me.Panel1.Controls.Add(Me.PhoneNoMain)
         Me.Panel1.Controls.Add(Me.CmbChgUser)
         Me.Panel1.Controls.Add(Me.CmbAddUser)
-        Me.Panel1.Controls.Add(Me.PhoneButton1)
         Me.Panel1.Controls.Add(Me.CustomerCod1)
         Me.Panel1.Controls.Add(Me.TxtCustomerLName)
         Me.Panel1.Controls.Add(Me.TxtCustomerFName)
         Me.Panel1.Controls.Add(Me.BtnDownPayment)
         Me.Panel1.Controls.Add(Me.LblCustomerCompanyname)
-        Me.Panel1.Controls.Add(Me.BtnCashierCopy)
-        Me.Panel1.Controls.Add(Me.BtnPriceTiresCopy)
         Me.Panel1.Controls.Add(Me.TxtPo_No)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label11)
@@ -686,11 +682,20 @@ Public Class FrmWorkOrders
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.TxtCustomerMName)
+        Me.Panel1.Controls.Add(Me.LblDriverName)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.Panel1.Location = New System.Drawing.Point(0, 71)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(335, 122)
         Me.Panel1.TabIndex = 0
+        '
+        'PhoneDriverButton1
+        '
+        Me.PhoneDriverButton1.Location = New System.Drawing.Point(308, 24)
+        Me.PhoneDriverButton1.Name = "PhoneDriverButton1"
+        Me.PhoneDriverButton1.Size = New System.Drawing.Size(23, 23)
+        Me.PhoneDriverButton1.TabIndex = 177
+        Me.PhoneDriverButton1.ZEnabled = True
         '
         'BtnResetTax
         '
@@ -737,15 +742,6 @@ Public Class FrmWorkOrders
         Me.CmbAddUser.TabIndex = 6
         Me.CmbAddUser.ValueMember = "UserId"
         '
-        'PhoneButton1
-        '
-        Me.PhoneButton1.Location = New System.Drawing.Point(308, 23)
-        Me.PhoneButton1.Name = "PhoneButton1"
-        Me.PhoneButton1.Size = New System.Drawing.Size(23, 23)
-        Me.PhoneButton1.TabIndex = 174
-        Me.PhoneButton1.TabStop = False
-        Me.PhoneButton1.ZEnabled = False
-        '
         'CustomerCod1
         '
         Me.CustomerCod1.BackColor = System.Drawing.Color.YellowGreen
@@ -789,9 +785,9 @@ Public Class FrmWorkOrders
         Me.BtnDownPayment.BackColor = System.Drawing.Color.Aquamarine
         Me.BtnDownPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnDownPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDownPayment.Location = New System.Drawing.Point(296, 90)
+        Me.BtnDownPayment.Location = New System.Drawing.Point(301, 92)
         Me.BtnDownPayment.Name = "BtnDownPayment"
-        Me.BtnDownPayment.Size = New System.Drawing.Size(33, 29)
+        Me.BtnDownPayment.Size = New System.Drawing.Size(28, 28)
         Me.BtnDownPayment.TabIndex = 171
         Me.BtnDownPayment.TabStop = False
         Me.BtnDownPayment.Text = "DP"
@@ -804,44 +800,24 @@ Public Class FrmWorkOrders
         Me.LblCustomerCompanyname.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LblCustomerCompanyname.Location = New System.Drawing.Point(51, 46)
         Me.LblCustomerCompanyname.Name = "LblCustomerCompanyname"
-        Me.LblCustomerCompanyname.Size = New System.Drawing.Size(165, 26)
+        Me.LblCustomerCompanyname.Size = New System.Drawing.Size(162, 26)
         Me.LblCustomerCompanyname.TabIndex = 4
         Me.LblCustomerCompanyname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnCashierCopy
-        '
-        Me.BtnCashierCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCashierCopy.Image = CType(resources.GetObject("BtnCashierCopy.Image"), System.Drawing.Image)
-        Me.BtnCashierCopy.Location = New System.Drawing.Point(259, 90)
-        Me.BtnCashierCopy.Name = "BtnCashierCopy"
-        Me.BtnCashierCopy.Size = New System.Drawing.Size(33, 29)
-        Me.BtnCashierCopy.TabIndex = 168
-        Me.BtnCashierCopy.TabStop = False
-        '
-        'BtnPriceTiresCopy
-        '
-        Me.BtnPriceTiresCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnPriceTiresCopy.Image = CType(resources.GetObject("BtnPriceTiresCopy.Image"), System.Drawing.Image)
-        Me.BtnPriceTiresCopy.Location = New System.Drawing.Point(222, 90)
-        Me.BtnPriceTiresCopy.Name = "BtnPriceTiresCopy"
-        Me.BtnPriceTiresCopy.Size = New System.Drawing.Size(33, 29)
-        Me.BtnPriceTiresCopy.TabIndex = 167
-        Me.BtnPriceTiresCopy.TabStop = False
         '
         'TxtPo_No
         '
         Me.TxtPo_No.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtPo_No.Location = New System.Drawing.Point(261, 49)
+        Me.TxtPo_No.Location = New System.Drawing.Point(45, 96)
         Me.TxtPo_No.MaxLength = 10
         Me.TxtPo_No.Name = "TxtPo_No"
-        Me.TxtPo_No.Size = New System.Drawing.Size(70, 20)
+        Me.TxtPo_No.Size = New System.Drawing.Size(68, 20)
         Me.TxtPo_No.TabIndex = 5
         Me.TxtPo_No.Text = ""
         '
         'Label12
         '
         Me.Label12.BackColor = System.Drawing.Color.Silver
-        Me.Label12.Location = New System.Drawing.Point(216, 48)
+        Me.Label12.Location = New System.Drawing.Point(-1, 95)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(45, 22)
         Me.Label12.TabIndex = 154
@@ -862,12 +838,12 @@ Public Class FrmWorkOrders
         'CommentButton_Customer
         '
         Me.CommentButton_Customer.BackColor = System.Drawing.Color.FromArgb(CType(247, Byte), CType(207, Byte), CType(104, Byte))
-        Me.CommentButton_Customer.Location = New System.Drawing.Point(113, 96)
+        Me.CommentButton_Customer.Location = New System.Drawing.Point(210, 95)
         Me.CommentButton_Customer.Name = "CommentButton_Customer"
-        Me.CommentButton_Customer.Size = New System.Drawing.Size(104, 23)
+        Me.CommentButton_Customer.Size = New System.Drawing.Size(87, 23)
         Me.CommentButton_Customer.TabIndex = 7
         Me.CommentButton_Customer.TabStop = False
-        Me.CommentButton_Customer.ZButtonText = "Cust. Comments"
+        Me.CommentButton_Customer.ZButtonText = "Cust Comm"
         Me.CommentButton_Customer.ZCommentFormheight = 0
         Me.CommentButton_Customer.ZCommentFormWidth = 0
         Me.CommentButton_Customer.ZCommentText = ""
@@ -880,12 +856,12 @@ Public Class FrmWorkOrders
         '
         Me.CommentButton_House.BackColor = System.Drawing.Color.FromArgb(CType(247, Byte), CType(207, Byte), CType(104, Byte))
         Me.CommentButton_House.ForeColor = System.Drawing.Color.Black
-        Me.CommentButton_House.Location = New System.Drawing.Point(1, 96)
+        Me.CommentButton_House.Location = New System.Drawing.Point(115, 95)
         Me.CommentButton_House.Name = "CommentButton_House"
-        Me.CommentButton_House.Size = New System.Drawing.Size(110, 23)
+        Me.CommentButton_House.Size = New System.Drawing.Size(94, 23)
         Me.CommentButton_House.TabIndex = 6
         Me.CommentButton_House.TabStop = False
-        Me.CommentButton_House.ZButtonText = "House Comments"
+        Me.CommentButton_House.ZButtonText = "House Comm"
         Me.CommentButton_House.ZCommentFormheight = 0
         Me.CommentButton_House.ZCommentFormWidth = 0
         Me.CommentButton_House.ZCommentText = Nothing
@@ -979,6 +955,17 @@ Public Class FrmWorkOrders
         Me.TxtCustomerMName.Size = New System.Drawing.Size(12, 20)
         Me.TxtCustomerMName.TabIndex = 2
         Me.TxtCustomerMName.Text = ""
+        '
+        'LblDriverName
+        '
+        Me.LblDriverName.BackColor = System.Drawing.SystemColors.Window
+        Me.LblDriverName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblDriverName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.LblDriverName.Location = New System.Drawing.Point(216, 46)
+        Me.LblDriverName.Name = "LblDriverName"
+        Me.LblDriverName.Size = New System.Drawing.Size(114, 25)
+        Me.LblDriverName.TabIndex = 154
+        Me.LblDriverName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '
@@ -1905,27 +1892,29 @@ Public Class FrmWorkOrders
         "o_no, cust_company.complete_name, cust_company.abbreviation_name, service_center" & _
         "_head.chg_user, service_center_head.id_vehicle, service_center_head.id_service_c" & _
         "enter_before, ser_tr_vehicle.license_no_vehicle, ser_tr_vehicle_dtl.current_mile" & _
-        "age, service_center_head.Total, service_center_head.id_GL_journal FROM service_c" & _
-        "enter_head LEFT OUTER JOIN ser_tr_vehicle ON service_center_head.id_vehicle = se" & _
-        "r_tr_vehicle.id_vehicle LEFT OUTER JOIN cust_company INNER JOIN cust_trtab_main " & _
-        "ON cust_company.cod_company = cust_trtab_main.cod_company ON service_center_head" & _
-        ".cod_customer = cust_trtab_main.cod_customer LEFT OUTER JOIN ser_tr_vehicle_dtl " & _
-        "ON service_center_head.id_service_center = ser_tr_vehicle_dtl.id_service_center " & _
-        "WHERE (service_center_head.id_service_center = @id_service_center)"
+        "age, service_center_head.Total, service_center_head.id_GL_journal, service_cente" & _
+        "r_head.driver_name, service_center_head.phone FROM service_center_head LEFT OUTE" & _
+        "R JOIN ser_tr_vehicle ON service_center_head.id_vehicle = ser_tr_vehicle.id_vehi" & _
+        "cle LEFT OUTER JOIN cust_company INNER JOIN cust_trtab_main ON cust_company.cod_" & _
+        "company = cust_trtab_main.cod_company ON service_center_head.cod_customer = cust" & _
+        "_trtab_main.cod_customer LEFT OUTER JOIN ser_tr_vehicle_dtl ON service_center_he" & _
+        "ad.id_service_center = ser_tr_vehicle_dtl.id_service_center WHERE (service_cente" & _
+        "r_head.id_service_center = @id_service_center)"
         Me.SqlSelectCommand4.Connection = Me.Cnn
         Me.SqlSelectCommand4.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_service_center", System.Data.SqlDbType.VarChar, 10, "id_service_center"))
         '
         'SqlInsertCommand3
         '
-        Me.SqlInsertCommand3.CommandText = "INSERT INTO service_center_head(id_service_center, type_of_form, cod_customer, id" & _
-        "_vehicle, date_refer, discount, tax, house_comment, cust_comment, add_user, chg_" & _
-        "user, po_no, id_service_center_before, id_GL_journal, Total) VALUES (@id_service" & _
-        "_center, @type_of_form, @cod_customer, @id_vehicle, @date_refer, @discount, @tax" & _
-        ", @house_comment, @cust_comment, @add_user, @chg_user, @po_no, @id_service_cente" & _
-        "r_before, @id_GL_journal, @Total); SELECT id_service_center, type_of_form, cod_c" & _
-        "ustomer, id_vehicle, date_refer, discount, tax, house_comment, cust_comment, add" & _
-        "_user, chg_user, po_no, id_service_center_before, id_GL_journal, Total FROM serv" & _
-        "ice_center_head WHERE (id_service_center = @id_service_center)"
+        Me.SqlInsertCommand3.CommandText = "INSERT INTO service_center_head (id_service_center, type_of_form, cod_customer, i" & _
+        "d_vehicle, date_refer, discount, tax, house_comment, cust_comment, add_user, chg" & _
+        "_user, po_no, id_service_center_before, id_GL_journal, Total, driver_name, phone" & _
+        ") VALUES (@id_service_center, @type_of_form, @cod_customer, @id_vehicle, @date_r" & _
+        "efer, @discount, @tax, @house_comment, @cust_comment, @add_user, @chg_user, @po_" & _
+        "no, @id_service_center_before, @id_GL_journal, @Total, @driver_name, @phone); SE" & _
+        "LECT id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, disc" & _
+        "ount, tax, house_comment, cust_comment, add_user, chg_user, po_no, id_service_ce" & _
+        "nter_before, id_GL_journal, Total FROM service_center_head WHERE (id_service_cen" & _
+        "ter = @id_service_center)"
         Me.SqlInsertCommand3.Connection = Me.Cnn
         Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_service_center", System.Data.SqlDbType.VarChar, 10, "id_service_center"))
         Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@type_of_form", System.Data.SqlDbType.VarChar, 2, "type_of_form"))
@@ -1942,6 +1931,8 @@ Public Class FrmWorkOrders
         Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_service_center_before", System.Data.SqlDbType.VarChar, 10, "id_service_center_before"))
         Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_GL_journal", System.Data.SqlDbType.Int, 4, "id_GL_journal"))
         Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Money, 8, "Total"))
+        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@driver_name", System.Data.SqlDbType.VarChar, 25, "driver_name"))
+        Me.SqlInsertCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@phone", System.Data.SqlDbType.VarChar, 20, "phone"))
         '
         'SqlUpdateCommand3
         '
@@ -1950,28 +1941,28 @@ Public Class FrmWorkOrders
         "_refer = @date_refer, discount = @discount, tax = @tax, house_comment = @house_c" & _
         "omment, cust_comment = @cust_comment, add_user = @add_user, chg_user = @chg_user" & _
         ", po_no = @po_no, id_service_center_before = @id_service_center_before, id_GL_jo" & _
-        "urnal = @id_GL_journal, Total = @Total WHERE (id_service_center = @Original_id_s" & _
-        "ervice_center) AND (Total = @Original_Total OR @Original_Total IS NULL AND Total" & _
-        " IS NULL) AND (add_user = @Original_add_user OR @Original_add_user IS NULL AND a" & _
-        "dd_user IS NULL) AND (chg_user = @Original_chg_user OR @Original_chg_user IS NUL" & _
-        "L AND chg_user IS NULL) AND (cod_customer = @Original_cod_customer OR @Original_" & _
-        "cod_customer IS NULL AND cod_customer IS NULL) AND (cust_comment = @Original_cus" & _
-        "t_comment OR @Original_cust_comment IS NULL AND cust_comment IS NULL) AND (date_" & _
-        "refer = @Original_date_refer OR @Original_date_refer IS NULL AND date_refer IS N" & _
-        "ULL) AND (discount = @Original_discount OR @Original_discount IS NULL AND discou" & _
-        "nt IS NULL) AND (house_comment = @Original_house_comment OR @Original_house_comm" & _
-        "ent IS NULL AND house_comment IS NULL) AND (id_GL_journal = @Original_id_GL_jour" & _
-        "nal OR @Original_id_GL_journal IS NULL AND id_GL_journal IS NULL) AND (id_servic" & _
-        "e_center_before = @Original_id_service_center_before OR @Original_id_service_cen" & _
-        "ter_before IS NULL AND id_service_center_before IS NULL) AND (id_vehicle = @Orig" & _
-        "inal_id_vehicle OR @Original_id_vehicle IS NULL AND id_vehicle IS NULL) AND (po_" & _
-        "no = @Original_po_no OR @Original_po_no IS NULL AND po_no IS NULL) AND (tax = @O" & _
-        "riginal_tax OR @Original_tax IS NULL AND tax IS NULL) AND (type_of_form = @Origi" & _
-        "nal_type_of_form OR @Original_type_of_form IS NULL AND type_of_form IS NULL); SE" & _
-        "LECT id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, disc" & _
-        "ount, tax, house_comment, cust_comment, add_user, chg_user, po_no, id_service_ce" & _
-        "nter_before, id_GL_journal, Total FROM service_center_head WHERE (id_service_cen" & _
-        "ter = @id_service_center)"
+        "urnal = @id_GL_journal, Total = @Total, driver_name = @driver_name, phone = @pho" & _
+        "ne WHERE (id_service_center = @Original_id_service_center) AND (Total = @Origina" & _
+        "l_Total OR @Original_Total IS NULL AND Total IS NULL) AND (add_user = @Original_" & _
+        "add_user OR @Original_add_user IS NULL AND add_user IS NULL) AND (chg_user = @Or" & _
+        "iginal_chg_user OR @Original_chg_user IS NULL AND chg_user IS NULL) AND (cod_cus" & _
+        "tomer = @Original_cod_customer OR @Original_cod_customer IS NULL AND cod_custome" & _
+        "r IS NULL) AND (cust_comment = @Original_cust_comment OR @Original_cust_comment " & _
+        "IS NULL AND cust_comment IS NULL) AND (date_refer = @Original_date_refer OR @Ori" & _
+        "ginal_date_refer IS NULL AND date_refer IS NULL) AND (discount = @Original_disco" & _
+        "unt OR @Original_discount IS NULL AND discount IS NULL) AND (house_comment = @Or" & _
+        "iginal_house_comment OR @Original_house_comment IS NULL AND house_comment IS NUL" & _
+        "L) AND (id_GL_journal = @Original_id_GL_journal OR @Original_id_GL_journal IS NU" & _
+        "LL AND id_GL_journal IS NULL) AND (id_service_center_before = @Original_id_servi" & _
+        "ce_center_before OR @Original_id_service_center_before IS NULL AND id_service_ce" & _
+        "nter_before IS NULL) AND (id_vehicle = @Original_id_vehicle OR @Original_id_vehi" & _
+        "cle IS NULL AND id_vehicle IS NULL) AND (po_no = @Original_po_no OR @Original_po" & _
+        "_no IS NULL AND po_no IS NULL) AND (tax = @Original_tax OR @Original_tax IS NULL" & _
+        " AND tax IS NULL) AND (type_of_form = @Original_type_of_form OR @Original_type_o" & _
+        "f_form IS NULL AND type_of_form IS NULL); SELECT id_service_center, type_of_form" & _
+        ", cod_customer, id_vehicle, date_refer, discount, tax, house_comment, cust_comme" & _
+        "nt, add_user, chg_user, po_no, id_service_center_before, id_GL_journal, Total FR" & _
+        "OM service_center_head WHERE (id_service_center = @id_service_center)"
         Me.SqlUpdateCommand3.Connection = Me.Cnn
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_service_center", System.Data.SqlDbType.VarChar, 10, "id_service_center"))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@type_of_form", System.Data.SqlDbType.VarChar, 2, "type_of_form"))
@@ -1988,6 +1979,8 @@ Public Class FrmWorkOrders
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_service_center_before", System.Data.SqlDbType.VarChar, 10, "id_service_center_before"))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@id_GL_journal", System.Data.SqlDbType.Int, 4, "id_GL_journal"))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Total", System.Data.SqlDbType.Money, 8, "Total"))
+        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@driver_name", System.Data.SqlDbType.VarChar, 25, "driver_name"))
+        Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@phone", System.Data.SqlDbType.VarChar, 20, "phone"))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_id_service_center", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "id_service_center", System.Data.DataRowVersion.Original, Nothing))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_Total", System.Data.SqlDbType.Money, 8, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "Total", System.Data.DataRowVersion.Original, Nothing))
         Me.SqlUpdateCommand3.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Original_add_user", System.Data.SqlDbType.SmallInt, 2, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "add_user", System.Data.DataRowVersion.Original, Nothing))
@@ -2791,8 +2784,9 @@ Public Class FrmWorkOrders
 
         License_No1.CodCustomerForFilter = CustomerCod1.Text
 
-        PhoneButton1.FillDataSet("cust_trtab_main", "cod_customer=" & Qt(CustomerCod1.Text))
-        PhoneNoMain.Text = PhoneButton1.FillPhoneNoMain()
+        PhoneDriverButton1.FillDataSet("cust_trtab_main", "cod_customer=" & Qt(CustomerCod1.Text))
+        PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+        LblDriverName.Text = PhoneDriverButton1.FillPhoneNoMain()(2)
 
         If False Then
             Dim c1 As New FrmWhatDoForMenu
@@ -2844,7 +2838,7 @@ Public Class FrmWorkOrders
         TxtCustomerLName.Clear()
         LblCustomerCompanyname.Text = ""
         PhoneNoMain.Text = ""
-        Call PhoneButton1.ClearPhoneScreen()
+        Call PhoneDriverButton1.ClearPhoneScreen()
         'TxtPo_No.Clear()
         'TxtPo_No.Enabled = False
         'TxtPo_No.TabStop = TxtPo_No.Enabled
@@ -2985,7 +2979,7 @@ Public Class FrmWorkOrders
             End If
         End If
     End Sub
-    Private Sub BtnCashier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCashier.Click, BtnCashierCopy.Click
+    Private Sub BtnCashier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCashier.Click
         ''''If LblTotal.Numbervalue = 0 Then
         ''''    MsgBox("Total Amount is Zero !!!!!!")
         ''''Else
@@ -3443,8 +3437,10 @@ Public Class FrmWorkOrders
             If CmdGeneral.Connection.State <> ConnectionState.Open Then
                 CmdGeneral.Connection.Open()
             End If
-            CmdGeneral.CommandText = "INSERT INTO service_center_head (id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, discount, tax, house_comment, cust_comment, Po_no, add_user,Total,id_service_center_Before) " _
-                                   & " VALUES ( " & Qt(Newid_service_center) & ", " & Qt(TypeInParam) & "," & Qt(CustomerCod1.CustomerCod) & "," & IIf(License_No1.FieldCodValue > 0, License_No1.FieldCodValue, "NULL") & "," & Qt(TodayDateVar) & "," & NumDiscount.Text & "," & NumTax.Text & "," & Qt(CommentButton_House.ZCommentText) & "," & Qt(CommentButton_Customer.ZCommentText) & "," & Qt(TxtPo_No.Text) & "," & CmbAddUser.SelectedValue & "," & LblTotal.Text & "," & Qt(TxtRef.Text) & ")"
+            CmdGeneral.CommandText = "INSERT INTO service_center_head (id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, discount, tax, house_comment, cust_comment, Po_no, add_user,Total,id_service_center_Before,driver_name,phone) " _
+                                   & " VALUES ( " & Qt(Newid_service_center) & ", " & Qt(TypeInParam) & "," & Qt(CustomerCod1.CustomerCod) & "," & IIf(License_No1.FieldCodValue > 0, License_No1.FieldCodValue, "NULL") & "," & Qt(TodayDateVar) & _
+                                    "," & NumDiscount.Text & "," & NumTax.Text & "," & Qt(CommentButton_House.ZCommentText) & "," & Qt(CommentButton_Customer.ZCommentText) & "," & Qt(TxtPo_No.Text) & "," & CmbAddUser.SelectedValue & "," & LblTotal.Text & _
+                                    "," & Qt(TxtRef.Text) & "," & Qt(LblDriverName.Text) & "," & Qt(PhoneNoMain.Text) & ")"
             Try
                 CmdGeneral.ExecuteNonQuery()
                 Exit For
@@ -3759,7 +3755,8 @@ Public Class FrmWorkOrders
                     ThisCodCustomer = "CASH"
                 End Try
                 Try
-                    CmdGeneral.CommandText = "Insert Into cust_trtab_main (cod_customer,Vip_Code,F_name,M_Name,L_name,Phone_1,phone_main_1,cod_sales_tax) Values(" & Qt(ThisCodCustomer) & ",'CASH'," & Qt(TxtCustomerFName.Text) & "," & Qt(TxtCustomerMName.Text) & "," & Qt(TxtCustomerLName.Text) & "," & Qt(PhoneNoMain.Text) & ",1,'01')"
+                    CmdGeneral.CommandText = "Insert Into cust_trtab_main (cod_customer,Vip_Code,F_name,M_Name,L_name,Phone_1,phone_main_1,cod_sales_tax,driver_name1) " & _
+                     "Values(" & Qt(ThisCodCustomer) & ",'CASH'," & Qt(TxtCustomerFName.Text) & "," & Qt(TxtCustomerMName.Text) & "," & Qt(TxtCustomerLName.Text) & "," & Qt(PhoneNoMain.Text) & ",1,'01','" & Qt(LblDriverName.Text) & "')"
                     CmdGeneral.ExecuteNonQuery()
                 Catch ex As Exception
                     MsgBox("Cannot Insert Customer Information")
@@ -3787,6 +3784,8 @@ Public Class FrmWorkOrders
         dr("Tax") = NumTax.Text
         dr("Discount") = NumDiscount.Text
         dr("Total") = LblTotal.Text
+        dr("phone") = PhoneNoMain.Text
+        dr("driver_name") = LblDriverName.Text
         Try
             dr("add_user") = CmbAddUser.SelectedValue
         Catch ex As Exception
@@ -3813,10 +3812,10 @@ Public Class FrmWorkOrders
                         CmdGeneral.Connection.Open()
                     End If
                     If ReturnWasSavedFlag Then
-                        CmdGeneral.CommandText = "Update service_center_head set cod_customer=" & Qt(CustomerCod1.Text) & ", id_vehicle=" & IIf(License_No1.FieldCodValue > 0, Qt(License_No1.FieldCodValue), "Null") & ", discount=" & NumDiscount.Text & ", tax=" & NumTax.Text & ", house_comment=" & Qt(CommentButton_House.ZCommentText) & ", cust_comment=" & Qt(CommentButton_Customer.ZCommentText) & ", chg_user=" & Qt(CmbChgUser.SelectedValue) & ", po_no=" & Qt(TxtPo_No.Text) & ", Total=" & LblTotal.Text & " Where id_service_center=" & Qt(TxtRefTempVar)
+                        CmdGeneral.CommandText = "Update service_center_head set cod_customer=" & Qt(CustomerCod1.Text) & ", id_vehicle=" & IIf(License_No1.FieldCodValue > 0, Qt(License_No1.FieldCodValue), "Null") & ", discount=" & NumDiscount.Text & ", tax=" & NumTax.Text & ", house_comment=" & Qt(CommentButton_House.ZCommentText) & ", cust_comment=" & Qt(CommentButton_Customer.ZCommentText) & ", chg_user=" & Qt(CmbChgUser.SelectedValue) & ", po_no=" & Qt(TxtPo_No.Text) & ", Total=" & LblTotal.Text & ", phone=" & Qt(PhoneNoMain.Text) & ",driver_name= " & Qt(LblDriverName.Text) & " Where id_service_center=" & Qt(TxtRefTempVar)
                     Else
-                        CmdGeneral.CommandText = "INSERT INTO service_center_head (id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, discount, tax, house_comment, cust_comment, add_user, chg_user, po_no, id_service_center_before, Total) VALUES " & _
-                                               "(" & Qt(TxtRefTempVar) & "," & Qt(CmbType.Text) & "," & Qt(CustomerCod1.Text) & "," & IIf(License_No1.FieldCodValue > 0, Qt(License_No1.FieldCodValue), "Null") & "," & Qt(TxtDate.Text) & "," & NumDiscount.Text & "," & NumTax.Text & "," & Qt(CommentButton_House.ZCommentText) & "," & Qt(CommentButton_Customer.ZCommentText) & "," & Qt(CmbAddUser.SelectedValue) & "," & Qt(CmbChgUser.SelectedValue) & "," & Qt(TxtPo_No.Text) & "," & Qt(InvoiceNoForReturnVar) & "," & LblTotal.Text & ")"
+                        CmdGeneral.CommandText = "INSERT INTO service_center_head (id_service_center, type_of_form, cod_customer, id_vehicle, date_refer, discount, tax, house_comment, cust_comment, add_user, chg_user, po_no, id_service_center_before, Total,phone,driver_name) VALUES " & _
+                                               "(" & Qt(TxtRefTempVar) & "," & Qt(CmbType.Text) & "," & Qt(CustomerCod1.Text) & "," & IIf(License_No1.FieldCodValue > 0, Qt(License_No1.FieldCodValue), "Null") & "," & Qt(TxtDate.Text) & "," & NumDiscount.Text & "," & NumTax.Text & "," & Qt(CommentButton_House.ZCommentText) & "," & Qt(CommentButton_Customer.ZCommentText) & "," & Qt(CmbAddUser.SelectedValue) & "," & Qt(CmbChgUser.SelectedValue) & "," & Qt(TxtPo_No.Text) & "," & Qt(InvoiceNoForReturnVar) & "," & LblTotal.Text & "," & Qt(PhoneNoMain.Text) & "," & Qt(LblDriverName.Text) & ")"
                     End If
                     Try
                         CmdGeneral.ExecuteNonQuery()
@@ -4366,9 +4365,20 @@ Public Class FrmWorkOrders
 
                 'PhoneNoMain.Text = CustomerCod1.CustomerPhone & ""
             End If
-            PhoneButton1.FillDataSet("cust_trtab_main", "cod_customer=" & Qt(CustomerCod1.Text))
-            PhoneButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
-            PhoneNoMain.Text = PhoneButton1.FillPhoneNoMain()
+            'PhoneDriverButton1.FillDataSet("cust_trtab_main", "cod_customer=" & Qt(CustomerCod1.Text))
+            'PhoneDriverButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
+            ' PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+            PhoneNoMain.Text = .Rows(0).Item("phone") & ""
+            LblDriverName.Text = .Rows(0).Item("driver_name") & ""
+
+            If PhoneNoMain.Text.Trim.Length = 0 Then
+                PhoneDriverButton1.FillDataSet("cust_trtab_main", "cod_customer=" & Qt(CustomerCod1.Text))
+                PhoneDriverButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
+                PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+                LblDriverName.Text = PhoneDriverButton1.FillPhoneNoMain()(2)
+            End If
+
+
         End With
 
         If CmbType.Text = "RT" Then
@@ -4437,7 +4447,8 @@ Public Class FrmWorkOrders
         CommentButton_House.ForeColor = Color.Black
 
         PhoneNoMain.Text = ""
-        Call PhoneButton1.ClearPhoneScreen()
+        LblDriverName.Text = ""
+        Call PhoneDriverButton1.ClearPhoneScreen()
 
         Invoice_NO_Default_For_Outside_Purchase = ""
         Invoice_Date_Default_For_Outside_Purchase = ""
@@ -4675,6 +4686,8 @@ Public Class FrmWorkOrders
         CommentButton_House.ZEnabled = InStatus
         CommentButton_Customer.ZEnabled = InStatus
         PhoneNoMain.Enabled = InStatus
+        PhoneDriverButton1.ZEnabled = InStatus
+        ' PhoneDriverButton1.Enabled = False
         'PhoneButton1.ZEnabled = InStatus
         NumCurrent_mileage.Enabled = InStatus
         CmbAddUser.Enabled = False
@@ -5770,7 +5783,7 @@ Public Class FrmWorkOrders
         MsgBox(e.ErrorMessage)
     End Sub
     Private Sub SendMail()
-        
+
         Dim OleDbReader As System.Data.OleDb.OleDbDataReader
         OleDbReader = RetrieveCompanySetupTable()
         'OleDbReader = RetrieveStoreSetupTable(PubStoreNO)
@@ -5809,7 +5822,7 @@ Public Class FrmWorkOrders
             mail.From = StoreEmailAddressVar
             mail.Subject = MyFrmSendMailInformation.TxtSubject.Text
             mail.Body = MyFrmSendMailInformation.TxtBody.Text
-           
+
             mail.Attachments.Add(New System.Web.Mail.MailAttachment(emailPath & "Invoice" & TxtRef.Text.Trim & ".Doc"))
             System.Web.Mail.SmtpMail.SmtpServer = "smtp.1and1.com"
             'TODO Try-Catch for exception
@@ -6071,15 +6084,16 @@ Public Class FrmWorkOrders
         oMsg = Nothing
         oAttch = Nothing
     End Sub
-    Private Sub PhoneButton1_PhoneScreenAfterClose() Handles PhoneButton1.PhoneScreenAfterClose
-        PhoneNoMain.Text = PhoneButton1.FillPhoneNoMain()
+    Private Sub PhoneButton1_PhoneScreenAfterClose() Handles PhoneDriverButton1.PhoneScreenAfterClose
+        PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+        LblDriverName.Text = PhoneDriverButton1.FillPhoneNoMain()(2)
     End Sub
     Private Sub PhoneNoMain_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneNoMain.TextChanged
-        Call PhoneButton1.GetPhoneNoMain(PhoneNoMain.Text)
+        ''Call PhoneDriverButton1.GetPhoneNoMain(PhoneNoMain.Text)
         Call EnableDisableSave()
     End Sub
-    Private Sub PhoneButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneButton1.Click
-        PhoneButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
+    Private Sub PhoneButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        PhoneDriverButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
     End Sub
     Private Sub BtnFind_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnFind.Click
         MyFrmFindServiceRecords.MainSearchTypeVar = CmbType.Text
@@ -6088,7 +6102,7 @@ Public Class FrmWorkOrders
     Private Sub MyFrmFindServiceRecords_ServiceRecordFind(ByVal ThisId_service_center As String) Handles MyFrmFindServiceRecords.ServiceRecordFind
         Call LoadAWotkOrder(ThisId_service_center)
     End Sub
-    Private Sub BtnPriceTires_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPriceTires.Click, BtnPriceTiresCopy.Click
+    Private Sub BtnPriceTires_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPriceTires.Click
         Call FndItemCode()
         'MyFrmSearchItemCode.ShowDialog()
     End Sub
@@ -6715,5 +6729,10 @@ Public Class FrmWorkOrders
         If CustomerCod1.CreditHold Then
             MsgBox("Customer is on Credit Hold" & vbCrLf & "No Charge is allowed", MsgBoxStyle.OKOnly)
         End If
+    End Sub
+
+
+    Private Sub PhoneDriverButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneDriverButton1.Click
+        PhoneDriverButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
     End Sub
 End Class

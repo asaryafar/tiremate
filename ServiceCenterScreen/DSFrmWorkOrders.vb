@@ -1359,6 +1359,10 @@ Public Class DSFrmWorkOrders
         
         Private columnid_GL_journal As DataColumn
         
+        Private columnphone As DataColumn
+        
+        Private columndriver_name As DataColumn
+        
         Friend Sub New()
             MyBase.New("service_center_head")
             Me.InitClass
@@ -1501,6 +1505,18 @@ Public Class DSFrmWorkOrders
             End Get
         End Property
         
+        Friend ReadOnly Property phoneColumn As DataColumn
+            Get
+                Return Me.columnphone
+            End Get
+        End Property
+        
+        Friend ReadOnly Property driver_nameColumn As DataColumn
+            Get
+                Return Me.columndriver_name
+            End Get
+        End Property
+        
         Public Default ReadOnly Property Item(ByVal index As Integer) As service_center_headRow
             Get
                 Return CType(Me.Rows(index),service_center_headRow)
@@ -1538,9 +1554,11 @@ Public Class DSFrmWorkOrders
                     ByVal license_no_vehicle As String,  _
                     ByVal current_mileage As Single,  _
                     ByVal Total As Single,  _
-                    ByVal id_GL_journal As Integer) As service_center_headRow
+                    ByVal id_GL_journal As Integer,  _
+                    ByVal phone As String,  _
+                    ByVal driver_name As String) As service_center_headRow
             Dim rowservice_center_headRow As service_center_headRow = CType(Me.NewRow,service_center_headRow)
-            rowservice_center_headRow.ItemArray = New Object() {id_service_center, type_of_form, cod_customer, date_refer, discount, tax, house_comment, cust_comment, add_user, po_no, complete_name, abbreviation_name, chg_user, id_vehicle, id_service_center_before, license_no_vehicle, current_mileage, Total, id_GL_journal}
+            rowservice_center_headRow.ItemArray = New Object() {id_service_center, type_of_form, cod_customer, date_refer, discount, tax, house_comment, cust_comment, add_user, po_no, complete_name, abbreviation_name, chg_user, id_vehicle, id_service_center_before, license_no_vehicle, current_mileage, Total, id_GL_journal, phone, driver_name}
             Me.Rows.Add(rowservice_center_headRow)
             Return rowservice_center_headRow
         End Function
@@ -1579,6 +1597,8 @@ Public Class DSFrmWorkOrders
             Me.columncurrent_mileage = Me.Columns("current_mileage")
             Me.columnTotal = Me.Columns("Total")
             Me.columnid_GL_journal = Me.Columns("id_GL_journal")
+            Me.columnphone = Me.Columns("phone")
+            Me.columndriver_name = Me.Columns("driver_name")
         End Sub
         
         Private Sub InitClass()
@@ -1620,6 +1640,10 @@ Public Class DSFrmWorkOrders
             Me.Columns.Add(Me.columnTotal)
             Me.columnid_GL_journal = New DataColumn("id_GL_journal", GetType(System.Int32), Nothing, System.Data.MappingType.Element)
             Me.Columns.Add(Me.columnid_GL_journal)
+            Me.columnphone = New DataColumn("phone", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columnphone)
+            Me.columndriver_name = New DataColumn("driver_name", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name)
             Me.columnid_service_center.AllowDBNull = false
         End Sub
         
@@ -1922,6 +1946,32 @@ Public Class DSFrmWorkOrders
             End Set
         End Property
         
+        Public Property phone As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableservice_center_head.phoneColumn),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableservice_center_head.phoneColumn) = value
+            End Set
+        End Property
+        
+        Public Property driver_name As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableservice_center_head.driver_nameColumn),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableservice_center_head.driver_nameColumn) = value
+            End Set
+        End Property
+        
         Public Function Istype_of_formNull() As Boolean
             Return Me.IsNull(Me.tableservice_center_head.type_of_formColumn)
         End Function
@@ -2064,6 +2114,22 @@ Public Class DSFrmWorkOrders
         
         Public Sub Setid_GL_journalNull()
             Me(Me.tableservice_center_head.id_GL_journalColumn) = System.Convert.DBNull
+        End Sub
+        
+        Public Function IsphoneNull() As Boolean
+            Return Me.IsNull(Me.tableservice_center_head.phoneColumn)
+        End Function
+        
+        Public Sub SetphoneNull()
+            Me(Me.tableservice_center_head.phoneColumn) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_nameNull() As Boolean
+            Return Me.IsNull(Me.tableservice_center_head.driver_nameColumn)
+        End Function
+        
+        Public Sub Setdriver_nameNull()
+            Me(Me.tableservice_center_head.driver_nameColumn) = System.Convert.DBNull
         End Sub
     End Class
     

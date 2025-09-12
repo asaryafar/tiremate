@@ -181,6 +181,16 @@ Public Class DSPhone
         
         Private columnphone_main_5 As DataColumn
         
+        Private columndriver_name1 As DataColumn
+        
+        Private columndriver_name2 As DataColumn
+        
+        Private columndriver_name3 As DataColumn
+        
+        Private columndriver_name4 As DataColumn
+        
+        Private columndriver_name5 As DataColumn
+        
         Friend Sub New()
             MyBase.New("Phone")
             Me.InitClass
@@ -329,6 +339,36 @@ Public Class DSPhone
             End Get
         End Property
         
+        Friend ReadOnly Property driver_name1Column As DataColumn
+            Get
+                Return Me.columndriver_name1
+            End Get
+        End Property
+        
+        Friend ReadOnly Property driver_name2Column As DataColumn
+            Get
+                Return Me.columndriver_name2
+            End Get
+        End Property
+        
+        Friend ReadOnly Property driver_name3Column As DataColumn
+            Get
+                Return Me.columndriver_name3
+            End Get
+        End Property
+        
+        Friend ReadOnly Property driver_name4Column As DataColumn
+            Get
+                Return Me.columndriver_name4
+            End Get
+        End Property
+        
+        Friend ReadOnly Property driver_name5Column As DataColumn
+            Get
+                Return Me.columndriver_name5
+            End Get
+        End Property
+        
         Public Default ReadOnly Property Item(ByVal index As Integer) As PhoneRow
             Get
                 Return CType(Me.Rows(index),PhoneRow)
@@ -367,9 +407,14 @@ Public Class DSPhone
                     ByVal phone_5 As String,  _
                     ByVal extension_5 As String,  _
                     ByVal phone_type_5 As String,  _
-                    ByVal phone_main_5 As Boolean) As PhoneRow
+                    ByVal phone_main_5 As Boolean,  _
+                    ByVal driver_name1 As String,  _
+                    ByVal driver_name2 As String,  _
+                    ByVal driver_name3 As String,  _
+                    ByVal driver_name4 As String,  _
+                    ByVal driver_name5 As String) As PhoneRow
             Dim rowPhoneRow As PhoneRow = CType(Me.NewRow,PhoneRow)
-            rowPhoneRow.ItemArray = New Object() {phone_1, extension_1, phone_type_1, phone_main_1, phone_2, extension_2, phone_type_2, phone_main_2, phone_3, extension_3, phone_type_3, phone_main_3, phone_4, extension_4, phone_type_4, phone_main_4, phone_5, extension_5, phone_type_5, phone_main_5}
+            rowPhoneRow.ItemArray = New Object() {phone_1, extension_1, phone_type_1, phone_main_1, phone_2, extension_2, phone_type_2, phone_main_2, phone_3, extension_3, phone_type_3, phone_main_3, phone_4, extension_4, phone_type_4, phone_main_4, phone_5, extension_5, phone_type_5, phone_main_5, driver_name1, driver_name2, driver_name3, driver_name4, driver_name5}
             Me.Rows.Add(rowPhoneRow)
             Return rowPhoneRow
         End Function
@@ -409,6 +454,11 @@ Public Class DSPhone
             Me.columnextension_5 = Me.Columns("extension_5")
             Me.columnphone_type_5 = Me.Columns("phone_type_5")
             Me.columnphone_main_5 = Me.Columns("phone_main_5")
+            Me.columndriver_name1 = Me.Columns("driver_name1")
+            Me.columndriver_name2 = Me.Columns("driver_name2")
+            Me.columndriver_name3 = Me.Columns("driver_name3")
+            Me.columndriver_name4 = Me.Columns("driver_name4")
+            Me.columndriver_name5 = Me.Columns("driver_name5")
         End Sub
         
         Private Sub InitClass()
@@ -452,6 +502,16 @@ Public Class DSPhone
             Me.Columns.Add(Me.columnphone_type_5)
             Me.columnphone_main_5 = New DataColumn("phone_main_5", GetType(System.Boolean), Nothing, System.Data.MappingType.Element)
             Me.Columns.Add(Me.columnphone_main_5)
+            Me.columndriver_name1 = New DataColumn("driver_name1", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name1)
+            Me.columndriver_name2 = New DataColumn("driver_name2", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name2)
+            Me.columndriver_name3 = New DataColumn("driver_name3", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name3)
+            Me.columndriver_name4 = New DataColumn("driver_name4", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name4)
+            Me.columndriver_name5 = New DataColumn("driver_name5", GetType(System.String), Nothing, System.Data.MappingType.Element)
+            Me.Columns.Add(Me.columndriver_name5)
             Me.columnphone_main_1.DefaultValue = true
             Me.columnphone_main_2.DefaultValue = false
             Me.columnphone_main_3.DefaultValue = false
@@ -775,6 +835,71 @@ Public Class DSPhone
             End Set
         End Property
         
+        Public Property driver_name1 As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePhone.driver_name1Column),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePhone.driver_name1Column) = value
+            End Set
+        End Property
+        
+        Public Property driver_name2 As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePhone.driver_name2Column),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePhone.driver_name2Column) = value
+            End Set
+        End Property
+        
+        Public Property driver_name3 As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePhone.driver_name3Column),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePhone.driver_name3Column) = value
+            End Set
+        End Property
+        
+        Public Property driver_name4 As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePhone.driver_name4Column),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePhone.driver_name4Column) = value
+            End Set
+        End Property
+        
+        Public Property driver_name5 As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePhone.driver_name5Column),String)
+                Catch e As InvalidCastException
+                    Throw New StrongTypingException("Cannot get value because it is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePhone.driver_name5Column) = value
+            End Set
+        End Property
+        
         Public Function Isphone_1Null() As Boolean
             Return Me.IsNull(Me.tablePhone.phone_1Column)
         End Function
@@ -933,6 +1058,46 @@ Public Class DSPhone
         
         Public Sub Setphone_main_5Null()
             Me(Me.tablePhone.phone_main_5Column) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_name1Null() As Boolean
+            Return Me.IsNull(Me.tablePhone.driver_name1Column)
+        End Function
+        
+        Public Sub Setdriver_name1Null()
+            Me(Me.tablePhone.driver_name1Column) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_name2Null() As Boolean
+            Return Me.IsNull(Me.tablePhone.driver_name2Column)
+        End Function
+        
+        Public Sub Setdriver_name2Null()
+            Me(Me.tablePhone.driver_name2Column) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_name3Null() As Boolean
+            Return Me.IsNull(Me.tablePhone.driver_name3Column)
+        End Function
+        
+        Public Sub Setdriver_name3Null()
+            Me(Me.tablePhone.driver_name3Column) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_name4Null() As Boolean
+            Return Me.IsNull(Me.tablePhone.driver_name4Column)
+        End Function
+        
+        Public Sub Setdriver_name4Null()
+            Me(Me.tablePhone.driver_name4Column) = System.Convert.DBNull
+        End Sub
+        
+        Public Function Isdriver_name5Null() As Boolean
+            Return Me.IsNull(Me.tablePhone.driver_name5Column)
+        End Function
+        
+        Public Sub Setdriver_name5Null()
+            Me(Me.tablePhone.driver_name5Column) = System.Convert.DBNull
         End Sub
     End Class
     

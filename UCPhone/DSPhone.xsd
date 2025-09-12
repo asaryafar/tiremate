@@ -28,6 +28,11 @@
 							<xs:element name="extension_5" type="xs:string" minOccurs="0" />
 							<xs:element name="phone_type_5" type="xs:string" minOccurs="0" />
 							<xs:element name="phone_main_5" type="xs:boolean" minOccurs="0" default="0" />
+							<xs:element name="driver_name1" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name2" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name3" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name4" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name5" type="xs:string" minOccurs="0" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

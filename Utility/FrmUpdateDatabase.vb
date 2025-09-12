@@ -474,8 +474,9 @@ Public Class FrmUpdateDatabase
                 'Call Fix20()
                 'Call Fix21()
                 'Call Fix22()
-                Call Fix23()
-                Call Fix24()
+                'Call Fix23()
+                'Call Fix24()
+                Call Fix25()
             End If
         Next
         If Cnn.State = ConnectionState.Open Then
@@ -1415,25 +1416,31 @@ Public Class FrmUpdateDatabase
 
     End Sub
 
-    Sub Fix24()
-        Try
-            Dim CmdMenu As New System.Data.OleDb.OleDbCommand
-            Dim CnnMenuMDB As New System.Data.OleDb.OleDbConnection
-            CnnMenuMDB.ConnectionString = PConnectionStringForMenuMdb
-            CmdMenu.Connection = CnnMenuMDB
-            CmdMenu.CommandText = " INSERT INTO items ( ItemKey, Itemdesc, Item_small_icon, ItemKind, FormName, MasterItem )" & _
-                                 " values (504080000,'Export Customer Email',0,3,'ReportCustomer.FrmRepCusEmail',504000000)"
+  
 
-            If CnnMenuMDB.State <> ConnectionState.Open Then
-                CnnMenuMDB.Open()
-            End If
-            CmdMenu.ExecuteNonQuery()
+
+    Sub Fix24()
+        execit(" alter table service_center_head  ALTER COLUMN email varchar(50) ", CmdGeneral, True)
+
+
+
+    End Sub
+
+    Sub Fix25()
+        Try
+            CmdGeneral.CommandText = " ALTER TABLE service_center_head ADD driver_name varchar(25) null ,phone varchar(20) null"
+            CmdGeneral.ExecuteNonQuery()
+
+
+            CmdGeneral.CommandText = "Alter table cust_trtab_main add driver_name5 varchar(25) null"
+
+            CmdGeneral.ExecuteNonQuery()
+
         Catch ex As Exception
 
         End Try
-  
-    End Sub
 
+    End Sub
     Sub execit(ByVal thisst As String, ByRef thiscmd As System.Data.SqlClient.SqlCommand, Optional ByVal showerror As Boolean = False, Optional ByVal IsViewFlag As Boolean = False, Optional ByVal ViewName As String = "")
         If IsViewFlag Then
             Try

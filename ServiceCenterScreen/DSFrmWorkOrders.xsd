@@ -57,6 +57,8 @@
 							<xs:element name="current_mileage" type="xs:float" minOccurs="0" />
 							<xs:element name="Total" type="xs:float" minOccurs="0" />
 							<xs:element name="id_GL_journal" type="xs:int" minOccurs="0" />
+							<xs:element name="phone" type="xs:string" minOccurs="0" />
+							<xs:element name="driver_name" type="xs:string" minOccurs="0" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

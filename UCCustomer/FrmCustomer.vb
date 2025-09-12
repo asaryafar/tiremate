@@ -100,7 +100,6 @@ Public Class FrmCustomer
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtFName As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtDriver As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -166,7 +165,6 @@ Public Class FrmCustomer
     Friend WithEvents DACust_sales_tax As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents DsFrmCustomer1 As UCCustomer.DSUCCustomer
     Friend WithEvents CompanyName1 As UCCompany.CompanyName
-    Friend WithEvents BtnDriver As System.Windows.Forms.Button
     Friend WithEvents DAcust_tab_source As System.Data.SqlClient.SqlDataAdapter
     Friend WithEvents SqlSelectCommand3 As System.Data.SqlClient.SqlCommand
     Friend WithEvents DAEmployee As System.Data.SqlClient.SqlDataAdapter
@@ -211,7 +209,6 @@ Public Class FrmCustomer
     Friend WithEvents NumCreditLimit As CalcUtils.UcCalcText
     Friend WithEvents txtDriverLicense As System.Windows.Forms.TextBox
     Friend WithEvents DteExpDate As CalendarCombo.CalendarCombo
-    Friend WithEvents PhoneButton1 As UCPhone.PhoneButton
     Friend WithEvents LblSalesActivityAmount As CalcUtils.UcCalcText
     Friend WithEvents LblSalesActivityThisYear As CalcUtils.UcCalcText
     Friend WithEvents LblNextPaymentAmount As CalcUtils.UcCalcText
@@ -225,6 +222,8 @@ Public Class FrmCustomer
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents DteCustomer_Birth_Date As CalendarCombo.CalendarCombo
     Friend WithEvents NumTaxExemptID As Janus.Windows.GridEX.EditControls.MaskedEditBox
+    Friend WithEvents PhoneDriverButton1 As UCPhone.PhoneDriverButton
+    Friend WithEvents LblDriverName As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(FrmCustomer))
@@ -245,12 +244,12 @@ Public Class FrmCustomer
         Me.Label4 = New System.Windows.Forms.Label
         Me.CnnTemp = New System.Data.SqlClient.SqlConnection
         Me.PnlKartAmvalField = New System.Windows.Forms.Panel
+        Me.PhoneDriverButton1 = New UCPhone.PhoneDriverButton
+        Me.LblDriverName = New System.Windows.Forms.Label
         Me.DteCustomer_Birth_Date = New CalendarCombo.CalendarCombo
         Me.Label49 = New System.Windows.Forms.Label
-        Me.PhoneButton1 = New UCPhone.PhoneButton
         Me.NumDiscount = New CalcUtils.UcCalcText
         Me.txtEmail = New EmailAndWebAddress.EmailAddress
-        Me.BtnDriver = New System.Windows.Forms.Button
         Me.CompanyName1 = New UCCompany.CompanyName
         Me.ZipCode1 = New UCZipCode.ZipCode
         Me.PhoneNoMain = New UCPhone.PhoneNo
@@ -339,7 +338,6 @@ Public Class FrmCustomer
         Me.Label8 = New System.Windows.Forms.Label
         Me.txtFName = New System.Windows.Forms.TextBox
         Me.Label3 = New System.Windows.Forms.Label
-        Me.txtDriver = New System.Windows.Forms.TextBox
         Me.Label11 = New System.Windows.Forms.Label
         Me.Label9 = New System.Windows.Forms.Label
         Me.Label10 = New System.Windows.Forms.Label
@@ -492,6 +490,11 @@ Public Class FrmCustomer
         Me.CmdDelete.Connection = Me.Cnn
         Me.CmdDelete.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cod_Customer", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cod_customer", System.Data.DataRowVersion.Original, Nothing))
         '
+        'Cnn
+        '
+        Me.Cnn.ConnectionString = "workstation id=TIRE;packet size=4096;user id=sa;data source=""."";persist security " & _
+        "info=False;initial catalog=TireMate_05"
+        '
         'PnlSearch
         '
         Me.PnlSearch.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -537,12 +540,12 @@ Public Class FrmCustomer
         '
         'PnlKartAmvalField
         '
+        Me.PnlKartAmvalField.Controls.Add(Me.PhoneDriverButton1)
+        Me.PnlKartAmvalField.Controls.Add(Me.LblDriverName)
         Me.PnlKartAmvalField.Controls.Add(Me.DteCustomer_Birth_Date)
         Me.PnlKartAmvalField.Controls.Add(Me.Label49)
-        Me.PnlKartAmvalField.Controls.Add(Me.PhoneButton1)
         Me.PnlKartAmvalField.Controls.Add(Me.NumDiscount)
         Me.PnlKartAmvalField.Controls.Add(Me.txtEmail)
-        Me.PnlKartAmvalField.Controls.Add(Me.BtnDriver)
         Me.PnlKartAmvalField.Controls.Add(Me.CompanyName1)
         Me.PnlKartAmvalField.Controls.Add(Me.ZipCode1)
         Me.PnlKartAmvalField.Controls.Add(Me.PhoneNoMain)
@@ -564,7 +567,6 @@ Public Class FrmCustomer
         Me.PnlKartAmvalField.Controls.Add(Me.Label8)
         Me.PnlKartAmvalField.Controls.Add(Me.txtFName)
         Me.PnlKartAmvalField.Controls.Add(Me.Label3)
-        Me.PnlKartAmvalField.Controls.Add(Me.txtDriver)
         Me.PnlKartAmvalField.Controls.Add(Me.Label11)
         Me.PnlKartAmvalField.Controls.Add(Me.Label9)
         Me.PnlKartAmvalField.Controls.Add(Me.Label10)
@@ -586,6 +588,25 @@ Public Class FrmCustomer
         Me.PnlKartAmvalField.Name = "PnlKartAmvalField"
         Me.PnlKartAmvalField.Size = New System.Drawing.Size(669, 330)
         Me.PnlKartAmvalField.TabIndex = 1
+        '
+        'PhoneDriverButton1
+        '
+        Me.PhoneDriverButton1.Location = New System.Drawing.Point(387, 57)
+        Me.PhoneDriverButton1.Name = "PhoneDriverButton1"
+        Me.PhoneDriverButton1.Size = New System.Drawing.Size(23, 23)
+        Me.PhoneDriverButton1.TabIndex = 453
+        Me.PhoneDriverButton1.ZEnabled = True
+        '
+        'LblDriverName
+        '
+        Me.LblDriverName.BackColor = System.Drawing.SystemColors.Window
+        Me.LblDriverName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LblDriverName.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.LblDriverName.Location = New System.Drawing.Point(295, 81)
+        Me.LblDriverName.Name = "LblDriverName"
+        Me.LblDriverName.Size = New System.Drawing.Size(114, 25)
+        Me.LblDriverName.TabIndex = 452
+        Me.LblDriverName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'DteCustomer_Birth_Date
         '
@@ -619,14 +640,6 @@ Public Class FrmCustomer
         Me.Label49.Text = "Birth Date"
         Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'PhoneButton1
-        '
-        Me.PhoneButton1.Location = New System.Drawing.Point(389, 59)
-        Me.PhoneButton1.Name = "PhoneButton1"
-        Me.PhoneButton1.Size = New System.Drawing.Size(23, 23)
-        Me.PhoneButton1.TabIndex = 449
-        Me.PhoneButton1.ZEnabled = True
-        '
         'NumDiscount
         '
         Me.NumDiscount.BorderStyle = Janus.Windows.UI.BorderStyle.Sunken
@@ -652,7 +665,7 @@ Public Class FrmCustomer
         Me.txtEmail.AutoScrollMinSize = New System.Drawing.Size(0, 0)
         Me.txtEmail.ErrorColor = System.Drawing.Color.Red
         Me.txtEmail.ErrorMessage = "abc@microsoft.com ÂÏÑÓ ÓÊ Çá˜ÊÑæäí˜í ÈÇíÓÊí Èå Çíä ÕæÑÊ ÈÇÔÏ"
-        Me.txtEmail.Location = New System.Drawing.Point(296, 83)
+        Me.txtEmail.Location = New System.Drawing.Point(296, 107)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(116, 21)
         Me.txtEmail.TabIndex = 8
@@ -660,17 +673,6 @@ Public Class FrmCustomer
         Me.txtEmail.ValidationExpression = "^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0" & _
         "-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|(25[0-5]|2[0-4][0-9]|1[0-" & _
         "9][0-9]|[1-9][0-9]|[0-9])\])$"
-        '
-        'BtnDriver
-        '
-        Me.BtnDriver.BackColor = System.Drawing.SystemColors.Control
-        Me.BtnDriver.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDriver.Image = CType(resources.GetObject("BtnDriver.Image"), System.Drawing.Image)
-        Me.BtnDriver.Location = New System.Drawing.Point(401, 107)
-        Me.BtnDriver.Name = "BtnDriver"
-        Me.BtnDriver.Size = New System.Drawing.Size(23, 23)
-        Me.BtnDriver.TabIndex = 443
-        Me.BtnDriver.TabStop = False
         '
         'CompanyName1
         '
@@ -1812,21 +1814,12 @@ Public Class FrmCustomer
         Me.Label3.Text = "FirstName"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtDriver
-        '
-        Me.txtDriver.Location = New System.Drawing.Point(295, 107)
-        Me.txtDriver.MaxLength = 25
-        Me.txtDriver.Name = "txtDriver"
-        Me.txtDriver.Size = New System.Drawing.Size(106, 21)
-        Me.txtDriver.TabIndex = 10
-        Me.txtDriver.Text = ""
-        '
         'Label11
         '
         Me.Label11.BackColor = System.Drawing.SystemColors.Control
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(247, 107)
+        Me.Label11.Location = New System.Drawing.Point(247, 83)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(48, 19)
         Me.Label11.TabIndex = 352
@@ -1850,7 +1843,7 @@ Public Class FrmCustomer
         Me.Label10.BackColor = System.Drawing.SystemColors.Control
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(247, 83)
+        Me.Label10.Location = New System.Drawing.Point(247, 107)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(48, 19)
         Me.Label10.TabIndex = 351
@@ -2017,19 +2010,19 @@ Public Class FrmCustomer
         "nd_copy, AR_finance_charge, AR_require_PO, AR_credit_hold, AR_accept_check, cust" & _
         "_notes, Taxable, inactive, customer_no, driver_name1, driver_name2, driver_name3" & _
         ", driver_name4, DriverLicense, AR_charge, AR_term, PrintStatementDetailFlag, Cus" & _
-        "tomer_Birth_Date) VALUES (@cod_customer, @vip_code, @cod_company, @f_name, @m_na" & _
-        "me, @l_name, @address, @phone_1, @extension_1, @phone_type_1, @phone_main_1, @ph" & _
-        "one_2, @extension_2, @phone_type_2, @phone_main_2, @phone_3, @extension_3, @phon" & _
-        "e_type_3, @phone_main_3, @phone_4, @extension_4, @phone_type_4, @phone_main_4, @" & _
-        "phone_5, @extension_5, @phone_type_5, @phone_main_5, @zip, @email, @cod_sales_re" & _
-        "p, @social_security_no, @cust_exempt_tax, @scrap_check, @scrap_value, @credit_ca" & _
-        "rd_no, @expiration_credit_date, @credit_limited, @cod_sales_tax, @cod_price, @di" & _
-        "scount, @cod_type, @cod_source, @cod_class, @cod_territory, @desc_sales_report, " & _
-        "@user_id, @user_password, @AR_statement, @AR_send_copy, @AR_finance_charge, @AR_" & _
-        "require_PO, @AR_credit_hold, @AR_accept_check, @cust_notes, @Taxable, @Inactive," & _
-        " @Customer_No, @driver_name1, @driver_name2, @driver_name3, @driver_name4, @driv" & _
-        "erLicense, @AR_charge, @AR_term, @PrintstatementDetailFlag, @Customer_Birth_Date" & _
-        ")"
+        "tomer_Birth_Date, driver_name5) VALUES (@cod_customer, @vip_code, @cod_company, " & _
+        "@f_name, @m_name, @l_name, @address, @phone_1, @extension_1, @phone_type_1, @pho" & _
+        "ne_main_1, @phone_2, @extension_2, @phone_type_2, @phone_main_2, @phone_3, @exte" & _
+        "nsion_3, @phone_type_3, @phone_main_3, @phone_4, @extension_4, @phone_type_4, @p" & _
+        "hone_main_4, @phone_5, @extension_5, @phone_type_5, @phone_main_5, @zip, @email," & _
+        " @cod_sales_rep, @social_security_no, @cust_exempt_tax, @scrap_check, @scrap_val" & _
+        "ue, @credit_card_no, @expiration_credit_date, @credit_limited, @cod_sales_tax, @" & _
+        "cod_price, @discount, @cod_type, @cod_source, @cod_class, @cod_territory, @desc_" & _
+        "sales_report, @user_id, @user_password, @AR_statement, @AR_send_copy, @AR_financ" & _
+        "e_charge, @AR_require_PO, @AR_credit_hold, @AR_accept_check, @cust_notes, @Taxab" & _
+        "le, @Inactive, @Customer_No, @driver_name1, @driver_name2, @driver_name3, @drive" & _
+        "r_name4, @driverLicense, @AR_charge, @AR_term, @PrintstatementDetailFlag, @Custo" & _
+        "mer_Birth_Date, @driver_name5)"
         Me.CmdInsert.Connection = Me.Cnn
         Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cod_customer", System.Data.SqlDbType.VarChar, 10, "cod_customer"))
         Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@vip_code", System.Data.SqlDbType.VarChar, 10, "vip_code"))
@@ -2097,6 +2090,7 @@ Public Class FrmCustomer
         Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@AR_term", System.Data.SqlDbType.VarChar, 10, "AR_term"))
         Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@PrintstatementDetailFlag", System.Data.SqlDbType.Bit, 1, "PrintStatementDetailFlag"))
         Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Customer_Birth_Date", System.Data.SqlDbType.VarChar, 10, "Customer_Birth_Date"))
+        Me.CmdInsert.Parameters.Add(New System.Data.SqlClient.SqlParameter("@driver_name5", System.Data.SqlDbType.VarChar, 25, "driver_name5"))
         '
         'CmdUpdate
         '
@@ -2123,7 +2117,8 @@ Public Class FrmCustomer
         "o = @Customer_No, driver_name1 = @driver_name1, driver_name2 = @driver_name2, dr" & _
         "iver_name3 = @driver_name3, driver_name4 = @driver_name4, DriverLicense = @drive" & _
         "rLicense, PrintStatementDetailFlag = @PrintstatementDetailFlag, Customer_Birth_D" & _
-        "ate = @Customer_Birth_Date WHERE (cod_customer = @cod_Customer)"
+        "ate = @Customer_Birth_Date, driver_name5 = @driver_name5 WHERE (cod_customer = @" & _
+        "cod_Customer)"
         Me.CmdUpdate.Connection = Me.Cnn
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@vip_code", System.Data.SqlDbType.VarChar, 10, "vip_code"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cod_company", System.Data.SqlDbType.VarChar, 5, "cod_company"))
@@ -2155,7 +2150,7 @@ Public Class FrmCustomer
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@email", System.Data.SqlDbType.VarChar, 30, "email"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cod_sales_rep", System.Data.SqlDbType.VarChar, 5, "cod_sales_rep"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@social_security_no", System.Data.SqlDbType.VarChar, 30, "social_security_no"))
-        Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cust_exempt_tax", System.Data.SqlDbType.BigInt, 4, "cust_exempt_tax"))
+        Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cust_exempt_tax", System.Data.SqlDbType.BigInt, 8, "cust_exempt_tax"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@scrap_check", System.Data.SqlDbType.Bit, 1, "scrap_check"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@scrap_value", System.Data.SqlDbType.Real, 4, "scrap_value"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@credit_card_no", System.Data.SqlDbType.VarChar, 20, "credit_card_no"))
@@ -2190,6 +2185,7 @@ Public Class FrmCustomer
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@driverLicense", System.Data.SqlDbType.VarChar, 10, "DriverLicense"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@PrintstatementDetailFlag", System.Data.SqlDbType.Bit, 1, "PrintStatementDetailFlag"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@Customer_Birth_Date", System.Data.SqlDbType.VarChar, 10, "Customer_Birth_Date"))
+        Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@driver_name5", System.Data.SqlDbType.VarChar, 25, "driver_name5"))
         Me.CmdUpdate.Parameters.Add(New System.Data.SqlClient.SqlParameter("@cod_Customer", System.Data.SqlDbType.VarChar, 10, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cod_customer", System.Data.DataRowVersion.Original, Nothing))
         '
         'Panel9
@@ -2965,13 +2961,13 @@ Public Class FrmCustomer
     Private Sub MCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MCancel.Click
         Call PCancel()
     End Sub
-    Private Sub TXTCustomerCod_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TxtCustomerCod.TextChanged, txtAddress.TextChanged, txtCreditCardNo.TextChanged, TxtCustomerNo.TextChanged, txtDriver.TextChanged, txtMName.TextChanged, txtPassword.TextChanged, txtUserID.TextChanged, txtvip_code.TextChanged, ZipCode1.TextChanged, SocialSecurityNoNo1.TextChanged, cmbAR_term.SelectedIndexChanged, cmbClass.SelectedIndexChanged, cmbPriceLevel.SelectedIndexChanged, cmbSaleRep.SelectedIndexChanged, cmbSales_tax.SelectedIndexChanged, cmbSource.SelectedIndexChanged, cmbTerritory.SelectedIndexChanged, cmbType.SelectedIndexChanged, NumDiscount.TextChanged, chkAcceptCheck.CheckedChanged, chkCreditHold.CheckedChanged, chkFinCharge.CheckedChanged, chkInactive.CheckedChanged, chkRequirePO.CheckedChanged, chkScrapTireLicense.CheckedChanged, chkSendCopies.CheckedChanged, chkStatement.CheckedChanged, ChkTaxable.CheckedChanged, CompanyName1.TextChanged, NumScrapTireLicense.TextChanged, NumCreditLimit.TextChanged, txtDriverLicense.TextChanged, ChkPrintstatementDetailFlag.CheckedChanged, DteCustomer_Birth_Date.Leave, DteCustomer_Birth_Date.Leave, NumTaxExemptID.TextChanged
+    Private Sub TXTCustomerCod_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TxtCustomerCod.TextChanged, txtAddress.TextChanged, txtCreditCardNo.TextChanged, TxtCustomerNo.TextChanged, txtMName.TextChanged, txtPassword.TextChanged, txtUserID.TextChanged, txtvip_code.TextChanged, ZipCode1.TextChanged, SocialSecurityNoNo1.TextChanged, cmbAR_term.SelectedIndexChanged, cmbClass.SelectedIndexChanged, cmbPriceLevel.SelectedIndexChanged, cmbSaleRep.SelectedIndexChanged, cmbSales_tax.SelectedIndexChanged, cmbSource.SelectedIndexChanged, cmbTerritory.SelectedIndexChanged, cmbType.SelectedIndexChanged, NumDiscount.TextChanged, chkAcceptCheck.CheckedChanged, chkCreditHold.CheckedChanged, chkFinCharge.CheckedChanged, chkInactive.CheckedChanged, chkRequirePO.CheckedChanged, chkScrapTireLicense.CheckedChanged, chkSendCopies.CheckedChanged, chkStatement.CheckedChanged, ChkTaxable.CheckedChanged, CompanyName1.TextChanged, NumScrapTireLicense.TextChanged, NumCreditLimit.TextChanged, txtDriverLicense.TextChanged, ChkPrintstatementDetailFlag.CheckedChanged, DteCustomer_Birth_Date.Leave, DteCustomer_Birth_Date.Leave, NumTaxExemptID.TextChanged
         Call SaveButtonControl()
     End Sub
     Private Sub TxtFName_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtFName.TextChanged, txtLName.TextChanged
         Call SaveButtonControl()
-        If txtDriver.Text.Trim.Length = 0 Or txtDriver.Text.Trim = txtDriver.Text.Trim Then
-            txtDriver.Text = txtFName.Text.Trim & " " & txtLName.Text.Trim
+        If LblDriverName.Text.Trim.Length = 0 Or LblDriverName.Text.Trim = LblDriverName.Text.Trim Then
+            LblDriverName.Text = txtFName.Text.Trim & " " & txtLName.Text.Trim
         End If
     End Sub
     Private Sub SaveButtonControl()
@@ -3164,7 +3160,7 @@ Public Class FrmCustomer
         txtCreditCardNo.Enabled = instatus
         NumCreditLimit.Enabled = instatus
         TxtCustomerNo.Enabled = instatus
-        txtDriver.Enabled = instatus
+        '' txtDriver.Enabled = instatus
         txtEmail.Enabled = instatus
         DteExpDate.Enabled = instatus
         DteCustomer_Birth_Date.Enabled = instatus
@@ -3200,7 +3196,7 @@ Public Class FrmCustomer
         ChkTaxable.Enabled = instatus
         ZipCode1.Enabled = instatus
         PhoneNoMain.Enabled = instatus
-        PhoneButton1.ZEnabled = instatus
+        PhoneDriverButton1.ZEnabled = instatus
     End Sub
     Friend Sub ClearField()
         CustomerNoteVar = ""
@@ -3214,7 +3210,7 @@ Public Class FrmCustomer
         txtCreditCardNo.Text = ""
         NumCreditLimit.Text = ""
         NumDiscount.Text = ""
-        txtDriver.Text = ""
+        LblDriverName.Text = ""
         MyFrmDriverName.txtdriver_name1.Text = ""
         MyFrmDriverName.txtdriver_name2.Text = ""
         MyFrmDriverName.txtdriver_name3.Text = ""
@@ -3245,7 +3241,7 @@ Public Class FrmCustomer
         '''chkStatement.Checked = False
         ZipCode1.Text = ""
         PhoneNoMain.Text = ""
-        Call PhoneButton1.ClearPhoneScreen()
+        Call PhoneDriverButton1.ClearPhoneScreen()
 
         Dim OleDbReaderForStore As System.Data.OleDb.OleDbDataReader
         OleDbReaderForStore = RetrieveStoreSetupTable(PubStoreNO)
@@ -3339,30 +3335,31 @@ Public Class FrmCustomer
                 .Parameters("@m_name").Value = txtMName.Text
                 .Parameters("@l_name").Value = txtLName.Text
                 .Parameters("@address").Value = txtAddress.Text
-                .Parameters("@phone_1").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_1")
-                .Parameters("@extension_1").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_1")
-                .Parameters("@phone_type_1").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_1"))
-                .Parameters("@phone_main_1").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_1"))
-                .Parameters("@phone_2").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_2")
-                .Parameters("@extension_2").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_2")
-                .Parameters("@phone_type_2").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_2"))
-                .Parameters("@phone_main_2").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_2"))
-                .Parameters("@phone_3").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_3")
-                .Parameters("@extension_3").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_3")
-                .Parameters("@phone_type_3").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_3"))
-                .Parameters("@phone_main_3").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_3"))
-                .Parameters("@phone_4").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_4")
-                .Parameters("@extension_4").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_4")
-                .Parameters("@phone_type_4").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_4"))
-                .Parameters("@phone_main_4").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_4"))
-                .Parameters("@phone_5").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_5")
-                .Parameters("@extension_5").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_5")
-                .Parameters("@phone_type_5").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_5"))
-                .Parameters("@phone_main_5").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_5"))
-                .Parameters("@driver_name1").Value = txtDriver.Text
-                .Parameters("@driver_name2").Value = MyFrmDriverName.txtdriver_name2.Text
-                .Parameters("@driver_name3").Value = MyFrmDriverName.txtdriver_name3.Text
-                .Parameters("@driver_name4").Value = MyFrmDriverName.txtdriver_name4.Text
+                .Parameters("@phone_1").Value = PhoneNoMain.Text  '' PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_1")
+                .Parameters("@extension_1").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_1")
+                .Parameters("@phone_type_1").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_1"))
+                .Parameters("@phone_main_1").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_1"))
+                .Parameters("@phone_2").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_2")
+                .Parameters("@extension_2").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_2")
+                .Parameters("@phone_type_2").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_2"))
+                .Parameters("@phone_main_2").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_2"))
+                .Parameters("@phone_3").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_3")
+                .Parameters("@extension_3").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_3")
+                .Parameters("@phone_type_3").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_3"))
+                .Parameters("@phone_main_3").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_3"))
+                .Parameters("@phone_4").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_4")
+                .Parameters("@extension_4").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_4")
+                .Parameters("@phone_type_4").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_4"))
+                .Parameters("@phone_main_4").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_4"))
+                .Parameters("@phone_5").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_5")
+                .Parameters("@extension_5").Value = "" ''PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("extension_5")
+                .Parameters("@phone_type_5").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_5"))
+                .Parameters("@phone_main_5").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_5"))
+                .Parameters("@driver_name1").Value = LblDriverName.Text ''PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name1")
+                .Parameters("@driver_name2").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name2")
+                .Parameters("@driver_name3").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name3")
+                .Parameters("@driver_name4").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name4")
+                .Parameters("@driver_name5").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name5")
                 .Parameters("@DriverLicense").Value = txtDriverLicense.Text
                 .Parameters("@zip").Value = IIf(ZipCode1.Text.Trim.Length > 0, ZipCode1.Text, System.DBNull.Value)
                 .Parameters("@email").Value = txtEmail.Text
@@ -3425,30 +3422,31 @@ Public Class FrmCustomer
                 .Parameters("@m_name").Value = txtMName.Text
                 .Parameters("@l_name").Value = txtLName.Text
                 .Parameters("@address").Value = txtAddress.Text
-                .Parameters("@phone_1").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_1")
-                .Parameters("@extension_1").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_1")
-                .Parameters("@phone_type_1").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_1"))
-                .Parameters("@phone_main_1").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_1"))
-                .Parameters("@phone_2").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_2")
-                .Parameters("@extension_2").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_2")
-                .Parameters("@phone_type_2").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_2"))
-                .Parameters("@phone_main_2").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_2"))
-                .Parameters("@phone_3").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_3")
-                .Parameters("@extension_3").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_3")
-                .Parameters("@phone_type_3").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_3"))
-                .Parameters("@phone_main_3").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_3"))
-                .Parameters("@phone_4").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_4")
-                .Parameters("@extension_4").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_4")
-                .Parameters("@phone_type_4").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_4"))
-                .Parameters("@phone_main_4").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_4"))
-                .Parameters("@phone_5").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("Phone_5")
-                .Parameters("@extension_5").Value = PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_5")
-                .Parameters("@phone_type_5").Value = ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_5"))
-                .Parameters("@phone_main_5").Value = DecodeCheckBox(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_main_5"))
-                .Parameters("@driver_name1").Value = txtDriver.Text
-                .Parameters("@driver_name2").Value = MyFrmDriverName.txtdriver_name2.Text
-                .Parameters("@driver_name3").Value = MyFrmDriverName.txtdriver_name3.Text
-                .Parameters("@driver_name4").Value = MyFrmDriverName.txtdriver_name4.Text
+                .Parameters("@phone_1").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_1")
+                .Parameters("@extension_1").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_1")
+                .Parameters("@phone_type_1").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_1"))
+                .Parameters("@phone_main_1").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_1"))
+                .Parameters("@phone_2").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_2")
+                .Parameters("@extension_2").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_2")
+                .Parameters("@phone_type_2").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_2"))
+                .Parameters("@phone_main_2").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_2"))
+                .Parameters("@phone_3").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_3")
+                .Parameters("@extension_3").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_3")
+                .Parameters("@phone_type_3").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_3"))
+                .Parameters("@phone_main_3").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_3"))
+                .Parameters("@phone_4").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_4")
+                .Parameters("@extension_4").Value = "" ''PhoneButton1.DsPhone1.Phone.Rows(0).Item("extension_4")
+                .Parameters("@phone_type_4").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_4"))
+                .Parameters("@phone_main_4").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_4"))
+                .Parameters("@phone_5").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("Phone_5")
+                .Parameters("@extension_5").Value = "" ''PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("extension_5")
+                .Parameters("@phone_type_5").Value = "0" ''ChkCombo(PhoneButton1.DsPhone1.Phone.Rows(0).Item("phone_type_5"))
+                .Parameters("@phone_main_5").Value = DecodeCheckBox(PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("phone_main_5"))
+                .Parameters("@driver_name1").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name1")
+                .Parameters("@driver_name2").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name2")
+                .Parameters("@driver_name3").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name3")
+                .Parameters("@driver_name4").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name4")
+                .Parameters("@driver_name5").Value = PhoneDriverButton1.DsPhone1.Phone.Rows(0).Item("driver_name5")
                 .Parameters("@DriverLicense").Value = txtDriverLicense.Text
                 .Parameters("@zip").Value = IIf(ZipCode1.Text.Trim.Length > 0, ZipCode1.Text, System.DBNull.Value)
                 .Parameters("@email").Value = txtEmail.Text
@@ -3515,8 +3513,9 @@ Public Class FrmCustomer
             txtMName.Text = Trim(SQLReader.Item("m_name") & "")
             txtLName.Text = Trim(SQLReader.Item("l_name") & "")
             txtAddress.Text = Trim(SQLReader.Item("Address") & "")
-            PhoneButton1.FillDataSet("Cust_trtab_main", "Cod_Customer=" & Qt(ThisCod_Customer))
-            PhoneNoMain.Text = PhoneButton1.FillPhoneNoMain()
+            PhoneDriverButton1.FillDataSet("Cust_trtab_main", "Cod_Customer=" & Qt(ThisCod_Customer))
+            PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+            LblDriverName.Text = PhoneDriverButton1.FillPhoneNoMain()(2)
             txtEmail.Text = Trim(SQLReader.Item("Email") & "")
             SocialSecurityNoNo1.Text = Trim(SQLReader.Item("social_security_no") & "")
             Try
@@ -3572,7 +3571,7 @@ Public Class FrmCustomer
             End If
 
             txtDriverLicense.Text = Trim(SQLReader.Item("driverLicense") & "")
-            txtDriver.Text = Trim(SQLReader.Item("driver_name1") & "")
+            ''txtDriver.Text = Trim(SQLReader.Item("driver_name1") & "")
             MyFrmDriverName.txtdriver_name1.Text = Trim(SQLReader.Item("driver_name1") & "")
             MyFrmDriverName.txtdriver_name2.Text = Trim(SQLReader.Item("driver_name2") & "")
             MyFrmDriverName.txtdriver_name3.Text = Trim(SQLReader.Item("driver_name3") & "")
@@ -3854,29 +3853,34 @@ Public Class FrmCustomer
             'CmdGeneral.Connection.Close()
         End Try
     End Function
-    Private Sub BtnDriver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDriver.Click
-        Call FitToScreen(BtnDriver, MyFrmDriverName)
-        MyFrmDriverName.ThisFormStatus = Status
-        MyFrmDriverName.TxtName.Text = IIf(CompanyName1.Text.Trim.Length > 0, CompanyName1.Text, txtFName.Text.Trim & " " & txtMName.Text.Trim & " " & txtLName.Text.Trim)
-        MyFrmDriverName.txtdriver_name1.Text = txtDriver.Text.Trim
-        MyFrmDriverName.ShowDialog()
-        txtDriver.Text = MyFrmDriverName.txtdriver_name1.Text.Trim
-        'Call SaveButtonControl()
-    End Sub
-    Private Sub PhoneButton1_PhoneScreenAfterClose() Handles PhoneButton1.PhoneScreenAfterClose
-        PhoneNoMain.Text = PhoneButton1.FillPhoneNoMain()
+    'Private Sub BtnDriver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Call FitToScreen(BtnDriver, MyFrmDriverName)
+    '    MyFrmDriverName.ThisFormStatus = Status
+    '    MyFrmDriverName.TxtName.Text = IIf(CompanyName1.Text.Trim.Length > 0, CompanyName1.Text, txtFName.Text.Trim & " " & txtMName.Text.Trim & " " & txtLName.Text.Trim)
+    '    MyFrmDriverName.txtdriver_name1.Text = txtDriver.Text.Trim
+    '    MyFrmDriverName.ShowDialog()
+    '    txtDriver.Text = MyFrmDriverName.txtdriver_name1.Text.Trim
+    '    'Call SaveButtonControl()
+    'End Sub
+    Private Sub PhoneButton1_PhoneScreenAfterClose() Handles PhoneDriverButton1.PhoneScreenAfterClose
+        PhoneNoMain.Text = PhoneDriverButton1.FillPhoneNoMain()(1)
+        LblDriverName.Text = PhoneDriverButton1.FillPhoneNoMain()(2)
         Call SaveButtonControl()
     End Sub
     Private Sub PhoneNoMain_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneNoMain.TextChanged
-        Call PhoneButton1.GetPhoneNoMain(PhoneNoMain.Text)
+        ''Call PhoneButton1.GetPhoneNoMain(PhoneNoMain.Text)
         Call SaveButtonControl()
     End Sub
     'Private Sub PhoneNoMain_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneNoMain.Leave
     '    Call PhoneButton1.GetPhoneNoMain(PhoneNoMain.Text)
     '    Call SaveButtonControl()
     'End Sub
-    Private Sub PhoneButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneButton1.Click
-        PhoneButton1.HeaderName = IIf(CompanyName1.Text.Trim.Length > 0, CompanyName1.Text, txtFName.Text.Trim & " " & txtMName.Text.Trim & " " & txtLName.Text.Trim)
+    'Private Sub PhoneButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    PhoneButton1.HeaderName = IIf(CompanyName1.Text.Trim.Length > 0, CompanyName1.Text, txtFName.Text.Trim & " " & txtMName.Text.Trim & " " & txtLName.Text.Trim)
+    '    Call SaveButtonControl()
+    'End Sub
+    Private Sub PhoneDriverButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PhoneDriverButton1.Click
+        PhoneDriverButton1.HeaderName = CustomerCod1.CustomerDesc.Trim
         Call SaveButtonControl()
     End Sub
     Private Sub chkAR_charge_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkAR_charge.CheckedChanged
